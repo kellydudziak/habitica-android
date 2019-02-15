@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "636424802823",
+    "firebase_url": "https://habitica-1ce8a.firebaseio.com",
+    "project_id": "habitica-1ce8a",
+    "storage_bucket": "habitica-1ce8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636424802823:android:d2e86a80d3b5f4f7",
+        "android_client_info": {
+          "package_name": "com.habitrpg.android.habitica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636424802823-924g5l1319lv51tkn62fkqbjqrb96c17.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWJKCcqWZ7mqCByURGeJ8mrrdvB2L2ygc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
