@@ -1,0 +1,2541 @@
+@startuml
+
+title __VIEWS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class HabiticaIcons {
+              {static} - imageOfExperience : Bitmap
+              {static} - imageOfMagic : Bitmap
+              {static} - imageOfGold : Bitmap
+              {static} - imageOfGem : Bitmap
+              {static} - imageOfHourglass : Bitmap
+              {static} - imageOfExperienceReward : Bitmap
+              {static} - imageOfGoldReward : Bitmap
+              {static} - imageOfHeartDarkBg : Bitmap
+              {static} - imageOfHeartLightBg : Bitmap
+              {static} - imageOfHeartLarge : Bitmap
+              {static} - imageOfStarSmall : Bitmap
+              {static} - imageOfStarLarge : Bitmap
+              {static} - imageOfStarMedium : Bitmap
+              {static} - imageOfPinnedItem : Bitmap
+              {static} - imageOfPinItem : Bitmap
+              {static} - imageOfUnpinItem : Bitmap
+              {static} - imageOfGem_36 : Bitmap
+              {static} - imageOfWarriorLightBg : Bitmap
+              {static} - imageOfWarriorDarkBg : Bitmap
+              {static} - imageOfRogueLightBg : Bitmap
+              {static} - imageOfRogueDarkBg : Bitmap
+              {static} - imageOfHealerLightBg : Bitmap
+              {static} - imageOfHealerDarkBg : Bitmap
+              {static} - imageOfMageDarkBg : Bitmap
+              {static} - imageOfMageLightBg : Bitmap
+              {static} - imageOfHourglassShop : Bitmap
+              {static} - imageOfAttributeSparklesLeft : Bitmap
+              {static} - imageOfAttributeSparklesRight : Bitmap
+              {static} - imageOfAttributeAllocateButton : Bitmap
+              {static} - imageOfDamage : Bitmap
+              {static} - imageOfRageStrikeInactive : Bitmap
+              {static} - imageOfRage : Bitmap
+              {static} - imageOfTwoHandedIcon : Bitmap
+              {static} - imageOfBlankAvatarIcon : Bitmap
+              {static} - imageOfDisclosureArrow : Bitmap
+              {static} - imageOfDeclineIcon : Bitmap
+              {static} - imageOfAcceptIcon : Bitmap
+              {static} - imageOfBuffIcon : Bitmap
+              {static} - imageOfAlertIcon : Bitmap
+              {static} + drawHeart()
+              {static} + drawHeart()
+              {static} + drawExperience()
+              {static} + drawExperience()
+              {static} + drawMagic()
+              {static} + drawMagic()
+              {static} + drawGold()
+              {static} + drawGold()
+              {static} + drawGem()
+              {static} + drawGem()
+              {static} + drawHourglass()
+              {static} + drawHourglass()
+              {static} - drawExperienceReward()
+              {static} - drawExperienceReward()
+              {static} - drawGoldReward()
+              {static} - drawGoldReward()
+              {static} - drawHeartDarkBg()
+              {static} - drawHeartDarkBg()
+              {static} - drawHeartLightBg()
+              {static} - drawHeartLightBg()
+              {static} + drawWarrior()
+              {static} + drawWarrior()
+              {static} - drawHeartLarge()
+              {static} - drawHeartLarge()
+              {static} + drawDifficultyStars()
+              {static} + drawDifficultyStars()
+              {static} + drawDifficultyStar()
+              {static} + drawDifficultyStar()
+              {static} + drawStarSmall()
+              {static} + drawStarSmall()
+              {static} + drawStarLarge()
+              {static} + drawStarLarge()
+              {static} + drawStarMedium()
+              {static} + drawStarMedium()
+              {static} + drawPinnedItem()
+              {static} + drawPinnedItem()
+              {static} + drawAddRemovePin()
+              {static} + drawAddRemovePin()
+              {static} - drawPinItem()
+              {static} - drawPinItem()
+              {static} - drawUnpinItem()
+              {static} - drawUnpinItem()
+              {static} + drawItemIndicator()
+              {static} + drawItemIndicator()
+              {static} - drawItemIndicatorNumber()
+              {static} - drawItemIndicatorNumber()
+              {static} - drawItemIndicatorLocked()
+              {static} - drawItemIndicatorLocked()
+              {static} - drawItemIndicatorLimited()
+              {static} - drawItemIndicatorLimited()
+              {static} - drawGem_36()
+              {static} - drawGem_36()
+              {static} + drawWarriorLightBg()
+              {static} + drawWarriorLightBg()
+              {static} + drawWarriorDarkBg()
+              {static} + drawWarriorDarkBg()
+              {static} + drawRogue()
+              {static} + drawRogue()
+              {static} + drawRogueLightBg()
+              {static} + drawRogueLightBg()
+              {static} + drawRogueDarkBg()
+              {static} + drawRogueDarkBg()
+              {static} + drawHealer()
+              {static} + drawHealer()
+              {static} + drawHealerLightBg()
+              {static} + drawHealerLightBg()
+              {static} + drawHealerDarkBg()
+              {static} + drawHealerDarkBg()
+              {static} + drawMage()
+              {static} + drawMage()
+              {static} + drawMageDarkBg()
+              {static} + drawMageDarkBg()
+              {static} + drawMageLightBg()
+              {static} + drawMageLightBg()
+              {static} + drawCheckmark()
+              {static} + drawCheckmark()
+              {static} + drawHourglassShop()
+              {static} + drawHourglassShop()
+              {static} + drawAttributeSparklesLeft()
+              {static} + drawAttributeSparklesLeft()
+              {static} + drawAttributeSparklesRight()
+              {static} + drawAttributeSparklesRight()
+              {static} + drawAttributeAllocateButton()
+              {static} + drawAttributeAllocateButton()
+              {static} + drawInfoIcon()
+              {static} + drawInfoIcon()
+              {static} + drawContributorBadge()
+              {static} + drawContributorBadge()
+              {static} + drawChatLikeIcon()
+              {static} + drawChatLikeIcon()
+              {static} + drawQuestBackground()
+              {static} + drawDamage()
+              {static} + drawDamage()
+              {static} + drawCaret()
+              {static} + drawCaret()
+              {static} + drawRageStrikeInactive()
+              {static} + drawRageStrikeInactive()
+              {static} + drawRageStrikeActive()
+              {static} + drawRageStrikeActive()
+              {static} + drawRage()
+              {static} + drawRage()
+              {static} + drawTaskDifficultyStars()
+              {static} + drawTaskDifficultyStars()
+              {static} + drawTaskFormDifficultyStar()
+              {static} + drawTaskFormDifficultyStar()
+              {static} + drawHabitControlPlus()
+              {static} + drawHabitControlPlus()
+              {static} + drawHabitControlMinus()
+              {static} + drawHabitControlMinus()
+              {static} + drawLocked()
+              {static} + drawLocked()
+              {static} + drawGuildCrest()
+              {static} + drawGuildCrest()
+              {static} + drawGuildCrestMedium()
+              {static} + drawGuildCrestMedium()
+              {static} + drawGuildCrestSmall()
+              {static} + drawGuildCrestSmall()
+              {static} + drawGuildHeaderCrest()
+              {static} + drawGuildHeaderCrest()
+              {static} + drawTwoHandedIcon()
+              {static} + drawTwoHandedIcon()
+              {static} + drawBlankAvatarIcon()
+              {static} + drawBlankAvatarIcon()
+              {static} + drawDisclosureArrow()
+              {static} + drawDisclosureArrow()
+              {static} + drawFilterIcon()
+              {static} + drawFilterIcon()
+              {static} + drawDeclineIcon()
+              {static} + drawDeclineIcon()
+              {static} + drawAcceptIcon()
+              {static} + drawAcceptIcon()
+              {static} + drawBuffIcon()
+              {static} + drawBuffIcon()
+              {static} + drawParticipantsIcon()
+              {static} + drawParticipantsIcon()
+              {static} + drawChatReplyIcon()
+              {static} + drawChatReplyIcon()
+              {static} + drawChatCopyIcon()
+              {static} + drawChatCopyIcon()
+              {static} + drawChatReportIcon()
+              {static} + drawChatReportIcon()
+              {static} + drawChatDeleteIcon()
+              {static} + drawChatDeleteIcon()
+              {static} + drawAlertIcon()
+              {static} + drawAlertIcon()
+              {static} + imageOfExperience()
+              {static} + imageOfMagic()
+              {static} + imageOfGold()
+              {static} + imageOfGem()
+              {static} + imageOfHourglass()
+              {static} + imageOfExperienceReward()
+              {static} + imageOfGoldReward()
+              {static} + imageOfHeartDarkBg()
+              {static} + imageOfHeartLightBg()
+              {static} + imageOfHeartLarge()
+              {static} + imageOfDifficultyStars()
+              {static} + imageOfStarSmall()
+              {static} + imageOfStarLarge()
+              {static} + imageOfStarMedium()
+              {static} + imageOfPinnedItem()
+              {static} + imageOfPinItem()
+              {static} + imageOfUnpinItem()
+              {static} + imageOfItemIndicatorNumber()
+              {static} + imageOfItemIndicatorLocked()
+              {static} + imageOfItemIndicatorLimited()
+              {static} + imageOfGem_36()
+              {static} + imageOfWarriorLightBg()
+              {static} + imageOfWarriorDarkBg()
+              {static} + imageOfRogueLightBg()
+              {static} + imageOfRogueDarkBg()
+              {static} + imageOfHealerLightBg()
+              {static} + imageOfHealerDarkBg()
+              {static} + imageOfMageDarkBg()
+              {static} + imageOfMageLightBg()
+              {static} + imageOfCheckmark()
+              {static} + imageOfHourglassShop()
+              {static} + imageOfAttributeSparklesLeft()
+              {static} + imageOfAttributeSparklesRight()
+              {static} + imageOfAttributeAllocateButton()
+              {static} + imageOfInfoIcon()
+              {static} + imageOfContributorBadge()
+              {static} + imageOfChatLikeIcon()
+              {static} + imageOfQuestBackground()
+              {static} + imageOfDamage()
+              {static} + imageOfCaret()
+              {static} + imageOfRageStrikeInactive()
+              {static} + imageOfRageStrikeActive()
+              {static} + imageOfRage()
+              {static} + imageOfTaskDifficultyStars()
+              {static} + imageOfHabitControlPlus()
+              {static} + imageOfHabitControlMinus()
+              {static} + imageOfLocked()
+              {static} + imageOfGuildCrest()
+              {static} + imageOfGuildCrestMedium()
+              {static} + imageOfGuildCrestSmall()
+              {static} + imageOfGuildHeaderCrest()
+              {static} + imageOfTwoHandedIcon()
+              {static} + imageOfBlankAvatarIcon()
+              {static} + imageOfDisclosureArrow()
+              {static} + imageOfFilterIcon()
+              {static} + imageOfDeclineIcon()
+              {static} + imageOfAcceptIcon()
+              {static} + imageOfBuffIcon()
+              {static} + imageOfAlertIcon()
+              {static} + resizingBehaviorApply()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class GlobalCache {
+              {static} ~ rageStrikeNPC : PaintCodeBitmap
+              {static} ~ blendModeSourceIn : PorterDuffXfermode
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          enum ResizingBehavior {
+            AspectFit
+            AspectFill
+            Stretch
+            Center
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHeart {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForExperience {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - starRect : RectF
+              {static} - starPath : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - star2Rect : RectF
+              {static} - star2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForMagic {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGold {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGem {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHourglass {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForExperienceReward {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGoldReward {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHeartDarkBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHeartLightBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForWarrior {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+              {static} - bezier17Rect : RectF
+              {static} - bezier17Path : Path
+              {static} - bezier18Rect : RectF
+              {static} - bezier18Path : Path
+              {static} - bezier19Rect : RectF
+              {static} - bezier19Path : Path
+              {static} - group3 : RectF
+              {static} - clipPath : Path
+              {static} - bezier20Rect : RectF
+              {static} - bezier20Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - bezier21Rect : RectF
+              {static} - bezier21Path : Path
+              {static} - bezier22Rect : RectF
+              {static} - bezier22Path : Path
+              {static} - rectangle6Rect : RectF
+              {static} - rectangle6Path : Path
+              {static} - bezier23Rect : RectF
+              {static} - bezier23Path : Path
+              {static} - bezier24Rect : RectF
+              {static} - bezier24Path : Path
+              {static} - bezier25Rect : RectF
+              {static} - bezier25Path : Path
+              {static} - bezier26Rect : RectF
+              {static} - bezier26Path : Path
+              {static} - bezier27Rect : RectF
+              {static} - bezier27Path : Path
+              {static} - bezier28Rect : RectF
+              {static} - bezier28Path : Path
+              {static} - bezier29Rect : RectF
+              {static} - bezier29Path : Path
+              {static} - bezier30Rect : RectF
+              {static} - bezier30Path : Path
+              {static} - bezier31Rect : RectF
+              {static} - bezier31Path : Path
+              {static} - bezier32Rect : RectF
+              {static} - bezier32Path : Path
+              {static} - bezier33Rect : RectF
+              {static} - bezier33Path : Path
+              {static} - bezier34Rect : RectF
+              {static} - bezier34Path : Path
+              {static} - bezier35Rect : RectF
+              {static} - bezier35Path : Path
+              {static} - rectangle7Rect : RectF
+              {static} - rectangle7Path : Path
+              {static} - rectangle8Rect : RectF
+              {static} - rectangle8Path : Path
+              {static} - rectangle9Rect : RectF
+              {static} - rectangle9Path : Path
+              {static} - bezier36Rect : RectF
+              {static} - bezier36Path : Path
+              {static} - bezier37Rect : RectF
+              {static} - bezier37Path : Path
+              {static} - bezier38Rect : RectF
+              {static} - bezier38Path : Path
+              {static} - bezier39Rect : RectF
+              {static} - bezier39Path : Path
+              {static} - group5 : RectF
+              {static} - clip2Path : Path
+              {static} - bezier40Rect : RectF
+              {static} - bezier40Path : Path
+              {static} - rectangle10Rect : RectF
+              {static} - rectangle10Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHeartLarge {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForDifficultyStars {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+              {static} - symbol2Rect : RectF
+              {static} - symbol2TargetRect : RectF
+              {static} - symbol3Rect : RectF
+              {static} - symbol3TargetRect : RectF
+              {static} - symbol4Rect : RectF
+              {static} - symbol4TargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForDifficultyStar {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - star3Rect : RectF
+              {static} - star3Path : Path
+              {static} - starRect : RectF
+              {static} - starPath : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForStarSmall {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForStarLarge {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - rectangle6Rect : RectF
+              {static} - rectangle6Path : Path
+              {static} - rectangle7Rect : RectF
+              {static} - rectangle7Path : Path
+              {static} - rectangle8Rect : RectF
+              {static} - rectangle8Path : Path
+              {static} - rectangle9Rect : RectF
+              {static} - rectangle9Path : Path
+              {static} - rectangle10Rect : RectF
+              {static} - rectangle10Path : Path
+              {static} - rectangle11Rect : RectF
+              {static} - rectangle11Path : Path
+              {static} - rectangle12Rect : RectF
+              {static} - rectangle12Path : Path
+              {static} - rectangle13Rect : RectF
+              {static} - rectangle13Path : Path
+              {static} - rectangle14Rect : RectF
+              {static} - rectangle14Path : Path
+              {static} - rectangle15Rect : RectF
+              {static} - rectangle15Path : Path
+              {static} - rectangle16Rect : RectF
+              {static} - rectangle16Path : Path
+              {static} - rectangle17Rect : RectF
+              {static} - rectangle17Path : Path
+              {static} - rectangle18Rect : RectF
+              {static} - rectangle18Path : Path
+              {static} - rectangle19Rect : RectF
+              {static} - rectangle19Path : Path
+              {static} - rectangle20Rect : RectF
+              {static} - rectangle20Path : Path
+              {static} - rectangle21Rect : RectF
+              {static} - rectangle21Path : Path
+              {static} - rectangle22Rect : RectF
+              {static} - rectangle22Path : Path
+              {static} - rectangle23Rect : RectF
+              {static} - rectangle23Path : Path
+              {static} - rectangle24Rect : RectF
+              {static} - rectangle24Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForStarMedium {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - rectangle6Rect : RectF
+              {static} - rectangle6Path : Path
+              {static} - rectangle7Rect : RectF
+              {static} - rectangle7Path : Path
+              {static} - rectangle8Rect : RectF
+              {static} - rectangle8Path : Path
+              {static} - rectangle9Rect : RectF
+              {static} - rectangle9Path : Path
+              {static} - rectangle10Rect : RectF
+              {static} - rectangle10Path : Path
+              {static} - rectangle11Rect : RectF
+              {static} - rectangle11Path : Path
+              {static} - rectangle12Rect : RectF
+              {static} - rectangle12Path : Path
+              {static} - rectangle13Rect : RectF
+              {static} - rectangle13Path : Path
+              {static} - rectangle14Rect : RectF
+              {static} - rectangle14Path : Path
+              {static} - rectangle15Rect : RectF
+              {static} - rectangle15Path : Path
+              {static} - rectangle16Rect : RectF
+              {static} - rectangle16Path : Path
+              {static} - rectangle17Rect : RectF
+              {static} - rectangle17Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForPinnedItem {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAddRemovePin {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForPinItem {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForUnpinItem {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForItemIndicator {
+              {static} - paint : Paint
+              {static} - shadowPaint : Paint
+              {static} - shadow : PaintCodeShadow
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - oval2Rect : RectF
+              {static} - oval2Path : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForItemIndicatorNumber {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForItemIndicatorLocked {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForItemIndicatorLimited {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGem_36 {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - gem36Rect : RectF
+              {static} - gem36TargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForWarriorLightBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForWarriorDarkBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRogue {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - starRect : RectF
+              {static} - starPath : Path
+              {static} - star2Rect : RectF
+              {static} - star2Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+              {static} - bezier17Rect : RectF
+              {static} - bezier17Path : Path
+              {static} - bezier18Rect : RectF
+              {static} - bezier18Path : Path
+              {static} - bezier19Rect : RectF
+              {static} - bezier19Path : Path
+              {static} - bezier20Rect : RectF
+              {static} - bezier20Path : Path
+              {static} - bezier21Rect : RectF
+              {static} - bezier21Path : Path
+              {static} - bezier22Rect : RectF
+              {static} - bezier22Path : Path
+              {static} - bezier23Rect : RectF
+              {static} - bezier23Path : Path
+              {static} - star3Rect : RectF
+              {static} - star3Path : Path
+              {static} - bezier24Rect : RectF
+              {static} - bezier24Path : Path
+              {static} - bezier25Rect : RectF
+              {static} - bezier25Path : Path
+              {static} - bezier26Rect : RectF
+              {static} - bezier26Path : Path
+              {static} - bezier27Rect : RectF
+              {static} - bezier27Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRogueLightBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRogueDarkBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHealer {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+              {static} - bezier17Rect : RectF
+              {static} - bezier17Path : Path
+              {static} - bezier18Rect : RectF
+              {static} - bezier18Path : Path
+              {static} - bezier19Rect : RectF
+              {static} - bezier19Path : Path
+              {static} - bezier20Rect : RectF
+              {static} - bezier20Path : Path
+              {static} - bezier21Rect : RectF
+              {static} - bezier21Path : Path
+              {static} - bezier22Rect : RectF
+              {static} - bezier22Path : Path
+              {static} - bezier23Rect : RectF
+              {static} - bezier23Path : Path
+              {static} - bezier24Rect : RectF
+              {static} - bezier24Path : Path
+              {static} - bezier25Rect : RectF
+              {static} - bezier25Path : Path
+              {static} - bezier26Rect : RectF
+              {static} - bezier26Path : Path
+              {static} - bezier27Rect : RectF
+              {static} - bezier27Path : Path
+              {static} - bezier28Rect : RectF
+              {static} - bezier28Path : Path
+              {static} - bezier29Rect : RectF
+              {static} - bezier29Path : Path
+              {static} - bezier30Rect : RectF
+              {static} - bezier30Path : Path
+              {static} - bezier31Rect : RectF
+              {static} - bezier31Path : Path
+              {static} - bezier32Rect : RectF
+              {static} - bezier32Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHealerLightBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHealerDarkBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForMage {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+              {static} - bezier17Rect : RectF
+              {static} - bezier17Path : Path
+              {static} - bezier18Rect : RectF
+              {static} - bezier18Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForMageDarkBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForMageLightBg {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForCheckmark {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezierPathDashEffect : PaintCodeDashPathEffect
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHourglassShop {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - clipRect : RectF
+              {static} - clipPath : Path
+              {static} - clip2Rect : RectF
+              {static} - clip2Path : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAttributeSparklesLeft {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - starRect : RectF
+              {static} - starPath : Path
+              {static} - star2Rect : RectF
+              {static} - star2Path : Path
+              {static} - star3Rect : RectF
+              {static} - star3Path : Path
+              {static} - star4Rect : RectF
+              {static} - star4Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAttributeSparklesRight {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - starRect : RectF
+              {static} - starPath : Path
+              {static} - star2Rect : RectF
+              {static} - star2Path : Path
+              {static} - star3Rect : RectF
+              {static} - star3Path : Path
+              {static} - star4Rect : RectF
+              {static} - star4Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAttributeAllocateButton {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForInfoIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForContributorBadge {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - tier1Rect : RectF
+              {static} - tier1Path : Path
+              {static} - tier2Rect : RectF
+              {static} - tier2Path : Path
+              {static} - tier3Rect : RectF
+              {static} - tier3Path : Path
+              {static} - tier4Rect : RectF
+              {static} - tier4Path : Path
+              {static} - tier5Rect : RectF
+              {static} - tier5Path : Path
+              {static} - tier6Rect : RectF
+              {static} - tier6Path : Path
+              {static} - tier7Rect : RectF
+              {static} - tier7Path : Path
+              {static} - tierModRect : RectF
+              {static} - tierModPath : Path
+              {static} - tierStaffRect : RectF
+              {static} - tierStaffPath : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForChatLikeIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForQuestBackground {
+              {static} - paint : Paint
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - group : RectF
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - group2 : RectF
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - group3 : RectF
+              {static} - rectangle6Rect : RectF
+              {static} - rectangle6Path : Path
+              {static} - rectangle7Rect : RectF
+              {static} - rectangle7Path : Path
+              {static} - group4 : RectF
+              {static} - rectangle8Rect : RectF
+              {static} - rectangle8Path : Path
+              {static} - rectangle9Rect : RectF
+              {static} - rectangle9Path : Path
+              {static} - rectangle10Rect : RectF
+              {static} - rectangle10Path : Path
+              {static} - rectangle11Rect : RectF
+              {static} - rectangle11Path : Path
+              {static} - rectangle12Rect : RectF
+              {static} - rectangle12Path : Path
+              {static} - rectangle13Rect : RectF
+              {static} - rectangle13Path : Path
+              {static} - rectangle14Rect : RectF
+              {static} - rectangle14Path : Path
+              {static} - rectangle15Rect : RectF
+              {static} - rectangle15Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForDamage {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - group3 : RectF
+              {static} - clipPath : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForCaret {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRageStrikeInactive {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - labelRect : RectF
+              {static} - labelPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRageStrikeActive {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForRage {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier5Rect : RectF
+              {static} - bezier5Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - bezier9Rect : RectF
+              {static} - bezier9Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - bezier12Rect : RectF
+              {static} - bezier12Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForTaskDifficultyStars {
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - symbol2Rect : RectF
+              {static} - symbol2TargetRect : RectF
+              {static} - symbol3Rect : RectF
+              {static} - symbol3TargetRect : RectF
+              {static} - symbol4Rect : RectF
+              {static} - symbol4TargetRect : RectF
+              {static} - symbol5Rect : RectF
+              {static} - symbol5TargetRect : RectF
+              {static} - symbol6Rect : RectF
+              {static} - symbol6TargetRect : RectF
+              {static} - symbol7Rect : RectF
+              {static} - symbol7TargetRect : RectF
+              {static} - symbol8Rect : RectF
+              {static} - symbol8TargetRect : RectF
+              {static} - symbol9Rect : RectF
+              {static} - symbol9TargetRect : RectF
+              {static} - symbol10Rect : RectF
+              {static} - symbol10TargetRect : RectF
+              {static} - symbolRect : RectF
+              {static} - symbolTargetRect : RectF
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForTaskFormDifficultyStar {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - star3Rect : RectF
+              {static} - star3Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHabitControlPlus {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - ovalRect : RectF
+              {static} - ovalPath : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForHabitControlMinus {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - ovalRect : RectF
+              {static} - ovalPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForLocked {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - group : RectF
+              {static} - clipPath : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - group2 : RectF
+              {static} - clip2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGuildCrest {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - group : RectF
+              {static} - clip5Path : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier7Rect : RectF
+              {static} - bezier7Path : Path
+              {static} - bezier8Rect : RectF
+              {static} - bezier8Path : Path
+              {static} - group8 : RectF
+              {static} - clip14Path : Path
+              {static} - rectangle3Rect : RectF
+              {static} - rectangle3Path : Path
+              {static} - rectangle8Rect : RectF
+              {static} - rectangle8Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier15Rect : RectF
+              {static} - bezier15Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier11Rect : RectF
+              {static} - bezier11Path : Path
+              {static} - labelRect : RectF
+              {static} - labelTextPaint : TextPaint
+              {static} - labelStaticLayout : PaintCodeStaticLayout
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGuildCrestMedium {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - group : RectF
+              {static} - clip5Path : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle4Rect : RectF
+              {static} - rectangle4Path : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier4Rect : RectF
+              {static} - bezier4Path : Path
+              {static} - bezier6Rect : RectF
+              {static} - bezier6Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGuildCrestSmall {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForGuildHeaderCrest {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - group6 : RectF
+              {static} - clip6Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - group11 : RectF
+              {static} - clip13Path : Path
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - rectangle2Rect : RectF
+              {static} - rectangle2Path : Path
+              {static} - rectangle5Rect : RectF
+              {static} - rectangle5Path : Path
+              {static} - bezier10Rect : RectF
+              {static} - bezier10Path : Path
+              {static} - bezier13Rect : RectF
+              {static} - bezier13Path : Path
+              {static} - bezier14Rect : RectF
+              {static} - bezier14Path : Path
+              {static} - bezier16Rect : RectF
+              {static} - bezier16Path : Path
+              {static} - bezier17Rect : RectF
+              {static} - bezier17Path : Path
+              {static} - bezier18Rect : RectF
+              {static} - bezier18Path : Path
+              {static} - bezier19Rect : RectF
+              {static} - bezier19Path : Path
+              {static} - bezier20Rect : RectF
+              {static} - bezier20Path : Path
+              {static} - rectangle9Rect : RectF
+              {static} - rectangle9Path : Path
+              {static} - label2Rect : RectF
+              {static} - label2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForTwoHandedIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForBlankAvatarIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForDisclosureArrow {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForFilterIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+              {static} - oval2Rect : RectF
+              {static} - oval2Path : Path
+              {static} - oval4Rect : RectF
+              {static} - oval4Path : Path
+              {static} - oval6Rect : RectF
+              {static} - oval6Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForDeclineIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAcceptIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForBuffIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - rectangleRect : RectF
+              {static} - rectanglePath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForParticipantsIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+              {static} - bezier2Rect : RectF
+              {static} - bezier2Path : Path
+              {static} - bezier3Rect : RectF
+              {static} - bezier3Path : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForChatReplyIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - group : RectF
+              {static} - clipPath : Path
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForChatCopyIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForChatReportIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForChatDeleteIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class CacheForAlertIcon {
+              {static} - paint : Paint
+              {static} - originalFrame : RectF
+              {static} - resizedFrame : RectF
+              {static} - bezierRect : RectF
+              {static} - bezierPath : Path
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class HabiticaIconsHelper {
+              {static} - displayDensity : float
+              {static} - imageOfExperience : Bitmap
+              {static} - imageOfMagic : Bitmap
+              {static} - imageOfGold : Bitmap
+              {static} - imageOfGem : Bitmap
+              {static} - imageOfHourglass : Bitmap
+              {static} - imageOfExperienceReward : Bitmap
+              {static} - imageOfGoldReward : Bitmap
+              {static} - imageOfHeartDarkBg : Bitmap
+              {static} - imageOfHeartLightBg : Bitmap
+              {static} - imageOfHeartLarge : Bitmap
+              {static} - imageOfStarSmall : Bitmap
+              {static} - imageOfStarLarge : Bitmap
+              {static} - imageOfStarMedium : Bitmap
+              {static} - imageOfPinnedItem : Bitmap
+              {static} - imageOfPinItem : Bitmap
+              {static} - imageOfUnpinItem : Bitmap
+              {static} - imageOfItemIndicatorNumber : Bitmap
+              {static} - imageOfItemIndicatorLocked : Bitmap
+              {static} - imageOfItemIndicatorLimited : Bitmap
+              {static} - imageOfGem_36 : Bitmap
+              {static} - imageOfWarriorLightBg : Bitmap
+              {static} - imageOfWarriorDarkBg : Bitmap
+              {static} - imageOfRogueLightBg : Bitmap
+              {static} - imageOfRogueDarkBg : Bitmap
+              {static} - imageOfHealerLightBg : Bitmap
+              {static} - imageOfHealerDarkBg : Bitmap
+              {static} - imageOfMageDarkBg : Bitmap
+              {static} - imageOfMageLightBg : Bitmap
+              {static} - imageOfHourglassShop : Bitmap
+              {static} - imageOfAttributeSparklesLeft : Bitmap
+              {static} - imageOfAttributeSparklesRight : Bitmap
+              {static} - imageOfAttributeAllocateButton : Bitmap
+              {static} - imageOfInfoIcon : Bitmap
+              {static} - imageOfDamage : Bitmap
+              {static} - imageOfRageStrikeInactive : Bitmap
+              {static} - imageOfRage : Bitmap
+              {static} - imageOfParticipantsIcon : Bitmap
+              {static} - imageOfChatReplyIcon : Bitmap
+              {static} - imageOfChatCopyIcon : Bitmap
+              {static} - imageOfChatReportIcon : Bitmap
+              {static} - imageOfChatDeleteIcon : Bitmap
+              {static} - imageOfTwoHandedIcon : Bitmap
+              {static} - imageOfAlertIcon : Bitmap
+              {static} - imageOfBuffIcon : Bitmap
+              {static} + init()
+              {static} - scaleSize()
+              {static} + imageOfExperience()
+              {static} + imageOfMagic()
+              {static} + imageOfGold()
+              {static} + imageOfGem()
+              {static} + imageOfHourglass()
+              {static} + imageOfExperienceReward()
+              {static} + imageOfGoldReward()
+              {static} + imageOfHeartDarkBg()
+              {static} + imageOfHeartLightBg()
+              {static} + imageOfHeartLarge()
+              {static} + imageOfDifficultyStars()
+              {static} + imageOfStarSmall()
+              {static} + imageOfStarLarge()
+              {static} + imageOfStarMedium()
+              {static} + imageOfPinnedItem()
+              {static} + imageOfPinItem()
+              {static} + imageOfUnpinItem()
+              {static} + imageOfItemIndicatorNumber()
+              {static} + imageOfItemIndicatorLocked()
+              {static} + imageOfItemIndicatorLimited()
+              {static} + imageOfGem_36()
+              {static} + imageOfWarriorLightBg()
+              {static} + imageOfWarriorDarkBg()
+              {static} + imageOfRogueLightBg()
+              {static} + imageOfRogueDarkBg()
+              {static} + imageOfHealerLightBg()
+              {static} + imageOfHealerDarkBg()
+              {static} + imageOfMageDarkBg()
+              {static} + imageOfMageLightBg()
+              {static} + imageOfHourglassShop()
+              {static} + imageOfAttributeSparklesLeft()
+              {static} + imageOfAttributeSparklesRight()
+              {static} + imageOfAttributeAllocateButton()
+              {static} + imageOfInfoIcon()
+              {static} + imageOfContributorBadge()
+              {static} + imageOfChatLikeIcon()
+              {static} + imageOfDamage()
+              {static} + imageOfCaret()
+              {static} + imageOfQuestBackground()
+              {static} + imageOfRageStrikeInactive()
+              {static} + imageOfRageStrikeActive()
+              {static} + imageOfRage()
+              {static} + imageOfLocked()
+              {static} + imageOfParticipantsIcon()
+              {static} + imageOfChatReplyIcon()
+              {static} + imageOfChatCopyIcon()
+              {static} + imageOfChatReportIcon()
+              {static} + imageOfChatDeleteIcon()
+              {static} + imageOfTwoHandedIcon()
+              {static} + imageOfCheckmark()
+              {static} + imageOfAlertIcon()
+              {static} + imageOfBuffIcon()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeBitmap {
+              - shader : BitmapShader
+              - bitmap : Bitmap
+              - bounds : RectF
+              - resource : int
+              - context : WeakReference<Context>
+              ~ get()
+              ~ get()
+              ~ getShader()
+              ~ getBounds()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeColor {
+              {static} - ColorToHSV()
+              {static} + colorByChangingHue()
+              {static} + colorByChangingSaturation()
+              {static} + colorByChangingValue()
+              {static} + hue()
+              {static} + saturation()
+              {static} + brightness()
+              {static} + colorByChangingAlpha()
+              {static} + colorByBlendingColors()
+              {static} + colorByApplyingHighlight()
+              {static} + colorByApplyingShadow()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeDashPathEffect {
+              - effect : DashPathEffect
+              - dash : float
+              - gap : float
+              - phase : float
+              ~ get()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeShadow {
+              ~ color : int
+              ~ dx : float
+              ~ dy : float
+              - radius : float
+              - blurMaskFilter : BlurMaskFilter
+              ~ PaintCodeShadow()
+              ~ PaintCodeShadow()
+              ~ get()
+              ~ setBlurOfPaint()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeStaticLayout {
+              - layout : StaticLayout
+              - width : int
+              - alignment : Alignment
+              - source : CharSequence
+              - paint : TextPaint
+              ~ get()
+          }
+        }
+      }
+    }
+  }
+  
+
+  HabiticaIcons +-down- GlobalCache
+  HabiticaIcons +-down- ResizingBehavior
+  HabiticaIcons +-down- CacheForHeart
+  HabiticaIcons +-down- CacheForExperience
+  HabiticaIcons +-down- CacheForMagic
+  HabiticaIcons +-down- CacheForGold
+  HabiticaIcons +-down- CacheForGem
+  HabiticaIcons +-down- CacheForHourglass
+  HabiticaIcons +-down- CacheForExperienceReward
+  HabiticaIcons +-down- CacheForGoldReward
+  HabiticaIcons +-down- CacheForHeartDarkBg
+  HabiticaIcons +-down- CacheForHeartLightBg
+  HabiticaIcons +-down- CacheForWarrior
+  HabiticaIcons +-down- CacheForHeartLarge
+  HabiticaIcons +-down- CacheForDifficultyStars
+  HabiticaIcons +-down- CacheForDifficultyStar
+  HabiticaIcons +-down- CacheForStarSmall
+  HabiticaIcons +-down- CacheForStarLarge
+  HabiticaIcons +-down- CacheForStarMedium
+  HabiticaIcons +-down- CacheForPinnedItem
+  HabiticaIcons +-down- CacheForAddRemovePin
+  HabiticaIcons +-down- CacheForPinItem
+  HabiticaIcons +-down- CacheForUnpinItem
+  HabiticaIcons +-down- CacheForItemIndicator
+  HabiticaIcons +-down- CacheForItemIndicatorNumber
+  HabiticaIcons +-down- CacheForItemIndicatorLocked
+  HabiticaIcons +-down- CacheForItemIndicatorLimited
+  HabiticaIcons +-down- CacheForGem_36
+  HabiticaIcons +-down- CacheForWarriorLightBg
+  HabiticaIcons +-down- CacheForWarriorDarkBg
+  HabiticaIcons +-down- CacheForRogue
+  HabiticaIcons +-down- CacheForRogueLightBg
+  HabiticaIcons +-down- CacheForRogueDarkBg
+  HabiticaIcons +-down- CacheForHealer
+  HabiticaIcons +-down- CacheForHealerLightBg
+  HabiticaIcons +-down- CacheForHealerDarkBg
+  HabiticaIcons +-down- CacheForMage
+  HabiticaIcons +-down- CacheForMageDarkBg
+  HabiticaIcons +-down- CacheForMageLightBg
+  HabiticaIcons +-down- CacheForCheckmark
+  HabiticaIcons +-down- CacheForHourglassShop
+  HabiticaIcons +-down- CacheForAttributeSparklesLeft
+  HabiticaIcons +-down- CacheForAttributeSparklesRight
+  HabiticaIcons +-down- CacheForAttributeAllocateButton
+  HabiticaIcons +-down- CacheForInfoIcon
+  HabiticaIcons +-down- CacheForContributorBadge
+  HabiticaIcons +-down- CacheForChatLikeIcon
+  HabiticaIcons +-down- CacheForQuestBackground
+  HabiticaIcons +-down- CacheForDamage
+  HabiticaIcons +-down- CacheForCaret
+  HabiticaIcons +-down- CacheForRageStrikeInactive
+  HabiticaIcons +-down- CacheForRageStrikeActive
+  HabiticaIcons +-down- CacheForRage
+  HabiticaIcons +-down- CacheForTaskDifficultyStars
+  HabiticaIcons +-down- CacheForTaskFormDifficultyStar
+  HabiticaIcons +-down- CacheForHabitControlPlus
+  HabiticaIcons +-down- CacheForHabitControlMinus
+  HabiticaIcons +-down- CacheForLocked
+  HabiticaIcons +-down- CacheForGuildCrest
+  HabiticaIcons +-down- CacheForGuildCrestMedium
+  HabiticaIcons +-down- CacheForGuildCrestSmall
+  HabiticaIcons +-down- CacheForGuildHeaderCrest
+  HabiticaIcons +-down- CacheForTwoHandedIcon
+  HabiticaIcons +-down- CacheForBlankAvatarIcon
+  HabiticaIcons +-down- CacheForDisclosureArrow
+  HabiticaIcons +-down- CacheForFilterIcon
+  HabiticaIcons +-down- CacheForDeclineIcon
+  HabiticaIcons +-down- CacheForAcceptIcon
+  HabiticaIcons +-down- CacheForBuffIcon
+  HabiticaIcons +-down- CacheForParticipantsIcon
+  HabiticaIcons +-down- CacheForChatReplyIcon
+  HabiticaIcons +-down- CacheForChatCopyIcon
+  HabiticaIcons +-down- CacheForChatReportIcon
+  HabiticaIcons +-down- CacheForChatDeleteIcon
+  HabiticaIcons +-down- CacheForAlertIcon
+  PaintCodeColor -up-|> Color
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

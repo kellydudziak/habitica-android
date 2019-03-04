@@ -1,0 +1,215 @@
+@startuml
+
+title __RESPONSES's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class BuyResponse {
+              + armoire : HashMap<String, String>
+              + lvl : Integer
+              + gp : Double
+              + exp : Double
+              + mp : Double
+              + hp : Double
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class ErrorResponse {
+              + message : String
+              + errors : List<HabiticaError>
+              + getDisplayMessage()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class FeedResponse {
+              + value : Integer
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class HabitResponse {
+              + notifications : List<Notification>
+              - success : Boolean
+              + getSuccess()
+              + setSuccess()
+              + getData()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class HabiticaError {
+              + message : String
+              + param : String
+              + value : String
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class MaintenanceResponse {
+              + activeMaintenance : Boolean
+              + minBuild : Integer
+              + title : String
+              + imageUrl : String
+              + description : String
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class PostChatMessageResult {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class SkillResponse {
+              + partyMembers : List<User>
+              + expDiff : double
+              + hpDiff : double
+              + goldDiff : double
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class Status {
+              - status : String
+              + getStatus()
+              + setStatus()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          enum TaskDirection {
+            up
+            down
+            dir
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class TaskDirectionData {
+              - delta : float
+              + exp : Double
+              + hp : Double
+              + gp : Double
+              + mp : Double
+              + lvl : Integer
+              + getDelta()
+              + setDelta()
+              + get_tmp()
+              + set_tmp()
+              + getExp()
+              + getHp()
+              + getGp()
+              + getMp()
+              + getLvl()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class UnlockResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  BuyResponse o-- Items : items
+  HabitResponse o-- T : data
+  PostChatMessageResult o-- ChatMessage : message
+  SkillResponse o-- User : user
+  SkillResponse o-- Task : task
+  TaskDirectionData o-- TaskDirectionDataTemp : _tmp
+  UnlockResponse o-- Preferences : preferences
+  UnlockResponse o-- Purchases : purchased
+  UnlockResponse o-- Items : items
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,283 @@
+@startuml
+
+title __INTERACTORS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class BuyRewardUseCase {
+            + BuyRewardUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class CheckClassSelectionUseCase {
+            + CheckClassSelectionUseCase()
+            # buildUseCaseObservable()
+            - displayClassSelectionActivity()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            - activity : Activity
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class ChecklistCheckUseCase {
+            + ChecklistCheckUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            # itemId : String
+            # taskId : String
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DailyCheckUseCase {
+            + DailyCheckUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            # up : boolean
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DisplayItemDropUseCase {
+            + DisplayItemDropUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            - context : AppCompatActivity
+            - snackbarTargetView : ViewGroup
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class HabitScoreUseCase {
+            + HabitScoreUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            # up : boolean
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class LevelUpUseCase {
+            + LevelUpUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            - newLevel : int
+            - activity : Activity
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class TodoCheckUseCase {
+            + TodoCheckUseCase()
+            # buildUseCaseObservable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class RequestValues {
+            # up : boolean
+            + RequestValues()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        abstract class UseCase {
+            # UseCase()
+            {abstract} # buildUseCaseObservable()
+            + observable()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        interface RequestValues {
+        }
+      }
+    }
+  }
+  
+
+  BuyRewardUseCase -up-|> UseCase
+  BuyRewardUseCase o-- TaskRepository : taskRepository
+  BuyRewardUseCase o-- SoundManager : soundManager
+  BuyRewardUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- Task : task
+  RequestValues o-- User : user
+  CheckClassSelectionUseCase -up-|> UseCase
+  CheckClassSelectionUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- User : user
+  RequestValues o-- SelectClassEvent : selectClassEvent
+  ChecklistCheckUseCase -up-|> UseCase
+  ChecklistCheckUseCase o-- TaskRepository : taskRepository
+  ChecklistCheckUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  DailyCheckUseCase -up-|> UseCase
+  DailyCheckUseCase o-- TaskRepository : taskRepository
+  DailyCheckUseCase o-- SoundManager : soundManager
+  DailyCheckUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- Task : task
+  RequestValues o-- User : user
+  DisplayItemDropUseCase -up-|> UseCase
+  DisplayItemDropUseCase o-- SoundManager : soundManager
+  DisplayItemDropUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- TaskScoringResult : data
+  HabitScoreUseCase -up-|> UseCase
+  HabitScoreUseCase o-- TaskRepository : taskRepository
+  HabitScoreUseCase o-- SoundManager : soundManager
+  HabitScoreUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- User : user
+  RequestValues o-- Task : habit
+  LevelUpUseCase -up-|> UseCase
+  LevelUpUseCase o-- SoundManager : soundManager
+  LevelUpUseCase o-- CheckClassSelectionUseCase : checkClassSelectionUseCase
+  LevelUpUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- User : user
+  TodoCheckUseCase -up-|> UseCase
+  TodoCheckUseCase o-- TaskRepository : taskRepository
+  TodoCheckUseCase o-- SoundManager : soundManager
+  TodoCheckUseCase +-down- RequestValues
+  RequestValues -up-|> RequestValues
+  RequestValues o-- Task : task
+  RequestValues o-- User : user
+  UseCase o-- ThreadExecutor : threadExecutor
+  UseCase o-- PostExecutionThread : postExecutionThread
+  UseCase +-down- RequestValues
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

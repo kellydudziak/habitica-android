@@ -1,0 +1,345 @@
+@startuml
+
+title __UTILS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class BooleanAsIntAdapter {
+            + write()
+            + read()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class ContentDeserializer {
+            + deserialize()
+            - populateMount()
+            - populatePet()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class CustomizationDeserializer {
+            + deserialize()
+            - parseCustomization()
+            - parseBackground()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class DateDeserializer {
+            - dateFormat : DateFormat
+            - alternativeFormat : DateFormat
+            - nextDueFormat : DateFormat
+            + DateDeserializer()
+            + deserialize()
+            + serialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class DateSerializer {
+            + serialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class EggListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class EquipmentListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FAQArticleListDeserilializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FeedResponseDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FoodListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class HatchingPotionListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MemberSerialization {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MountListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MountMapDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PetListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PetMapDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PurchasedDeserializer {
+            + deserialize()
+            - parseCustomization()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestCollectDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestDropItemsListSerialization {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestListDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class SkillDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskGroupPlanDeserializer {
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskListDeserializer {
+            - getIntListFromJsonArray()
+            - getMonthlyDays()
+            + deserialize()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskSerializer {
+            + serialize()
+            - serializeChecklist()
+            - serializeReminders()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskTagDeserializer {
+            + deserialize()
+            - alreadyContainsTag()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TutorialStepListDeserializer {
+            + deserialize()
+            - parseStep()
+        }
+      }
+    }
+  }
+  
+
+  BooleanAsIntAdapter -up-|> TypeAdapter
+  ContentDeserializer -up-|> JsonDeserializer
+  ContentDeserializer o-- CustomizationRepository : customizationRepository
+  CustomizationDeserializer -up-|> JsonDeserializer
+  DateDeserializer -up-|> JsonDeserializer
+  DateDeserializer -up-|> JsonSerializer
+  DateSerializer -up-|> JsonSerializer
+  EggListDeserializer -up-|> JsonDeserializer
+  EquipmentListDeserializer -up-|> JsonDeserializer
+  FAQArticleListDeserilializer -up-|> JsonDeserializer
+  FeedResponseDeserializer -up-|> JsonDeserializer
+  FoodListDeserializer -up-|> JsonDeserializer
+  HatchingPotionListDeserializer -up-|> JsonDeserializer
+  MemberSerialization -up-|> JsonDeserializer
+  MountListDeserializer -up-|> JsonDeserializer
+  MountMapDeserializer -up-|> JsonDeserializer
+  PetListDeserializer -up-|> JsonDeserializer
+  PetMapDeserializer -up-|> JsonDeserializer
+  PurchasedDeserializer -up-|> JsonDeserializer
+  QuestCollectDeserializer -up-|> JsonDeserializer
+  QuestDropItemsListSerialization -up-|> JsonDeserializer
+  QuestListDeserializer -up-|> JsonDeserializer
+  SkillDeserializer -up-|> JsonDeserializer
+  TaskGroupPlanDeserializer -up-|> JsonDeserializer
+  TaskListDeserializer -up-|> JsonDeserializer
+  TaskSerializer -up-|> JsonSerializer
+  TaskTagDeserializer -up-|> JsonDeserializer
+  TutorialStepListDeserializer -up-|> JsonDeserializer
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

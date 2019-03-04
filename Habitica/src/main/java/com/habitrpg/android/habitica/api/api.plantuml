@@ -1,0 +1,166 @@
+@startuml
+
+title __API's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        interface ApiService {
+            {abstract} + getStatus()
+            {abstract} + getContent()
+            {abstract} + getUser()
+            {abstract} + updateUser()
+            {abstract} + registrationLanguage()
+            {abstract} + getInboxMessages()
+            {abstract} + retrieveInAppRewards()
+            {abstract} + retrieveOldGearRewards()
+            {abstract} + equipItem()
+            {abstract} + buyItem()
+            {abstract} + purchaseItem()
+            {abstract} + purchaseHourglassItem()
+            {abstract} + purchaseMysterySet()
+            {abstract} + purchaseQuest()
+            {abstract} + sellItem()
+            {abstract} + feedPet()
+            {abstract} + hatchPet()
+            {abstract} + getTasks()
+            {abstract} + getTasks()
+            {abstract} + getTasks()
+            {abstract} + unlockPath()
+            {abstract} + getTask()
+            {abstract} + postTaskDirection()
+            {abstract} + postTaskNewPosition()
+            {abstract} + scoreChecklistItem()
+            {abstract} + createTask()
+            {abstract} + createTasks()
+            {abstract} + updateTask()
+            {abstract} + deleteTask()
+            {abstract} + createTag()
+            {abstract} + updateTag()
+            {abstract} + deleteTag()
+            {abstract} + registerUser()
+            {abstract} + connectLocal()
+            {abstract} + connectSocial()
+            {abstract} + sleep()
+            {abstract} + revive()
+            {abstract} + useSkill()
+            {abstract} + useSkill()
+            {abstract} + changeClass()
+            {abstract} + changeClass()
+            {abstract} + disableClasses()
+            {abstract} + markPrivateMessagesRead()
+            {abstract} + listGroups()
+            {abstract} + getGroup()
+            {abstract} + updateGroup()
+            {abstract} + listGroupChat()
+            {abstract} + joinGroup()
+            {abstract} + leaveGroup()
+            {abstract} + postGroupChat()
+            {abstract} + deleteMessage()
+            {abstract} + deleteInboxMessage()
+            {abstract} + getGroupMembers()
+            {abstract} + getGroupMembers()
+            {abstract} + likeMessage()
+            {abstract} + flagMessage()
+            {abstract} + seenMessages()
+            {abstract} + inviteToGroup()
+            {abstract} + rejectGroupInvite()
+            {abstract} + acceptQuest()
+            {abstract} + rejectQuest()
+            {abstract} + cancelQuest()
+            {abstract} + forceStartQuest()
+            {abstract} + inviteToQuest()
+            {abstract} + abortQuest()
+            {abstract} + leaveQuest()
+            {abstract} + validatePurchase()
+            {abstract} + validateSubscription()
+            {abstract} + validateNoRenewSubscription()
+            {abstract} + changeCustomDayStart()
+            {abstract} + getMember()
+            {abstract} + getMemberWithUsername()
+            {abstract} + getMemberAchievements()
+            {abstract} + postPrivateMessage()
+            {abstract} + retrieveShopInventory()
+            {abstract} + retrieveMarketGear()
+            {abstract} + addPushDevice()
+            {abstract} + deletePushDevice()
+            {abstract} + getUserChallenges()
+            {abstract} + getUserChallenges()
+            {abstract} + getChallengeTasks()
+            {abstract} + getChallenge()
+            {abstract} + joinChallenge()
+            {abstract} + leaveChallenge()
+            {abstract} + createChallenge()
+            {abstract} + createChallengeTasks()
+            {abstract} + createChallengeTask()
+            {abstract} + updateChallenge()
+            {abstract} + deleteChallenge()
+            {abstract} + debugAddTenGems()
+            {abstract} + readNotification()
+            {abstract} + openMysteryItem()
+            {abstract} + runCron()
+            {abstract} + resetAccount()
+            {abstract} + deleteAccount()
+            {abstract} + togglePinnedItem()
+            {abstract} + sendPasswordResetEmail()
+            {abstract} + updateLoginName()
+            {abstract} + verifyUsername()
+            {abstract} + updateEmail()
+            {abstract} + updatePassword()
+            {abstract} + allocatePoint()
+            {abstract} + bulkAllocatePoints()
+            {abstract} + getWorldState()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        class GSonFactoryCreator {
+            {static} + create()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        interface MaintenanceApiService {
+            {abstract} + getMaintenanceStatus()
+            {abstract} + getDepricationStatus()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        class Server {
+            - addr : String
+            + Server()
+            - Server()
+            + Server()
+            + toString()
+        }
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

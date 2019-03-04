@@ -1,0 +1,476 @@
+@startuml
+
+title __INVENTORY's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          interface Animal {
+              {abstract} + getKey()
+              {abstract} + setKey()
+              {abstract} + getAnimal()
+              {abstract} + setAnimal()
+              {abstract} + getColor()
+              {abstract} + setColor()
+              {abstract} + getAnimalGroup()
+              {abstract} + setAnimalGroup()
+              {abstract} + getAnimalText()
+              {abstract} + setAnimalText()
+              {abstract} + getColorText()
+              {abstract} + setColorText()
+              {abstract} + getPremium()
+              {abstract} + setPremium()
+              {abstract} + getLimited()
+              {abstract} + setLimited()
+              {abstract} + getNumberOwned()
+              {abstract} + setNumberOwned()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Customization {
+              - id : String
+              - identifier : String
+              - category : String
+              - type : String
+              - notes : String
+              - customizationSet : String
+              - customizationSetName : String
+              - text : String
+              - purchased : boolean
+              - isBuyable : boolean
+              - price : Integer
+              - setPrice : Integer
+              - availableFrom : Date
+              - availableUntil : Date
+              - updateID()
+              + getId()
+              + setId()
+              + getIdentifier()
+              + setIdentifier()
+              + getCategory()
+              + setCategory()
+              + getType()
+              + setType()
+              + getNotes()
+              + setNotes()
+              + getCustomizationSet()
+              + setCustomizationSet()
+              + getCustomizationSetName()
+              + setCustomizationSetName()
+              + getText()
+              + setText()
+              + getPurchasable()
+              + getPurchased()
+              + setPurchased()
+              + getPrice()
+              + setPrice()
+              + getSetPrice()
+              + setSetPrice()
+              + getAvailableFrom()
+              + setAvailableFrom()
+              + getAvailableUntil()
+              + setAvailableUntil()
+              + getImageName()
+              + isUsable()
+              + getPath()
+              + getIsBuyable()
+              + setIsBuyable()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class CustomizationSet {
+              + text : String
+              + identifier : String
+              + price : Integer
+              + hasPurchasable : boolean
+              + customizations : List<Customization>
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Egg {
+              ~ key : String
+              ~ text : String
+              ~ notes : String
+              ~ value : Integer
+              ~ owned : Integer
+              ~ adjective : String
+              ~ mountText : String
+              ~ stableOwned : Integer
+              ~ stableTotal : Integer
+              + getAdjective()
+              + setAdjective()
+              + getMountText()
+              + setMountText()
+              + getStableOwned()
+              + setStableOwned()
+              + getStableTotal()
+              + setStableTotal()
+              + getType()
+              + getKey()
+              + setOwned()
+              + getText()
+              + getOwned()
+              + getValue()
+              + setText()
+              + setValue()
+              + getNotes()
+              + setNotes()
+              + setKey()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Food {
+              ~ key : String
+              ~ text : String
+              ~ notes : String
+              ~ value : Integer
+              ~ owned : Integer
+              ~ target : String
+              ~ article : String
+              ~ canDrop : Boolean
+              + getTarget()
+              + setTarget()
+              + getArticle()
+              + setArticle()
+              + getCanDrop()
+              + setCanDrop()
+              + getType()
+              + getKey()
+              + setOwned()
+              + getText()
+              + getOwned()
+              + getValue()
+              + setText()
+              + getNotes()
+              + setValue()
+              + setNotes()
+              + setKey()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class HatchingPotion {
+              ~ key : String
+              ~ text : String
+              ~ notes : String
+              ~ value : Integer
+              ~ owned : Integer
+              ~ limited : Boolean
+              ~ premium : Boolean
+              + getLimited()
+              + setLimited()
+              + getPremium()
+              + setPremium()
+              + getType()
+              + getKey()
+              + setOwned()
+              + getText()
+              + getOwned()
+              + getValue()
+              + setText()
+              + setValue()
+              + getNotes()
+              + setNotes()
+              + setKey()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          interface Item {
+              {abstract} + getType()
+              {abstract} + getKey()
+              {abstract} + setOwned()
+              {abstract} + getText()
+              {abstract} + getOwned()
+              {abstract} + getValue()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Mount {
+              ~ owned : Boolean
+              ~ key : String
+              ~ animal : String
+              ~ color : String
+              ~ animalGroup : String
+              ~ animalText : String
+              ~ colorText : String
+              ~ premium : boolean
+              ~ limited : boolean
+              ~ numberOwned : Integer
+              + getKey()
+              + setKey()
+              + getAnimal()
+              + setAnimal()
+              + getColor()
+              + setColor()
+              + getAnimalGroup()
+              + setAnimalGroup()
+              + getAnimalText()
+              + setAnimalText()
+              + getColorText()
+              + setColorText()
+              + getPremium()
+              + setPremium()
+              + getLimited()
+              + setLimited()
+              + getNumberOwned()
+              + setNumberOwned()
+              + getOwned()
+              + setOwned()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Pet {
+              ~ trained : Integer
+              ~ key : String
+              ~ animal : String
+              ~ color : String
+              ~ animalGroup : String
+              ~ animalText : String
+              ~ colorText : String
+              ~ premium : boolean
+              ~ limited : boolean
+              - numberOwned : Integer
+              + getKey()
+              + setKey()
+              + getAnimal()
+              + setAnimal()
+              + getColor()
+              + setColor()
+              + getAnimalGroup()
+              + setAnimalGroup()
+              + getAnimalText()
+              + setAnimalText()
+              + getColorText()
+              + setColorText()
+              + getPremium()
+              + setPremium()
+              + getLimited()
+              + setLimited()
+              + getNumberOwned()
+              + setNumberOwned()
+              + getTrained()
+              + setTrained()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestCollect {
+              + key : String
+              + text : String
+              + count : int
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestDropItem {
+              - combinedKey : String
+              - questKey : String
+              - key : String
+              - type : String
+              - text : String
+              - onlyOwner : boolean
+              - count : int
+              + QuestDropItem()
+              + getCombinedKey()
+              + setCombinedKey()
+              + getQuestKey()
+              + setQuestKey()
+              + getKey()
+              + setKey()
+              + getType()
+              + setType()
+              + getText()
+              + setText()
+              + getCount()
+              + setCount()
+              + getImageName()
+              + isOnlyOwner()
+              + setOnlyOwner()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestDrops {
+              - key : String
+              + gp : int
+              + exp : int
+              + unlock : String
+              - items : RealmList<QuestDropItem>
+              + QuestDrops()
+              + getKey()
+              + setKey()
+              + getItems()
+              + setItems()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestMember {
+              + key : String
+              + isParticipating : Boolean
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestProgressCollect {
+              + key : String
+              + count : int
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class SpecialItem {
+              ~ key : String
+              ~ text : String
+              ~ notes : String
+              ~ value : Integer
+              ~ owned : Integer
+              + isMysteryItem : boolean
+              {static} + makeMysteryItem()
+              + getType()
+              + getKey()
+              + setOwned()
+              + getText()
+              + getOwned()
+              + getValue()
+          }
+        }
+      }
+    }
+  }
+  
+
+  Customization -up-|> RealmObject
+  Egg -up-|> Item
+  Egg -up-|> RealmObject
+  Food -up-|> Item
+  Food -up-|> RealmObject
+  HatchingPotion -up-|> Item
+  HatchingPotion -up-|> RealmObject
+  Mount -up-|> Animal
+  Mount -up-|> RealmObject
+  Pet -up-|> Animal
+  Pet -up-|> RealmObject
+  QuestCollect -up-|> RealmObject
+  QuestDropItem -up-|> RealmObject
+  QuestDrops -up-|> RealmObject
+  QuestMember -up-|> RealmObject
+  QuestProgressCollect -up-|> RealmObject
+  SpecialItem -up-|> Item
+  SpecialItem -up-|> RealmObject
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

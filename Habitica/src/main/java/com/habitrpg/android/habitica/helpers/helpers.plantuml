@@ -1,0 +1,286 @@
+@startuml
+
+title __HELPERS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class AmplitudeManager {
+            {static} + EVENT_CATEGORY_BEHAVIOUR : String
+            {static} + EVENT_CATEGORY_NAVIGATION : String
+            {static} + EVENT_HITTYPE_EVENT : String
+            {static} + EVENT_HITTYPE_PAGEVIEW : String
+            {static} + EVENT_HITTYPE_CREATE_WIDGET : String
+            {static} + EVENT_HITTYPE_REMOVE_WIDGET : String
+            {static} + EVENT_HITTYPE_UPDATE_WIDGET : String
+            {static} + sendEvent()
+            {static} + sendEvent()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class FirstDayOfTheWeekHelper {
+            - firstDayOfTheWeek : int
+            + dailyTaskFormOffset : int
+            - FirstDayOfTheWeekHelper()
+            {static} + newInstance()
+            + getFirstDayOfTheWeek()
+            + getDailyTaskFormOffset()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class LanguageHelper {
+            - locale : Locale
+            - languageCode : String
+            + LanguageHelper()
+            + getLanguageCode()
+            + getLocale()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class MathHelper {
+            {static} + round()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class PopupNotificationsManager {
+            - seenNotifications : Map<String, Boolean>
+            - context : Context
+            + PopupNotificationsManager()
+            + setApiClient()
+            ~ displayNotification()
+            + showNotificationDialog()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class PurchaseTypes {
+            {static} + Purchase4Gems : String
+            {static} + Purchase21Gems : String
+            {static} + Purchase42Gems : String
+            {static} + Purchase84Gems : String
+            {static} + allGemTypes : List<String>
+            {static} + Subscription1Month : String
+            {static} + Subscription3Month : String
+            {static} + Subscription6Month : String
+            {static} + Subscription12Month : String
+            {static} + allSubscriptionTypes : List<String>
+            {static} + Subscription1MonthNoRenew : String
+            {static} + Subscription3MonthNoRenew : String
+            {static} + Subscription6MonthNoRenew : String
+            {static} + Subscription12MonthNoRenew : String
+            {static} + allSubscriptionNoRenewTypes : List<String>
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class QrCodeManager {
+            {static} - qrProfileUrl : String
+            - content : String
+            - userId : String
+            - context : Context
+            - qrCodeImageView : ImageView
+            - qrCodeDownloadButton : Button
+            - qrCodeWrapper : FrameLayout
+            - albumnName : String
+            - fileName : String
+            - saveMessage : String
+            + QrCodeManager()
+            + setUpView()
+            - displayQrCode()
+            - dipToPixels()
+            - setDownloadQr()
+            - getAlbumStorageDir()
+            + showDialogue()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RemindersManager {
+            - dateFormater : DateFormat
+            + RemindersManager()
+            - createReminderFromDateString()
+            + reminderTimeToString()
+            + createReminderTimeDialog()
+            - onReminderTimeSelected()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        interface ReminderTimeSelectedCallback {
+            {abstract} + onReminderTimeSelected()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RemoteConfigManager {
+            - context : Context
+            - enableRepeatbles : Boolean
+            - enableNewShops : Boolean
+            - shopSpriteSuffix : String
+            - maxChatLength : Integer
+            - enableGiftOneGetOne : Boolean
+            - REMOTE_STRING_KEY : String
+            + RemoteConfigManager()
+            + repeatablesAreEnabled()
+            + newShopsEnabled()
+            + shopSpriteSuffix()
+            + maxChatLength()
+            + enableGiftOneGetOne()
+            - loadFromPreferences()
+            - parseConfig()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class DownloadFileFromURL {
+            - filename : String
+            # onPreExecute()
+            # doInBackground()
+            # onPostExecute()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RxErrorHandler {
+            {static} - instance : RxErrorHandler
+            {static} + init()
+            {static} + handleEmptyError()
+            {static} + reportError()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class UserStatComputer {
+            + computeClassBonus()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        interface StatsRow {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class AttributeRow {
+            + labelId : int
+            + strVal : float
+            + intVal : float
+            + conVal : float
+            + perVal : float
+            + roundDown : boolean
+            + isSummary : boolean
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class EquipmentRow {
+            + gearKey : String
+            + text : String
+            + stats : String
+        }
+      }
+    }
+  }
+  
+
+  PopupNotificationsManager o-- ApiClient : apiClient
+  QrCodeManager o-- UserRepository : userRepository
+  RemindersManager o-- CrashlyticsProxy : crashlyticsProxy
+  RemindersManager +-down- ReminderTimeSelectedCallback
+  RemoteConfigManager +-down- DownloadFileFromURL
+  DownloadFileFromURL -up-|> AsyncTask
+  RxErrorHandler o-- CrashlyticsProxy : crashlyticsProxy
+  UserStatComputer +-down- StatsRow
+  UserStatComputer +-down- AttributeRow
+  UserStatComputer +-down- EquipmentRow
+  AttributeRow -up-|> StatsRow
+  EquipmentRow -up-|> StatsRow
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

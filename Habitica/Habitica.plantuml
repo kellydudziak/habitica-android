@@ -1,0 +1,6275 @@
+@startuml
+
+title __HABITICA's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class APIPreferenceFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class AboutFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Achievement {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class AchievementGroup {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class AchievementResult {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class AddTaskWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class AmplitudeManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          interface Animal {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule_ProvidesApiHelperFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule_ProvidesGsonConverterFactoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule_ProvidesHostConfigFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule_ProvidesMaintenanceApiServiceFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class ApiModule_ProvidesPopupNotificationsManagerFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        interface ApiService {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.components {
+        interface AppComponent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidePostExecutionThreadFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvideSharedPreferencesFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvideThreadExecutorFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesContextFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesRemoteConfiigManagerFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesResourcesFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesSoundFileLoaderFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesSoundManagerFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesTagsHelperFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesTaskAlarmManagerFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_ProvidesUserIDFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class AppModule_PushNotificationManagerFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class AuthenticationPreferenceFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        interface Avatar {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.customization {
+            class AvatarCustomizationFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.customization {
+            class AvatarCustomizationFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.customization {
+            class AvatarOverviewFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.customization {
+            class AvatarOverviewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        interface AvatarPreferences {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.setup {
+            class AvatarSetupFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class AvatarStatsWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class AvatarStatsWidgetProvider_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.social {
+          class Backer {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BadgeCircle {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BadgeContainer {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class BaseFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class BaseMainFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class BasePreferencesFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.tasks {
+          class BaseTasksRecyclerViewAdapter_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.viewmodels {
+          class BaseViewModel_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class BaseWidgetProvider_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BatchTabPropertyApplier {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.userpicture {
+        class BitmapUtils {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class BooleanAsIntAdapter {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBar {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBarBadge {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBarTab {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomNavigationBehavior {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.menu {
+          class BottomSheetMenu {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.menu {
+          class BottomSheetMenuItem {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.menu {
+          interface BottomSheetMenuSelectionRunnable {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class BoughtGemsEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Buffs {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class BuildConfig {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.stats {
+            class BulkAllocateStatsDialog_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class BuyResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class BuyRewardCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class BuyRewardUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class BuyRewardUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengeDetailFragmentArgs {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengeDetailFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengeFilterOptions {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class ChallengeFormActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengeListFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.social.challenges {
+          class ChallengeTasksRecyclerViewAdapter_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengesOverviewFragmentDirections {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.challenges {
+              class ChallengesOverviewFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class ChatFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class ChatListFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class CheckClassSelectionUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class CheckClassSelectionUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class ChecklistCheckUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class ChecklistCheckUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class ChecklistCheckedCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class ClassSelectionActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class ContentDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class ContentDeserializer_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class ContentGear {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class ContentResult {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class ContributorInfo {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.proxy {
+        interface CrashlyticsProxy {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.proxy {
+        class CrashlyticsProxyImpl {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.proxy {
+        class CrashlyticsProxyImpl {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Customization {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class CustomizationDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class CustomizationSet {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.components {
+        class DaggerAppComponent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesListFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesWidgetProvider_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesWidgetService {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DailyCheckUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DailyCheckUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class DateDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class DateSerializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.tasks {
+          class Days {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class DebugDeveloperModule {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class DefaultRealmModule {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class DefaultRealmModuleMediator {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class DeveloperModule {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class DeveloperModule_ProvideCrashlyticsProxyFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DisplayItemDropUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class DisplayItemDropUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class DisplayTutorialEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Egg {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class EggListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.proxy {
+        package com.habitrpg.android.habitica.proxy.implementation {
+          class EmptyCrashlyticsProxy {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class EquipCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.equipment {
+            class EquipmentDetailFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.equipment {
+            class EquipmentDetailFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class EquipmentListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.equipment {
+            class EquipmentOverviewFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.equipment {
+            class EquipmentOverviewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class ErrorResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class FAQArticle {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FAQArticleListDeserilializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.faq {
+            class FAQDetailFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.faq {
+            class FAQDetailFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.faq {
+            class FAQOverviewFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.faq {
+            class FAQOverviewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class FeedCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class FeedResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FeedResponseDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class FirstDayOfTheWeekHelper {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class FixCharacterValuesActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Flags {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class FloatingActionMenuBehavior {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Food {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class FoodListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class FullProfileActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        class GSonFactoryCreator {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Gear {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class GemPurchaseActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class GemsPurchaseFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class GiftIAPActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class GroupInformationFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.viewmodels {
+          class GroupViewModel_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class GuildFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class GuildFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.invitations {
+          class GuildInvite {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class GuildsOverviewFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class GuildsOverviewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class HabitButtonWidgetActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetProvider_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetService {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetService_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class HabitResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        enum HabitRpgClass {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class HabitScoreEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class HabitScoreUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class HabitScoreUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class HabiticaApplication {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class HabiticaApplication {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class HabiticaApplication {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class HabiticaBaseApplication_MembersInjector {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class HabiticaError {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        package com.habitrpg.android.habitica.helpers.notifications {
+          class HabiticaFirebaseInstanceIDService {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        package com.habitrpg.android.habitica.helpers.notifications {
+          class HabiticaFirebaseInstanceIDService_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        package com.habitrpg.android.habitica.helpers.notifications {
+          class HabiticaFirebaseMessagingService {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        package com.habitrpg.android.habitica.helpers.notifications {
+          class HabiticaFirebaseMessagingService_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class HabiticaIcons {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class HabiticaIconsHelper {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        package com.habitrpg.android.habitica.helpers.notifications {
+          class HabiticaLocalNotificationFactory {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class HabiticaPurchaseVerifier {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Hair {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class HatchingCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class HatchingPotion {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class HatchingPotionListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class IAPGift {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Inbox {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class InboxFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class InboxFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class InboxMessageListFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class InboxMessageListFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.prefs {
+        package com.habitrpg.android.habitica.prefs.scanner {
+          class IntentIntegrator {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.prefs {
+        package com.habitrpg.android.habitica.prefs.scanner {
+          class IntentResult {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class IntroActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.setup {
+            class IntroFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          interface Item {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.items {
+            class ItemRecyclerFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperDropCallback {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperViewHolder {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Items {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.items {
+            class ItemsFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        class JobExecutor {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        class JobExecutor_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class LanguageHelper {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class LeaveChallengeBody {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class LevelUpUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class LevelUpUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.auth {
+          class LocalAuthentication {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class LocalNotificationActionReceiver {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class LocalNotificationActionReceiver_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class LoginActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class MainActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class MaintenanceActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        interface MaintenanceApiService {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class MaintenanceResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class MarginDecoration {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class MathHelper {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MemberSerialization {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class MiscUtils {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Mount {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class MountDetailRecyclerFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class MountDetailRecyclerFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MountListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class MountMapDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class NavigationDrawerFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class NewsFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Notification {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.notifications {
+          class NotificationData {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class NotificationPublisher_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class NotifyUserUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface OnTabReselectListener {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface OnTabSelectListener {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class OpenMysteryItemEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeBitmap {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeColor {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeDashPathEffect {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeShadow {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          class PaintCodeStaticLayout {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.party {
+              class PartyDetailFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.party {
+              class PartyFragmentDirections {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.party {
+              class PartyFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.invitations {
+          class PartyInvite {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class PartyInviteActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.party {
+              class PartyInviteFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            package com.habitrpg.android.habitica.ui.fragments.social.party {
+              class PartyMemberListFragment_MembersInjector {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class Pet {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class PetDetailRecyclerFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class PetDetailRecyclerFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PetListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PetMapDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class PopupNotificationsManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class PostChatMessageResult {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        interface PostExecutionThread {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class PreferencesFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Profile {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class ProfilePreferencesFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class PublicGuildsFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class PublicGuildsFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.shops {
+            class PurchaseDialog_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class PurchaseTypes {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class PurchaseValidationResult {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class PurchasedDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Purchases {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class PushDevice {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.preferences {
+            class PushNotificationsPreferencesFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class QrCodeManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestCollect {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestCollectDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class QuestDetailFragmentArgs {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class QuestDetailFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestDropItem {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestDropItemsListSerialization {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestDrops {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class QuestListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestMember {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class QuestProgressCollect {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class ReleaseDeveloperModule {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      class ReleaseDeveloperModule {
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RemindersManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RemindersManager_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RemoteConfigManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvideChallengeLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesChallengeRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesCustomizationLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesCustomizationRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesFAQLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesFAQRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesInventoryLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesInventoryRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesRealmFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesSetupCustomizationRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesSocialLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesSocialRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTagLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTagRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTaskLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTaskRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTutorialLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesTutorialRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesUserLocalRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.modules {
+        class RepositoryModule_ProvidesUserRepositoryFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.notifications {
+          class Reward {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.tasks {
+          class RewardsRecyclerViewAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class RxErrorHandler {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class SafeDefaultItemAnimator {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class SelectClassEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class SendNewInboxMessageCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.api {
+        class Server {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class SetupActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.data.implementation {
+        class SetupCustomizationRepositoryImpl_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class ShareEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.shops {
+            class ShopFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.shops {
+            class ShopsFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class ShowCheckinDialog {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class ShowConnectionProblemEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class ShowSnackbarEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class ShySettings {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class SimpleItemTouchHelperCallback {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class SkillDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class SkillMemberActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class SkillResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class SkillTasksActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.skills {
+            class SkillTasksRecyclerViewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.skills {
+            class SkillsFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.tasks {
+          abstract class SortableTasksRecyclerViewAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.tasks {
+          class SortableTasksRecyclerViewAdapter_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class SoundManager_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.inventory {
+          class SpecialItem {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SpecialItems {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class StableFragmentDirections {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class StableFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.inventory.stable {
+            class StableRecyclerFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class StatsFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class Status {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          class SubscriptionFragment_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SubscriptionPlan {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SubscriptionPlanConsecutive {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SuppressedModals {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class TabParser {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface TabSelectionInterceptor {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Tag {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class TaskAlarmBootReceiver {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class TaskAlarmBootReceiver_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class TaskCheckedCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          enum TaskDirection {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class TaskDirectionData {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.tasks {
+            class TaskFilterDialog_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class TaskFormActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskGroupPlanDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.tasks {
+          class TaskList {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        abstract class TaskListFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TaskListFactory_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        abstract class TaskListWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TaskListWidgetProvider_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.receivers {
+        class TaskReceiver_MembersInjector {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.adapter.tasks {
+          interface TaskRecyclerViewAdapter {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.tasks {
+            class TaskRecyclerViewFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskSerializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.setup {
+            class TaskSetupFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.tasks {
+          class TaskTag {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TaskTagDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class TaskTappedEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.tasks {
+            class TasksFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.tasks {
+          class TasksOrder {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class TavernDetailFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.social {
+            class TavernFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        interface ThreadExecutor {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.prefs {
+        class TimePreference {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class TodoCheckUseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        class TodoCheckUseCase_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodoListFactory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodoListWidgetProvider {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodosWidgetService {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Training {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Transaction {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.utils {
+        class TutorialStepListDeserializer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        class UIThread {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.executors {
+        class UIThread_Factory {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.responses {
+          class UnlockResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class UpdateUserCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.interactors {
+        abstract class UseCase {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        package com.habitrpg.android.habitica.events.commands {
+          class UseSkillCommand {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.auth {
+          class UserAuth {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.auth {
+          class UserAuthResponse {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.auth {
+          class UserAuthSocial {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.auth {
+          class UserAuthSocialTokens {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.helpers {
+        class UserStatComputer {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.events {
+        class UserSubscribedEvent {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.activities {
+          class VerifyUsernameActivity_MembersInjector {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            abstract class VerticalScrollingBehavior {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class ViewHelper {
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.fragments {
+          package com.habitrpg.android.habitica.ui.fragments.setup {
+            class WelcomeFragment_MembersInjector {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        class WrapContentRecyclerViewLayoutManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_FAQArticleRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_FAQArticleRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_SkillRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_SkillRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_TagRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_TagRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_TutorialStepRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_TutorialStepRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_EggRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_EggRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_FoodRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_FoodRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_MountRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_MountRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_PetRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_PetRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_QuestRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_QuestRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_members_MemberRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_members_MemberRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_shops_ShopItemRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_shops_ShopItemRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_BackerRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_BackerRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_ChallengeRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_ChallengeRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_ChatMessageRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_ChatMessageRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_GroupRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_GroupRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_UserPartyRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_UserPartyRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_social_UserStylesRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_social_UserStylesRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_DaysRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_DaysRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_TaskRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_TaskRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_ABTestRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_ABTestRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_AuthenticationRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_AuthenticationRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_BuffsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_BuffsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_FlagsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_FlagsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_GearRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_GearRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_HairRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_HairRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_InboxRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_InboxRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_ItemsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_ItemsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_OutfitRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_OutfitRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_PreferencesRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_PreferencesRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_ProfileRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_ProfileRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_PurchasesRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_PurchasesRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_StatsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_StatsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_TrainingRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_TrainingRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      class com_habitrpg_android_habitica_models_user_UserRealmProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package io.realm {
+      interface com_habitrpg_android_habitica_models_user_UserRealmProxyInterface {
+      }
+    }
+  }
+  
+
+  APIPreferenceFragment_MembersInjector -up-|> MembersInjector
+  AboutFragment_MembersInjector -up-|> MembersInjector
+  AchievementResult o-- AchievementGroup : basic
+  AchievementResult o-- AchievementGroup : seasonal
+  AchievementResult o-- AchievementGroup : special
+  AddTaskWidgetProvider -up-|> BaseWidgetProvider
+  ApiModule_ProvidesApiHelperFactory -up-|> Factory
+  ApiModule_ProvidesApiHelperFactory o-- ApiModule : module
+  ApiModule_ProvidesGsonConverterFactoryFactory -up-|> Factory
+  ApiModule_ProvidesGsonConverterFactoryFactory o-- ApiModule : module
+  ApiModule_ProvidesHostConfigFactory -up-|> Factory
+  ApiModule_ProvidesHostConfigFactory o-- ApiModule : module
+  ApiModule_ProvidesMaintenanceApiServiceFactory -up-|> Factory
+  ApiModule_ProvidesMaintenanceApiServiceFactory o-- ApiModule : module
+  ApiModule_ProvidesPopupNotificationsManagerFactory -up-|> Factory
+  ApiModule_ProvidesPopupNotificationsManagerFactory o-- ApiModule : module
+  AppModule_ProvidePostExecutionThreadFactory -up-|> Factory
+  AppModule_ProvidePostExecutionThreadFactory o-- AppModule : module
+  AppModule_ProvideSharedPreferencesFactory -up-|> Factory
+  AppModule_ProvideSharedPreferencesFactory o-- AppModule : module
+  AppModule_ProvideThreadExecutorFactory -up-|> Factory
+  AppModule_ProvideThreadExecutorFactory o-- AppModule : module
+  AppModule_ProvidesContextFactory -up-|> Factory
+  AppModule_ProvidesContextFactory o-- AppModule : module
+  AppModule_ProvidesRemoteConfiigManagerFactory -up-|> Factory
+  AppModule_ProvidesRemoteConfiigManagerFactory o-- AppModule : module
+  AppModule_ProvidesResourcesFactory -up-|> Factory
+  AppModule_ProvidesResourcesFactory o-- AppModule : module
+  AppModule_ProvidesSoundFileLoaderFactory -up-|> Factory
+  AppModule_ProvidesSoundFileLoaderFactory o-- AppModule : module
+  AppModule_ProvidesSoundManagerFactory -up-|> Factory
+  AppModule_ProvidesSoundManagerFactory o-- AppModule : module
+  AppModule_ProvidesTagsHelperFactory -up-|> Factory
+  AppModule_ProvidesTagsHelperFactory o-- AppModule : module
+  AppModule_ProvidesTaskAlarmManagerFactory -up-|> Factory
+  AppModule_ProvidesTaskAlarmManagerFactory o-- AppModule : module
+  AppModule_ProvidesUserIDFactory -up-|> Factory
+  AppModule_ProvidesUserIDFactory o-- AppModule : module
+  AppModule_PushNotificationManagerFactory -up-|> Factory
+  AppModule_PushNotificationManagerFactory o-- AppModule : module
+  AuthenticationPreferenceFragment_MembersInjector -up-|> MembersInjector
+  AvatarCustomizationFragment_MembersInjector -up-|> MembersInjector
+  AvatarOverviewFragment_MembersInjector -up-|> MembersInjector
+  AvatarSetupFragment_MembersInjector -up-|> MembersInjector
+  AvatarStatsWidgetProvider -up-|> BaseWidgetProvider
+  AvatarStatsWidgetProvider o-- UserRepository : userRepository
+  AvatarStatsWidgetProvider_MembersInjector -up-|> MembersInjector
+  Backer -up-|> RealmObject
+  BadgeContainer -up-|> FrameLayout
+  BaseFragment_MembersInjector -up-|> MembersInjector
+  BaseMainFragment_MembersInjector -up-|> MembersInjector
+  BasePreferencesFragment_MembersInjector -up-|> MembersInjector
+  BaseTasksRecyclerViewAdapter_MembersInjector -up-|> MembersInjector
+  BaseViewModel_MembersInjector -up-|> MembersInjector
+  BaseWidgetProvider_MembersInjector -up-|> MembersInjector
+  BatchTabPropertyApplier o-- BottomBar : bottomBar
+  BooleanAsIntAdapter -up-|> TypeAdapter
+  BottomBar -up-|> OnClickListener
+  BottomBar -up-|> OnLongClickListener
+  BottomBar -up-|> LinearLayout
+  BottomBar o-- BatchTabPropertyApplier : batchPropertyApplier
+  BottomBar o-- TabSelectionInterceptor : tabSelectionInterceptor
+  BottomBar o-- OnTabSelectListener : onTabSelectListener
+  BottomBar o-- OnTabReselectListener : onTabReselectListener
+  BottomBar o-- ShySettings : shySettings
+  BottomBarBadge -up-|> AppCompatTextView
+  BottomBarTab -up-|> LinearLayout
+  BottomBarTab o-- BottomBarBadge : badge
+  BottomBarTab o-- Type : type
+  BottomNavigationBehavior -up-|> VerticalScrollingBehavior
+  BottomNavigationBehavior o-- BottomNavigationWithSnackbar : mWithSnackBarImpl
+  BottomSheetMenu -up-|> OnClickListener
+  BottomSheetMenu -up-|> BottomSheetDialog
+  BottomSheetMenu o-- BottomSheetMenuSelectionRunnable : runnable
+  Buffs -up-|> RealmObject
+  BulkAllocateStatsDialog_MembersInjector -up-|> MembersInjector
+  BuyResponse o-- Items : items
+  BuyRewardCommand o-- Task : Reward
+  BuyRewardUseCase -up-|> UseCase
+  BuyRewardUseCase o-- TaskRepository : taskRepository
+  BuyRewardUseCase o-- SoundManager : soundManager
+  BuyRewardUseCase_Factory -up-|> Factory
+  ChallengeDetailFragment_MembersInjector -up-|> MembersInjector
+  ChallengeFormActivity_MembersInjector -up-|> MembersInjector
+  ChallengeListFragment_MembersInjector -up-|> MembersInjector
+  ChallengeTasksRecyclerViewAdapter_MembersInjector -up-|> MembersInjector
+  ChallengesOverviewFragment_MembersInjector -up-|> MembersInjector
+  ChatFragment_MembersInjector -up-|> MembersInjector
+  ChatListFragment_MembersInjector -up-|> MembersInjector
+  CheckClassSelectionUseCase -up-|> UseCase
+  CheckClassSelectionUseCase_Factory -up-|> Factory
+  ChecklistCheckUseCase -up-|> UseCase
+  ChecklistCheckUseCase o-- TaskRepository : taskRepository
+  ChecklistCheckUseCase_Factory -up-|> Factory
+  ChecklistCheckedCommand o-- Task : task
+  ChecklistCheckedCommand o-- ChecklistItem : item
+  ClassSelectionActivity_MembersInjector -up-|> MembersInjector
+  ContentDeserializer -up-|> JsonDeserializer
+  ContentDeserializer o-- CustomizationRepository : customizationRepository
+  ContentDeserializer_MembersInjector -up-|> MembersInjector
+  ContentResult o-- Equipment : potion
+  ContentResult o-- Equipment : armoire
+  ContentResult o-- ContentGear : gear
+  ContributorInfo -up-|> RealmObject
+  ContributorInfo o-- User : user
+  CrashlyticsProxyImpl -up-|> CrashlyticsProxy
+  CrashlyticsProxyImpl -up-|> CrashlyticsProxy
+  Customization -up-|> RealmObject
+  CustomizationDeserializer -up-|> JsonDeserializer
+  DaggerAppComponent -up-|> AppComponent
+  DaggerAppComponent o-- RepositoryModule : repositoryModule
+  DaggerAppComponent o-- AppModule : appModule
+  DaggerAppComponent o-- ApiModule : apiModule
+  DaggerAppComponent o-- ApiModule_ProvidesGsonConverterFactoryFactory : providesGsonConverterFactoryProvider
+  DaggerAppComponent o-- RepositoryModule_ProvidesRealmFactory : providesRealmProvider
+  DaggerAppComponent o-- RepositoryModule_ProvidesTaskLocalRepositoryFactory : providesTaskLocalRepositoryProvider
+  DaggerAppComponent o-- AppModule_ProvidesUserIDFactory : providesUserIDProvider
+  DailiesListFactory -up-|> TaskListFactory
+  DailiesWidgetProvider -up-|> TaskListWidgetProvider
+  DailiesWidgetProvider o-- ApiClient : apiClient
+  DailiesWidgetProvider o-- HostConfig : hostConfig
+  DailiesWidgetProvider_MembersInjector -up-|> MembersInjector
+  DailiesWidgetService -up-|> RemoteViewsService
+  DailyCheckUseCase -up-|> UseCase
+  DailyCheckUseCase o-- TaskRepository : taskRepository
+  DailyCheckUseCase o-- SoundManager : soundManager
+  DailyCheckUseCase_Factory -up-|> Factory
+  DateDeserializer -up-|> JsonDeserializer
+  DateDeserializer -up-|> JsonSerializer
+  DateSerializer -up-|> JsonSerializer
+  Days -up-|> Parcelable
+  Days -up-|> RealmObject
+  DebugDeveloperModule -up-|> DeveloperModule
+  DefaultRealmModuleMediator -up-|> RealmProxyMediator
+  DeveloperModule_ProvideCrashlyticsProxyFactory -up-|> Factory
+  DeveloperModule_ProvideCrashlyticsProxyFactory o-- DeveloperModule : module
+  DisplayItemDropUseCase -up-|> UseCase
+  DisplayItemDropUseCase o-- SoundManager : soundManager
+  DisplayItemDropUseCase_Factory -up-|> Factory
+  DisplayTutorialEvent o-- TutorialStep : step
+  Egg -up-|> Item
+  Egg -up-|> RealmObject
+  EggListDeserializer -up-|> JsonDeserializer
+  EmptyCrashlyticsProxy -up-|> CrashlyticsProxy
+  EquipmentDetailFragment_MembersInjector -up-|> MembersInjector
+  EquipmentListDeserializer -up-|> JsonDeserializer
+  EquipmentOverviewFragment_MembersInjector -up-|> MembersInjector
+  FAQArticle -up-|> RealmObject
+  FAQArticleListDeserilializer -up-|> JsonDeserializer
+  FAQDetailFragment_MembersInjector -up-|> MembersInjector
+  FAQOverviewFragment_MembersInjector -up-|> MembersInjector
+  FeedCommand o-- Pet : usingPet
+  FeedCommand o-- Food : usingFood
+  FeedResponseDeserializer -up-|> JsonDeserializer
+  FixCharacterValuesActivity_MembersInjector -up-|> MembersInjector
+  Flags -up-|> RealmObject
+  FloatingActionMenuBehavior -up-|> Behavior
+  Food -up-|> Item
+  Food -up-|> RealmObject
+  FoodListDeserializer -up-|> JsonDeserializer
+  FullProfileActivity_MembersInjector -up-|> MembersInjector
+  Gear -up-|> RealmObject
+  Gear o-- Items : items
+  Gear o-- Outfit : equipped
+  Gear o-- Outfit : costume
+  GemPurchaseActivity_MembersInjector -up-|> MembersInjector
+  GemsPurchaseFragment_MembersInjector -up-|> MembersInjector
+  GiftIAPActivity_MembersInjector -up-|> MembersInjector
+  GroupInformationFragment_MembersInjector -up-|> MembersInjector
+  GroupViewModel_MembersInjector -up-|> MembersInjector
+  GuildFragment_MembersInjector -up-|> MembersInjector
+  GuildInvite -up-|> RealmObject
+  GuildInvite o-- Invitations : invitations
+  GuildsOverviewFragment_MembersInjector -up-|> MembersInjector
+  HabitButtonWidgetActivity_MembersInjector -up-|> MembersInjector
+  HabitButtonWidgetProvider -up-|> BaseWidgetProvider
+  HabitButtonWidgetProvider o-- TaskRepository : taskRepository
+  HabitButtonWidgetProvider_MembersInjector -up-|> MembersInjector
+  HabitButtonWidgetService -up-|> Service
+  HabitButtonWidgetService o-- TaskRepository : taskRepository
+  HabitButtonWidgetService_MembersInjector -up-|> MembersInjector
+  HabitResponse o-- T : data
+  HabitScoreEvent o-- Task : habit
+  HabitScoreUseCase -up-|> UseCase
+  HabitScoreUseCase o-- TaskRepository : taskRepository
+  HabitScoreUseCase o-- SoundManager : soundManager
+  HabitScoreUseCase_Factory -up-|> Factory
+  HabiticaApplication -up-|> HabiticaBaseApplication
+  HabiticaBaseApplication_MembersInjector -up-|> MembersInjector
+  HabiticaFirebaseInstanceIDService -up-|> FirebaseInstanceIdService
+  HabiticaFirebaseInstanceIDService o-- PushNotificationManager : pushNotificationManager
+  HabiticaFirebaseInstanceIDService_MembersInjector -up-|> MembersInjector
+  HabiticaFirebaseMessagingService -up-|> FirebaseMessagingService
+  HabiticaFirebaseMessagingService o-- PushNotificationManager : pushNotificationManager
+  HabiticaFirebaseMessagingService_MembersInjector -up-|> MembersInjector
+  HabiticaPurchaseVerifier -up-|> BasePurchaseVerifier
+  HabiticaPurchaseVerifier o-- ApiClient : apiClient
+  Hair -up-|> RealmObject
+  Hair o-- Preferences : preferences
+  HatchingCommand o-- Egg : usingEgg
+  HatchingCommand o-- HatchingPotion : usingHatchingPotion
+  HatchingPotion -up-|> Item
+  HatchingPotion -up-|> RealmObject
+  HatchingPotionListDeserializer -up-|> JsonDeserializer
+  Inbox -up-|> RealmObject
+  Inbox o-- User : user
+  InboxFragment_MembersInjector -up-|> MembersInjector
+  InboxMessageListFragment_MembersInjector -up-|> MembersInjector
+  IntroActivity_MembersInjector -up-|> MembersInjector
+  IntroFragment_MembersInjector -up-|> MembersInjector
+  ItemRecyclerFragment_MembersInjector -up-|> MembersInjector
+  Items -up-|> RealmObject
+  Items o-- User : user
+  Items o-- Gear : gear
+  Items o-- SpecialItems : special
+  ItemsFragment_MembersInjector -up-|> MembersInjector
+  JobExecutor -up-|> ThreadExecutor
+  JobExecutor_Factory -up-|> Factory
+  LevelUpUseCase -up-|> UseCase
+  LevelUpUseCase o-- SoundManager : soundManager
+  LevelUpUseCase o-- CheckClassSelectionUseCase : checkClassSelectionUseCase
+  LevelUpUseCase_Factory -up-|> Factory
+  LocalAuthentication -up-|> RealmObject
+  LocalNotificationActionReceiver -up-|> BroadcastReceiver
+  LocalNotificationActionReceiver o-- UserRepository : userRepository
+  LocalNotificationActionReceiver o-- SocialRepository : socialRepository
+  LocalNotificationActionReceiver o-- ApiClient : apiClient
+  LocalNotificationActionReceiver o-- User : user
+  LocalNotificationActionReceiver_MembersInjector -up-|> MembersInjector
+  LoginActivity_MembersInjector -up-|> MembersInjector
+  MainActivity_MembersInjector -up-|> MembersInjector
+  MaintenanceActivity_MembersInjector -up-|> MembersInjector
+  MarginDecoration -up-|> ItemDecoration
+  MemberSerialization -up-|> JsonDeserializer
+  Mount -up-|> Animal
+  Mount -up-|> RealmObject
+  MountDetailRecyclerFragment_MembersInjector -up-|> MembersInjector
+  MountListDeserializer -up-|> JsonDeserializer
+  MountMapDeserializer -up-|> JsonDeserializer
+  NavigationDrawerFragment_MembersInjector -up-|> MembersInjector
+  NewsFragment_MembersInjector -up-|> MembersInjector
+  Notification o-- NotificationData : data
+  NotificationPublisher_MembersInjector -up-|> MembersInjector
+  NotifyUserUseCase_Factory -up-|> Factory
+  PaintCodeColor -up-|> Color
+  PartyDetailFragment_MembersInjector -up-|> MembersInjector
+  PartyFragment_MembersInjector -up-|> MembersInjector
+  PartyInvite -up-|> RealmObject
+  PartyInviteActivity_MembersInjector -up-|> MembersInjector
+  PartyInviteFragment_MembersInjector -up-|> MembersInjector
+  PartyMemberListFragment_MembersInjector -up-|> MembersInjector
+  Pet -up-|> Animal
+  Pet -up-|> RealmObject
+  PetDetailRecyclerFragment_MembersInjector -up-|> MembersInjector
+  PetListDeserializer -up-|> JsonDeserializer
+  PetMapDeserializer -up-|> JsonDeserializer
+  PopupNotificationsManager o-- ApiClient : apiClient
+  PostChatMessageResult o-- ChatMessage : message
+  PreferencesFragment_MembersInjector -up-|> MembersInjector
+  Profile -up-|> RealmObject
+  Profile o-- User : user
+  ProfilePreferencesFragment_MembersInjector -up-|> MembersInjector
+  PublicGuildsFragment_MembersInjector -up-|> MembersInjector
+  PurchaseDialog_MembersInjector -up-|> MembersInjector
+  PurchasedDeserializer -up-|> JsonDeserializer
+  Purchases -up-|> RealmObject
+  Purchases o-- User : user
+  Purchases o-- SubscriptionPlan : plan
+  PushNotificationsPreferencesFragment_MembersInjector -up-|> MembersInjector
+  QrCodeManager o-- UserRepository : userRepository
+  QuestCollect -up-|> RealmObject
+  QuestCollectDeserializer -up-|> JsonDeserializer
+  QuestDetailFragment_MembersInjector -up-|> MembersInjector
+  QuestDropItem -up-|> RealmObject
+  QuestDropItemsListSerialization -up-|> JsonDeserializer
+  QuestDrops -up-|> RealmObject
+  QuestListDeserializer -up-|> JsonDeserializer
+  QuestMember -up-|> RealmObject
+  QuestProgressCollect -up-|> RealmObject
+  RemindersManager o-- CrashlyticsProxy : crashlyticsProxy
+  RemindersManager_MembersInjector -up-|> MembersInjector
+  RepositoryModule_ProvideChallengeLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvideChallengeLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesChallengeRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesChallengeRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesCustomizationLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesCustomizationLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesCustomizationRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesCustomizationRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesFAQLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesFAQLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesFAQRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesFAQRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesInventoryLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesInventoryLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesInventoryRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesInventoryRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesRealmFactory -up-|> Factory
+  RepositoryModule_ProvidesRealmFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesSetupCustomizationRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesSetupCustomizationRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesSocialLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesSocialLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesSocialRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesSocialRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTagLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTagLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTagRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTagRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTaskLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTaskLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTaskRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTaskRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTutorialLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTutorialLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesTutorialRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesTutorialRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesUserLocalRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesUserLocalRepositoryFactory o-- RepositoryModule : module
+  RepositoryModule_ProvidesUserRepositoryFactory -up-|> Factory
+  RepositoryModule_ProvidesUserRepositoryFactory o-- RepositoryModule : module
+  RewardsRecyclerViewAdapter -up-|> TaskRecyclerViewAdapter
+  RewardsRecyclerViewAdapter -up-|> Adapter
+  RewardsRecyclerViewAdapter o-- User : user
+  RxErrorHandler o-- CrashlyticsProxy : crashlyticsProxy
+  SafeDefaultItemAnimator -up-|> SimpleItemAnimator
+  SetupActivity_MembersInjector -up-|> MembersInjector
+  SetupCustomizationRepositoryImpl_Factory -up-|> Factory
+  ShopFragment_MembersInjector -up-|> MembersInjector
+  ShopsFragment_MembersInjector -up-|> MembersInjector
+  ShowCheckinDialog o-- Notification : notification
+  ShowSnackbarEvent o-- SnackbarDisplayType : type
+  ShySettings o-- BottomBar : bottomBar
+  SimpleItemTouchHelperCallback -up-|> Callback
+  SimpleItemTouchHelperCallback o-- ItemTouchHelperAdapter : mAdapter
+  SkillDeserializer -up-|> JsonDeserializer
+  SkillMemberActivity_MembersInjector -up-|> MembersInjector
+  SkillResponse o-- User : user
+  SkillResponse o-- Task : task
+  SkillTasksActivity_MembersInjector -up-|> MembersInjector
+  SkillTasksRecyclerViewFragment_MembersInjector -up-|> MembersInjector
+  SkillsFragment_MembersInjector -up-|> MembersInjector
+  SortableTasksRecyclerViewAdapter -up-|> ItemTouchHelperAdapter
+  SortableTasksRecyclerViewAdapter -up-|> ItemTouchHelperDropCallback
+  SortableTasksRecyclerViewAdapter -up-|> BaseTasksRecyclerViewAdapter
+  SortableTasksRecyclerViewAdapter o-- SortTasksCallback : sortCallback
+  SortableTasksRecyclerViewAdapter_MembersInjector -up-|> MembersInjector
+  SoundManager_MembersInjector -up-|> MembersInjector
+  SpecialItem -up-|> Item
+  SpecialItem -up-|> RealmObject
+  SpecialItems -up-|> RealmObject
+  SpecialItems o-- Items : items
+  StableFragment_MembersInjector -up-|> MembersInjector
+  StableRecyclerFragment_MembersInjector -up-|> MembersInjector
+  StatsFragment_MembersInjector -up-|> MembersInjector
+  SubscriptionFragment_MembersInjector -up-|> MembersInjector
+  SubscriptionPlan -up-|> RealmObject
+  SubscriptionPlan o-- SubscriptionPlanConsecutive : consecutive
+  SubscriptionPlanConsecutive -up-|> RealmObject
+  SubscriptionPlanConsecutive o-- SubscriptionPlan : subscriptionPlan
+  SuppressedModals -up-|> RealmObject
+  SuppressedModals o-- Preferences : preferences
+  TabParser o-- Config : defaultTabConfig
+  Tag -up-|> RealmObject
+  TaskAlarmBootReceiver -up-|> BroadcastReceiver
+  TaskAlarmBootReceiver o-- TaskAlarmManager : taskAlarmManager
+  TaskAlarmBootReceiver_MembersInjector -up-|> MembersInjector
+  TaskCheckedCommand o-- Task : Task
+  TaskDirectionData o-- TaskDirectionDataTemp : _tmp
+  TaskFilterDialog_MembersInjector -up-|> MembersInjector
+  TaskFormActivity_MembersInjector -up-|> MembersInjector
+  TaskGroupPlanDeserializer -up-|> JsonDeserializer
+  TaskListDeserializer -up-|> JsonDeserializer
+  TaskListFactory -up-|> RemoteViewsFactory
+  TaskListFactory o-- TaskRepository : taskRepository
+  TaskListFactory o-- UserRepository : userRepository
+  TaskListFactory_MembersInjector -up-|> MembersInjector
+  TaskListWidgetProvider -up-|> BaseWidgetProvider
+  TaskListWidgetProvider o-- ApiClient : apiClient
+  TaskListWidgetProvider o-- TaskRepository : taskRepository
+  TaskListWidgetProvider_MembersInjector -up-|> MembersInjector
+  TaskReceiver_MembersInjector -up-|> MembersInjector
+  TaskRecyclerViewFragment_MembersInjector -up-|> MembersInjector
+  TaskSerializer -up-|> JsonSerializer
+  TaskSetupFragment_MembersInjector -up-|> MembersInjector
+  TaskTag -up-|> RealmObject
+  TaskTag o-- Tag : tag
+  TaskTag o-- Task : task
+  TaskTagDeserializer -up-|> JsonDeserializer
+  TaskTappedEvent o-- Task : Task
+  TasksFragment_MembersInjector -up-|> MembersInjector
+  TavernDetailFragment_MembersInjector -up-|> MembersInjector
+  TavernFragment_MembersInjector -up-|> MembersInjector
+  TimePreference -up-|> DialogPreference
+  TodoCheckUseCase -up-|> UseCase
+  TodoCheckUseCase o-- TaskRepository : taskRepository
+  TodoCheckUseCase o-- SoundManager : soundManager
+  TodoCheckUseCase_Factory -up-|> Factory
+  TodoListFactory -up-|> TaskListFactory
+  TodoListWidgetProvider -up-|> TaskListWidgetProvider
+  TodosWidgetService -up-|> RemoteViewsService
+  Training -up-|> RealmObject
+  Training o-- Stats : stats
+  TutorialStepListDeserializer -up-|> JsonDeserializer
+  UIThread -up-|> PostExecutionThread
+  UIThread_Factory -up-|> Factory
+  UnlockResponse o-- Preferences : preferences
+  UnlockResponse o-- Purchases : purchased
+  UnlockResponse o-- Items : items
+  UseCase o-- ThreadExecutor : threadExecutor
+  UseCase o-- PostExecutionThread : postExecutionThread
+  UseSkillCommand o-- Skill : skill
+  UserAuthSocial o-- UserAuthSocialTokens : authResponse
+  VerifyUsernameActivity_MembersInjector -up-|> MembersInjector
+  VerticalScrollingBehavior -up-|> Behavior
+  WelcomeFragment_MembersInjector -up-|> MembersInjector
+  WrapContentRecyclerViewLayoutManager -up-|> LinearLayoutManager
+  com_habitrpg_android_habitica_models_FAQArticleRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_FAQArticleRealmProxy -up-|> com_habitrpg_android_habitica_models_FAQArticleRealmProxyInterface
+  com_habitrpg_android_habitica_models_FAQArticleRealmProxy -up-|> FAQArticle
+  com_habitrpg_android_habitica_models_FAQArticleRealmProxy o-- FAQArticleColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_SkillRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_SkillRealmProxy -up-|> com_habitrpg_android_habitica_models_SkillRealmProxyInterface
+  com_habitrpg_android_habitica_models_SkillRealmProxy -up-|> Skill
+  com_habitrpg_android_habitica_models_SkillRealmProxy o-- SkillColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_TagRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_TagRealmProxy -up-|> com_habitrpg_android_habitica_models_TagRealmProxyInterface
+  com_habitrpg_android_habitica_models_TagRealmProxy -up-|> Tag
+  com_habitrpg_android_habitica_models_TagRealmProxy o-- TagColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_TutorialStepRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_TutorialStepRealmProxy -up-|> com_habitrpg_android_habitica_models_TutorialStepRealmProxyInterface
+  com_habitrpg_android_habitica_models_TutorialStepRealmProxy -up-|> TutorialStep
+  com_habitrpg_android_habitica_models_TutorialStepRealmProxy o-- TutorialStepColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxy -up-|> com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxyInterface
+  com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxy -up-|> LocalAuthentication
+  com_habitrpg_android_habitica_models_auth_LocalAuthenticationRealmProxy o-- LocalAuthenticationColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxy -up-|> Customization
+  com_habitrpg_android_habitica_models_inventory_CustomizationRealmProxy o-- CustomizationColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_EggRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_EggRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_EggRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_EggRealmProxy -up-|> Egg
+  com_habitrpg_android_habitica_models_inventory_EggRealmProxy o-- EggColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxy -up-|> Equipment
+  com_habitrpg_android_habitica_models_inventory_EquipmentRealmProxy o-- EquipmentColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_FoodRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_FoodRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_FoodRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_FoodRealmProxy -up-|> Food
+  com_habitrpg_android_habitica_models_inventory_FoodRealmProxy o-- FoodColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxy -up-|> HatchingPotion
+  com_habitrpg_android_habitica_models_inventory_HatchingPotionRealmProxy o-- HatchingPotionColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_MountRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_MountRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_MountRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_MountRealmProxy -up-|> Mount
+  com_habitrpg_android_habitica_models_inventory_MountRealmProxy o-- MountColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_PetRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_PetRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_PetRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_PetRealmProxy -up-|> Pet
+  com_habitrpg_android_habitica_models_inventory_PetRealmProxy o-- PetColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxy -up-|> QuestBossRage
+  com_habitrpg_android_habitica_models_inventory_QuestBossRageRealmProxy o-- QuestBossRageColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxy -up-|> QuestBoss
+  com_habitrpg_android_habitica_models_inventory_QuestBossRealmProxy o-- QuestBossColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxy -up-|> QuestCollect
+  com_habitrpg_android_habitica_models_inventory_QuestCollectRealmProxy o-- QuestCollectColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxy -up-|> QuestColors
+  com_habitrpg_android_habitica_models_inventory_QuestColorsRealmProxy o-- QuestColorsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxy -up-|> QuestContent
+  com_habitrpg_android_habitica_models_inventory_QuestContentRealmProxy o-- QuestContentColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxy -up-|> QuestDropItem
+  com_habitrpg_android_habitica_models_inventory_QuestDropItemRealmProxy o-- QuestDropItemColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxy -up-|> QuestDrops
+  com_habitrpg_android_habitica_models_inventory_QuestDropsRealmProxy o-- QuestDropsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxy -up-|> QuestMember
+  com_habitrpg_android_habitica_models_inventory_QuestMemberRealmProxy o-- QuestMemberColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxy -up-|> QuestProgressCollect
+  com_habitrpg_android_habitica_models_inventory_QuestProgressCollectRealmProxy o-- QuestProgressCollectColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxy -up-|> QuestProgress
+  com_habitrpg_android_habitica_models_inventory_QuestProgressRealmProxy o-- QuestProgressColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxy -up-|> QuestRageStrike
+  com_habitrpg_android_habitica_models_inventory_QuestRageStrikeRealmProxy o-- QuestRageStrikeColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_QuestRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_QuestRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_QuestRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_QuestRealmProxy -up-|> Quest
+  com_habitrpg_android_habitica_models_inventory_QuestRealmProxy o-- QuestColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxy -up-|> SpecialItem
+  com_habitrpg_android_habitica_models_inventory_SpecialItemRealmProxy o-- SpecialItemColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxy -up-|> com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxyInterface
+  com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxy -up-|> OwnedEquipment
+  com_habitrpg_android_habitica_models_inventory_owned_OwnedEquipmentRealmProxy o-- OwnedEquipmentColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxy -up-|> com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxyInterface
+  com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxy -up-|> GuildInvite
+  com_habitrpg_android_habitica_models_invitations_GuildInviteRealmProxy o-- GuildInviteColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxy -up-|> com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxyInterface
+  com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxy -up-|> Invitations
+  com_habitrpg_android_habitica_models_invitations_InvitationsRealmProxy o-- InvitationsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxy -up-|> com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxyInterface
+  com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxy -up-|> PartyInvite
+  com_habitrpg_android_habitica_models_invitations_PartyInviteRealmProxy o-- PartyInviteColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxy -up-|> com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxyInterface
+  com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxy -up-|> MemberPreferences
+  com_habitrpg_android_habitica_models_members_MemberPreferencesRealmProxy o-- MemberPreferencesColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_members_MemberRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_members_MemberRealmProxy -up-|> com_habitrpg_android_habitica_models_members_MemberRealmProxyInterface
+  com_habitrpg_android_habitica_models_members_MemberRealmProxy -up-|> Member
+  com_habitrpg_android_habitica_models_members_MemberRealmProxy o-- MemberColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_shops_ShopItemRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_shops_ShopItemRealmProxy -up-|> com_habitrpg_android_habitica_models_shops_ShopItemRealmProxyInterface
+  com_habitrpg_android_habitica_models_shops_ShopItemRealmProxy -up-|> ShopItem
+  com_habitrpg_android_habitica_models_shops_ShopItemRealmProxy o-- ShopItemColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxy -up-|> com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxyInterface
+  com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxy -up-|> ShopItemUnlockCondition
+  com_habitrpg_android_habitica_models_shops_ShopItemUnlockConditionRealmProxy o-- ShopItemUnlockConditionColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_BackerRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_BackerRealmProxy -up-|> com_habitrpg_android_habitica_models_social_BackerRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_BackerRealmProxy -up-|> Backer
+  com_habitrpg_android_habitica_models_social_BackerRealmProxy o-- BackerColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxy -up-|> com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxy -up-|> ChallengeMembership
+  com_habitrpg_android_habitica_models_social_ChallengeMembershipRealmProxy o-- ChallengeMembershipColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_ChallengeRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_ChallengeRealmProxy -up-|> com_habitrpg_android_habitica_models_social_ChallengeRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_ChallengeRealmProxy -up-|> Challenge
+  com_habitrpg_android_habitica_models_social_ChallengeRealmProxy o-- ChallengeColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxy -up-|> com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxy -up-|> ChatMessageLike
+  com_habitrpg_android_habitica_models_social_ChatMessageLikeRealmProxy o-- ChatMessageLikeColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_ChatMessageRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_ChatMessageRealmProxy -up-|> com_habitrpg_android_habitica_models_social_ChatMessageRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_ChatMessageRealmProxy -up-|> ChatMessage
+  com_habitrpg_android_habitica_models_social_ChatMessageRealmProxy o-- ChatMessageColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxy -up-|> com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxy -up-|> GroupMembership
+  com_habitrpg_android_habitica_models_social_GroupMembershipRealmProxy o-- GroupMembershipColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_GroupRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_GroupRealmProxy -up-|> com_habitrpg_android_habitica_models_social_GroupRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_GroupRealmProxy -up-|> Group
+  com_habitrpg_android_habitica_models_social_GroupRealmProxy o-- GroupColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_UserPartyRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_UserPartyRealmProxy -up-|> com_habitrpg_android_habitica_models_social_UserPartyRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_UserPartyRealmProxy -up-|> UserParty
+  com_habitrpg_android_habitica_models_social_UserPartyRealmProxy o-- UserPartyColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_social_UserStylesRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_social_UserStylesRealmProxy -up-|> com_habitrpg_android_habitica_models_social_UserStylesRealmProxyInterface
+  com_habitrpg_android_habitica_models_social_UserStylesRealmProxy -up-|> UserStyles
+  com_habitrpg_android_habitica_models_social_UserStylesRealmProxy o-- UserStylesColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxy -up-|> ChecklistItem
+  com_habitrpg_android_habitica_models_tasks_ChecklistItemRealmProxy o-- ChecklistItemColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_DaysRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_DaysRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_DaysRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_DaysRealmProxy -up-|> Days
+  com_habitrpg_android_habitica_models_tasks_DaysRealmProxy o-- DaysColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxy -up-|> RemindersItem
+  com_habitrpg_android_habitica_models_tasks_RemindersItemRealmProxy o-- RemindersItemColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxy -up-|> TaskGroupPlan
+  com_habitrpg_android_habitica_models_tasks_TaskGroupPlanRealmProxy o-- TaskGroupPlanColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_TaskRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_TaskRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_TaskRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_TaskRealmProxy -up-|> Task
+  com_habitrpg_android_habitica_models_tasks_TaskRealmProxy o-- TaskColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxy -up-|> com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxyInterface
+  com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxy -up-|> TaskTag
+  com_habitrpg_android_habitica_models_tasks_TaskTagRealmProxy o-- TaskTagColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_ABTestRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_ABTestRealmProxy -up-|> com_habitrpg_android_habitica_models_user_ABTestRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_ABTestRealmProxy -up-|> ABTest
+  com_habitrpg_android_habitica_models_user_ABTestRealmProxy o-- ABTestColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_AuthenticationRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_AuthenticationRealmProxy -up-|> com_habitrpg_android_habitica_models_user_AuthenticationRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_AuthenticationRealmProxy -up-|> Authentication
+  com_habitrpg_android_habitica_models_user_AuthenticationRealmProxy o-- AuthenticationColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxy -up-|> AuthenticationTimestamps
+  com_habitrpg_android_habitica_models_user_AuthenticationTimestampsRealmProxy o-- AuthenticationTimestampsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_BuffsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_BuffsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_BuffsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_BuffsRealmProxy -up-|> Buffs
+  com_habitrpg_android_habitica_models_user_BuffsRealmProxy o-- BuffsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxy -up-|> com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxy -up-|> ContributorInfo
+  com_habitrpg_android_habitica_models_user_ContributorInfoRealmProxy o-- ContributorInfoColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_FlagsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_FlagsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_FlagsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_FlagsRealmProxy -up-|> Flags
+  com_habitrpg_android_habitica_models_user_FlagsRealmProxy o-- FlagsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_GearRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_GearRealmProxy -up-|> com_habitrpg_android_habitica_models_user_GearRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_GearRealmProxy -up-|> Gear
+  com_habitrpg_android_habitica_models_user_GearRealmProxy o-- GearColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_HairRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_HairRealmProxy -up-|> com_habitrpg_android_habitica_models_user_HairRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_HairRealmProxy -up-|> Hair
+  com_habitrpg_android_habitica_models_user_HairRealmProxy o-- HairColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_InboxRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_InboxRealmProxy -up-|> com_habitrpg_android_habitica_models_user_InboxRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_InboxRealmProxy -up-|> Inbox
+  com_habitrpg_android_habitica_models_user_InboxRealmProxy o-- InboxColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_ItemsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_ItemsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_ItemsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_ItemsRealmProxy -up-|> Items
+  com_habitrpg_android_habitica_models_user_ItemsRealmProxy o-- ItemsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_OutfitRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_OutfitRealmProxy -up-|> com_habitrpg_android_habitica_models_user_OutfitRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_OutfitRealmProxy -up-|> Outfit
+  com_habitrpg_android_habitica_models_user_OutfitRealmProxy o-- OutfitColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_PreferencesRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_PreferencesRealmProxy -up-|> com_habitrpg_android_habitica_models_user_PreferencesRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_PreferencesRealmProxy -up-|> Preferences
+  com_habitrpg_android_habitica_models_user_PreferencesRealmProxy o-- PreferencesColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_ProfileRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_ProfileRealmProxy -up-|> com_habitrpg_android_habitica_models_user_ProfileRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_ProfileRealmProxy -up-|> Profile
+  com_habitrpg_android_habitica_models_user_ProfileRealmProxy o-- ProfileColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_PurchasesRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_PurchasesRealmProxy -up-|> com_habitrpg_android_habitica_models_user_PurchasesRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_PurchasesRealmProxy -up-|> Purchases
+  com_habitrpg_android_habitica_models_user_PurchasesRealmProxy o-- PurchasesColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxy -up-|> com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxy -up-|> PushNotificationsPreference
+  com_habitrpg_android_habitica_models_user_PushNotificationsPreferenceRealmProxy o-- PushNotificationsPreferenceColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxy -up-|> SpecialItems
+  com_habitrpg_android_habitica_models_user_SpecialItemsRealmProxy o-- SpecialItemsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_StatsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_StatsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_StatsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_StatsRealmProxy -up-|> Stats
+  com_habitrpg_android_habitica_models_user_StatsRealmProxy o-- StatsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxy -up-|> com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxy -up-|> SubscriptionPlanConsecutive
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanConsecutiveRealmProxy o-- SubscriptionPlanConsecutiveColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxy -up-|> com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxy -up-|> SubscriptionPlan
+  com_habitrpg_android_habitica_models_user_SubscriptionPlanRealmProxy o-- SubscriptionPlanColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxy -up-|> com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxy -up-|> SuppressedModals
+  com_habitrpg_android_habitica_models_user_SuppressedModalsRealmProxy o-- SuppressedModalsColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_TrainingRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_TrainingRealmProxy -up-|> com_habitrpg_android_habitica_models_user_TrainingRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_TrainingRealmProxy -up-|> Training
+  com_habitrpg_android_habitica_models_user_TrainingRealmProxy o-- TrainingColumnInfo : columnInfo
+  com_habitrpg_android_habitica_models_user_UserRealmProxy -up-|> RealmObjectProxy
+  com_habitrpg_android_habitica_models_user_UserRealmProxy -up-|> com_habitrpg_android_habitica_models_user_UserRealmProxyInterface
+  com_habitrpg_android_habitica_models_user_UserRealmProxy -up-|> User
+  com_habitrpg_android_habitica_models_user_UserRealmProxy o-- UserColumnInfo : columnInfo
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

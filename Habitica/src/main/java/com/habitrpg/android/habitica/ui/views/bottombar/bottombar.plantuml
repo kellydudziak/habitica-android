@@ -1,0 +1,731 @@
+@startuml
+
+title __BOTTOMBAR's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BadgeCircle {
+                {static} ~ make()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BadgeContainer {
+                + BadgeContainer()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BatchTabPropertyApplier {
+                ~ BatchTabPropertyApplier()
+                ~ applyToAllTabs()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface TabPropertyUpdater {
+                {abstract} + update()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBar {
+                {static} - STATE_CURRENT_SELECTED_TAB : String
+                {static} - DEFAULT_INACTIVE_SHIFTING_TAB_ALPHA : float
+                {static} - BEHAVIOR_NONE : int
+                {static} - BEHAVIOR_SHIFTING : int
+                {static} - BEHAVIOR_SHY : int
+                {static} - BEHAVIOR_DRAW_UNDER_NAV : int
+                {static} - BEHAVIOR_ICONS_ONLY : int
+                - primaryColor : int
+                - screenWidth : int
+                - tenDp : int
+                - maxFixedItemWidth : int
+                - tabXmlResource : int
+                - isTabletMode : boolean
+                - behaviors : int
+                - inActiveTabAlpha : float
+                - activeTabAlpha : float
+                - inActiveTabColor : int
+                - activeTabColor : int
+                - badgeBackgroundColor : int
+                - hideBadgeWhenActive : boolean
+                - longPressHintsEnabled : boolean
+                - titleTextAppearance : int
+                - titleTypeFace : Typeface
+                - showShadow : boolean
+                - shadowElevation : float
+                - shadowView : View
+                - backgroundOverlay : View
+                - outerContainer : ViewGroup
+                - tabContainer : ViewGroup
+                - defaultBackgroundColor : int
+                - currentBackgroundColor : int
+                - currentTabPosition : int
+                - inActiveShiftingItemWidth : int
+                - activeShiftingItemWidth : int
+                - isComingFromRestoredState : boolean
+                - ignoreTabReselectionListener : boolean
+                - shyHeightAlreadyCalculated : boolean
+                - navBarAccountedHeightCalculated : boolean
+                - currentTabs : BottomBarTab[]
+                + BottomBar()
+                + BottomBar()
+                + BottomBar()
+                + BottomBar()
+                - init()
+                # onAttachedToWindow()
+                - init21()
+                - populateAttributes()
+                - isShiftingMode()
+                - drawUnderNav()
+                ~ isShy()
+                ~ isShyHeightAlreadyCalculated()
+                - isIconsOnlyMode()
+                - hasBehavior()
+                - getTypeFaceFromAsset()
+                - initializeViews()
+                - determineInitialBackgroundColor()
+                + setItems()
+                + setItems()
+                - getTabConfig()
+                - updateItems()
+                - resizeTabsToCorrectSizes()
+                + getShySettings()
+                + setTabSelectionInterceptor()
+                + removeOverrideTabSelectionListener()
+                + setOnTabSelectListener()
+                + setOnTabSelectListener()
+                + removeOnTabSelectListener()
+                + setOnTabReselectListener()
+                + removeOnTabReselectListener()
+                + setDefaultTab()
+                + setDefaultTabPosition()
+                + selectTabWithId()
+                + selectTabAtPosition()
+                + selectTabAtPosition()
+                + getTabCount()
+                + getCurrentTab()
+                + getTabAtPosition()
+                + getCurrentTabId()
+                + getCurrentTabPosition()
+                + findPositionForTabWithId()
+                + getTabWithId()
+                + setLongPressHintsEnabled()
+                + setInActiveTabAlpha()
+                + setActiveTabAlpha()
+                + setInActiveTabColor()
+                + setActiveTabColor()
+                + setBadgeBackgroundColor()
+                + setBadgesHideWhenActive()
+                + setTabTitleTextAppearance()
+                + setTabTitleTypeface()
+                + setTabTitleTypeface()
+                # onLayout()
+                - updateTitleBottomPadding()
+                - initializeShyBehavior()
+                - updateShyHeight()
+                - resizeForDrawingUnderNavbar()
+                + onSaveInstanceState()
+                ~ saveState()
+                + onRestoreInstanceState()
+                ~ restoreState()
+                + onClick()
+                + onLongClick()
+                - findTabInLayout()
+                - handleClick()
+                - handleLongClick()
+                - updateSelectedTab()
+                - shiftingMagic()
+                - handleBackgroundColorChange()
+                - animateBGColorChange()
+                - prepareForBackgroundColorAnimation()
+                - backgroundCircularRevealAnimation()
+                - backgroundCrossfadeAnimation()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBarBadge {
+                - count : int
+                - isVisible : boolean
+                ~ BottomBarBadge()
+                ~ setCount()
+                ~ getCount()
+                ~ show()
+                ~ hide()
+                ~ isVisible()
+                ~ attachToTab()
+                ~ setColoredCircleBackground()
+                - wrapTabAndBadgeInSameContainer()
+                ~ removeFromTab()
+                ~ adjustPositionAndSize()
+                - setBackgroundCompat()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomBarTab {
+                {static} ~ STATE_BADGE_COUNT : String
+                {static} - ANIMATION_DURATION : long
+                {static} - ACTIVE_TITLE_SCALE : float
+                {static} - INACTIVE_FIXED_TITLE_SCALE : float
+                {static} - ACTIVE_SHIFTING_TITLELESS_ICON_SCALE : float
+                {static} - INACTIVE_SHIFTING_TITLELESS_ICON_SCALE : float
+                - sixDps : int
+                - eightDps : int
+                - sixteenDps : int
+                - isTitleless : boolean
+                - iconResId : int
+                - title : String
+                - inActiveAlpha : float
+                - activeAlpha : float
+                - inActiveColor : int
+                - activeColor : int
+                - barColorWhenSelected : int
+                - badgeBackgroundColor : int
+                - badgeHidesWhenActive : boolean
+                - iconView : AppCompatImageView
+                - titleView : TextView
+                - isActive : boolean
+                - indexInContainer : int
+                - titleTextAppearanceResId : int
+                - titleTypeFace : Typeface
+                ~ BottomBarTab()
+                ~ setConfig()
+                ~ prepareLayout()
+                ~ getLayoutResource()
+                - updateTitle()
+                - updateCustomTextAppearance()
+                - updateCustomTypeface()
+                ~ getType()
+                ~ setType()
+                ~ isTitleless()
+                ~ setIsTitleless()
+                + getOuterView()
+                ~ getIconView()
+                ~ getIconResId()
+                ~ setIconResId()
+                ~ getTitleView()
+                + getTitle()
+                + setTitle()
+                + getInActiveAlpha()
+                + setInActiveAlpha()
+                + getActiveAlpha()
+                + setActiveAlpha()
+                + getInActiveColor()
+                + setInActiveColor()
+                + getActiveColor()
+                + setActiveColor()
+                + getBarColorWhenSelected()
+                + setBarColorWhenSelected()
+                + getBadgeBackgroundColor()
+                + setBadgeBackgroundColor()
+                + getBadgeHidesWhenActive()
+                + setBadgeHidesWhenActive()
+                ~ getCurrentDisplayedIconColor()
+                ~ getCurrentDisplayedTitleColor()
+                ~ getCurrentDisplayedTextAppearance()
+                + setBadgeCount()
+                + removeBadge()
+                ~ isActive()
+                ~ hasActiveBadge()
+                ~ getIndexInTabContainer()
+                ~ setIndexInContainer()
+                ~ setIconTint()
+                + getTitleTextAppearance()
+                ~ setTitleTextAppearance()
+                + setTitleTypeface()
+                + getTitleTypeFace()
+                ~ select()
+                ~ deselect()
+                - animateColors()
+                - setColors()
+                - setAlphas()
+                ~ updateWidth()
+                - updateBadgePosition()
+                - setTopPaddingAnimated()
+                - animateTitle()
+                - animateIconScale()
+                - animateIcon()
+                - setTopPadding()
+                - setTitleScale()
+                - setIconScale()
+                + onSaveInstanceState()
+                ~ saveState()
+                + onRestoreInstanceState()
+                ~ restoreState()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            enum Type {
+              FIXED
+              SHIFTING
+              TABLET
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class Config {
+                - inActiveTabAlpha : float
+                - activeTabAlpha : float
+                - inActiveTabColor : int
+                - activeTabColor : int
+                - barColorWhenSelected : int
+                - badgeBackgroundColor : int
+                - titleTextAppearance : int
+                - titleTypeFace : Typeface
+                - badgeHidesWhenSelected : boolean
+                - Config()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class Builder {
+                - inActiveTabAlpha : float
+                - activeTabAlpha : float
+                - inActiveTabColor : int
+                - activeTabColor : int
+                - barColorWhenSelected : int
+                - badgeBackgroundColor : int
+                - hidesBadgeWhenSelected : boolean
+                - titleTextAppearance : int
+                - titleTypeFace : Typeface
+                + inActiveTabAlpha()
+                + activeTabAlpha()
+                + inActiveTabColor()
+                + activeTabColor()
+                + barColorWhenSelected()
+                + badgeBackgroundColor()
+                + hideBadgeWhenSelected()
+                + titleTextAppearance()
+                + titleTypeFace()
+                + build()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class BottomNavigationBehavior {
+                {static} - INTERPOLATOR : Interpolator
+                - bottomNavHeight : int
+                - defaultOffset : int
+                - isTablet : boolean
+                - mTranslationAnimator : ViewPropertyAnimatorCompat
+                - hidden : boolean
+                - mSnackbarHeight : int
+                - mScrollingEnabled : boolean
+                ~ BottomNavigationBehavior()
+                + layoutDependsOn()
+                + onNestedVerticalOverScroll()
+                + onDependentViewRemoved()
+                - updateScrollingForSnackbar()
+                + onDependentViewChanged()
+                + onDirectionNestedPreScroll()
+                - handleDirection()
+                # onNestedDirectionFling()
+                - animateOffset()
+                - ensureOrCancelAnimator()
+                ~ setHidden()
+                {static} ~ from()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface BottomNavigationWithSnackbar {
+                {abstract} + updateSnackbar()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class PreLollipopBottomNavWithSnackBarImpl {
+                + updateSnackbar()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class LollipopBottomNavWithSnackBarImpl {
+                + updateSnackbar()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class MiscUtils {
+                {static} # getTypedValue()
+                {static} # getColor()
+                {static} # getDrawableRes()
+                {static} # dpToPixel()
+                {static} # pixelToDp()
+                {static} # getScreenWidth()
+                {static} # setTextAppearance()
+                {static} # isNightMode()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface OnTabReselectListener {
+                {abstract} + onTabReSelected()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface OnTabSelectListener {
+                {abstract} + onTabSelected()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class ShySettings {
+                - pendingIsVisibleInShyMode : Boolean
+                ~ ShySettings()
+                ~ shyHeightCalculated()
+                + showBar()
+                + hideBar()
+                - toggleIsVisibleInShyMode()
+                - updatePendingShyVisibility()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class TabParser {
+                {static} - TAB_TAG : String
+                {static} - AVG_NUMBER_OF_TABS : int
+                {static} - COLOR_NOT_SET : int
+                {static} - RESOURCE_NOT_FOUND : int
+                - context : Context
+                - parser : XmlResourceParser
+                - tabs : List<BottomBarTab>
+                ~ TabParser()
+                + parseTabs()
+                - parseNewTab()
+                - tabWithDefaults()
+                - getTitleValue()
+                - getColorValue()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface TabAttribute {
+                {static} + ID : String
+                {static} + ICON : String
+                {static} + TITLE : String
+                {static} + INACTIVE_COLOR : String
+                {static} + ACTIVE_COLOR : String
+                {static} + BAR_COLOR_WHEN_SELECTED : String
+                {static} + BADGE_BACKGROUND_COLOR : String
+                {static} + BADGE_HIDES_WHEN_ACTIVE : String
+                {static} + IS_TITLELESS : String
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            class TabParserException {
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface TabSelectionInterceptor {
+                {abstract} + shouldInterceptTabSelection()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            abstract class VerticalScrollingBehavior {
+                - totalDyUnconsumed : int
+                - totalDy : int
+                - overScrollDirection : int
+                - scrollDirection : int
+                ~ VerticalScrollingBehavior()
+                ~ VerticalScrollingBehavior()
+                ~ getOverScrollDirection()
+                ~ getScrollDirection()
+                {abstract} ~ onNestedVerticalOverScroll()
+                {abstract} ~ onDirectionNestedPreScroll()
+                + onStartNestedScroll()
+                + onNestedScrollAccepted()
+                + onStopNestedScroll()
+                + onNestedScroll()
+                + onNestedPreScroll()
+                + onNestedFling()
+                {abstract} ~ onNestedDirectionFling()
+                + onNestedPreFling()
+                + onApplyWindowInsets()
+                + onSaveInstanceState()
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.views {
+          package com.habitrpg.android.habitica.ui.views.bottombar {
+            interface ScrollDirection {
+                {static} + SCROLL_DIRECTION_UP : int
+                {static} + SCROLL_DIRECTION_DOWN : int
+                {static} + SCROLL_NONE : int
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+  BadgeContainer -up-|> FrameLayout
+  LayoutParams -up-|> MarginLayoutParams
+  MarginLayoutParams -up-|> LayoutParams
+  BaseSavedState -up-|> AbsSavedState
+  BatchTabPropertyApplier o-- BottomBar : bottomBar
+  BatchTabPropertyApplier +-down- TabPropertyUpdater
+  BottomBar -up-|> OnClickListener
+  BottomBar -up-|> OnLongClickListener
+  BottomBar -up-|> LinearLayout
+  BottomBar o-- BatchTabPropertyApplier : batchPropertyApplier
+  BottomBar o-- TabSelectionInterceptor : tabSelectionInterceptor
+  BottomBar o-- OnTabSelectListener : onTabSelectListener
+  BottomBar o-- OnTabReselectListener : onTabReselectListener
+  BottomBar o-- ShySettings : shySettings
+  LayoutParams -up-|> MarginLayoutParams
+  MarginLayoutParams -up-|> LayoutParams
+  BaseSavedState -up-|> AbsSavedState
+  BottomBarBadge -up-|> AppCompatTextView
+  SavedState -up-|> BaseSavedState
+  BaseSavedState -up-|> AbsSavedState
+  BottomBarTab -up-|> LinearLayout
+  BottomBarTab o-- BottomBarBadge : badge
+  BottomBarTab o-- Type : type
+  BottomBarTab +-down- Type
+  BottomBarTab +-down- Config
+  Config +-down- Builder
+  LayoutParams -up-|> MarginLayoutParams
+  MarginLayoutParams -up-|> LayoutParams
+  BaseSavedState -up-|> AbsSavedState
+  BottomNavigationBehavior -up-|> VerticalScrollingBehavior
+  BottomNavigationBehavior o-- BottomNavigationWithSnackbar : mWithSnackBarImpl
+  BottomNavigationBehavior +-down- BottomNavigationWithSnackbar
+  BottomNavigationBehavior +-down- PreLollipopBottomNavWithSnackBarImpl
+  BottomNavigationBehavior +-down- LollipopBottomNavWithSnackBarImpl
+  PreLollipopBottomNavWithSnackBarImpl -up-|> BottomNavigationWithSnackbar
+  LollipopBottomNavWithSnackBarImpl -up-|> BottomNavigationWithSnackbar
+  ShySettings o-- BottomBar : bottomBar
+  TabParser o-- Config : defaultTabConfig
+  TabParser +-down- TabAttribute
+  TabParser +-down- TabParserException
+  VerticalScrollingBehavior -up-|> Behavior
+  VerticalScrollingBehavior +-down- ScrollDirection
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

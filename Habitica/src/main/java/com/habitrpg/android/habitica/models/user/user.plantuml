@@ -1,0 +1,493 @@
+@startuml
+
+title __USER's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Buffs {
+              - userId : String
+              + con : Float
+              + str : Float
+              + per : Float
+              + _int : Float
+              - snowball : Boolean
+              - streaks : Boolean
+              - seafoam : Boolean
+              - spookySparkles : Boolean
+              - shinySeed : Boolean
+              + Buffs()
+              + Buffs()
+              + getSnowball()
+              + setSnowball()
+              + getSeafoam()
+              + setSeafoam()
+              + getSpookySparkles()
+              + setSpookySparkles()
+              + getShinySeed()
+              + setShinySeed()
+              + getStreaks()
+              + setStreaks()
+              + merge()
+              + getStr()
+              + get_int()
+              + getCon()
+              + getPer()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class ContributorInfo {
+              {static} + CONTRIBUTOR_COLOR_DICT : SparseIntArray
+              - userId : String
+              - admin : boolean
+              - contributions : String
+              - level : int
+              - text : String
+              + getAdmin()
+              + setAdmin()
+              + getContributions()
+              + setContributions()
+              + getLevel()
+              + setLevel()
+              + getText()
+              + setText()
+              + getContributorColor()
+              + getContributorForegroundColor()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Flags {
+              - userId : String
+              ~ tutorial : RealmList<TutorialStep>
+              - showTour : boolean
+              - dropsEnabled : boolean
+              - itemsEnabled : boolean
+              - newStuff : boolean
+              - classSelected : boolean
+              - rebirthEnabled : boolean
+              - welcomed : boolean
+              - armoireEnabled : boolean
+              - armoireOpened : boolean
+              - armoireEmpty : boolean
+              - communityGuidelinesAccepted : boolean
+              - verifiedUsername : boolean
+              - warnedLowHealth : boolean
+              + getTutorial()
+              + setTutorial()
+              + getShowTour()
+              + setShowTour()
+              + getDropsEnabled()
+              + setDropsEnabled()
+              + getItemsEnabled()
+              + setItemsEnabled()
+              + getNewStuff()
+              + setNewStuff()
+              + getClassSelected()
+              + setClassSelected()
+              + getRebirthEnabled()
+              + setRebirthEnabled()
+              + getWelcomed()
+              + setWelcomed()
+              + getArmoireEnabled()
+              + setArmoireEnabled()
+              + getArmoireOpened()
+              + setArmoireOpened()
+              + getArmoireEmpty()
+              + setArmoireEmpty()
+              + getUserId()
+              + setUserId()
+              + isCommunityGuidelinesAccepted()
+              + setCommunityGuidelinesAccepted()
+              + isVerifiedUsername()
+              + setVerifiedUsername()
+              + isWarnedLowHealth()
+              + setWarnedLowHealth()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Gear {
+              - userId : String
+              + owned : RealmList<Equipment>
+              + getCostume()
+              + setCostume()
+              + getEquipped()
+              + setEquipped()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Hair {
+              - userId : String
+              - mustache : int
+              - beard : int
+              - bangs : int
+              - base : int
+              - flower : int
+              - color : String
+              + Hair()
+              + Hair()
+              + getMustache()
+              + setMustache()
+              + getBeard()
+              + setBeard()
+              + getBangs()
+              + setBangs()
+              + getBase()
+              + setBase()
+              + getColor()
+              + setColor()
+              + getFlower()
+              + setFlower()
+              + isAvailable()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Inbox {
+              - userId : String
+              - optOut : boolean
+              - blocks : List<Object>
+              - newMessages : int
+              + getOptOut()
+              + setOptOut()
+              + getBlocks()
+              + setBlocks()
+              + getNewMessages()
+              + setNewMessages()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Items {
+              - userId : String
+              + eggs : RealmList<Egg>
+              + food : RealmList<Food>
+              + hatchingPotions : RealmList<HatchingPotion>
+              + quests : RealmList<QuestContent>
+              ~ pets : RealmList<Pet>
+              ~ mounts : RealmList<Mount>
+              - currentMount : String
+              - currentPet : String
+              - lastDrop_count : int
+              - lastDrop_date : Date
+              + Items()
+              + Items()
+              + getCurrentMount()
+              + setCurrentMount()
+              + getCurrentPet()
+              + setCurrentPet()
+              + getLastDrop_count()
+              + setLastDrop_count()
+              + getLastDrop_date()
+              + setLastDrop_date()
+              + getGear()
+              + setGear()
+              + getSpecial()
+              + setSpecial()
+              + getEggs()
+              + setEggs()
+              + getFood()
+              + setFood()
+              + getHatchingPotions()
+              + setHatchingPotions()
+              + getQuests()
+              + setQuests()
+              + getPets()
+              + setPets()
+              + getMounts()
+              + setMounts()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Profile {
+              - userId : String
+              - name : String
+              - blurb : String
+              - imageUrl : String
+              + Profile()
+              + Profile()
+              + Profile()
+              + getName()
+              + setName()
+              + getBlurb()
+              + setBlurb()
+              + getImageUrl()
+              + setImageUrl()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Purchases {
+              - userId : String
+              + customizations : RealmList<Customization>
+              + getCustomizations()
+              + setCustomizations()
+              + getPlan()
+              + setPlan()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SpecialItems {
+              - userId : String
+              ~ seafoam : int
+              ~ shinySeed : int
+              ~ snowball : int
+              ~ spookySparkles : int
+              + getSeafoam()
+              + setSeafoam()
+              + getShinySeed()
+              + setShinySeed()
+              + getSnowball()
+              + setSnowball()
+              + getSpookySparkles()
+              + setSpookySparkles()
+              + hasSpecialItems()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SubscriptionPlan {
+              {static} + PLANID_BASIC : String
+              {static} + PLANID_BASICEARNED : String
+              {static} + PLANID_BASIC3MONTH : String
+              {static} + PLANID_BASIC6MONTH : String
+              {static} + PLANID_GOOGLE6MONTH : String
+              {static} + PLANID_BASIC12MONTH : String
+              - customerId : String
+              + dateCreated : Date
+              + dateUpdated : Date
+              + dateTerminated : Date
+              + paymentMethod : String
+              + planId : String
+              + gemsBought : Integer
+              + extraMonths : Integer
+              + quantity : Integer
+              + mysteryItemCount : int
+              + isActive()
+              + totalNumberOfGems()
+              + numberOfGemsLeft()
+              + setCustomerId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SubscriptionPlanConsecutive {
+              - customerId : String
+              - trinkets : int
+              - gemCapExtra : int
+              - offset : int
+              - count : int
+              + getTrinkets()
+              + setTrinkets()
+              + getGemCapExtra()
+              + setGemCapExtra()
+              + getOffset()
+              + setOffset()
+              + getCount()
+              + setCount()
+              + getCustomerId()
+              + setCustomerId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class SuppressedModals {
+              - userId : String
+              - streak : Boolean
+              - raisePet : Boolean
+              - hatchPet : Boolean
+              - levelUp : Boolean
+              + getStreak()
+              + setStreak()
+              + getRaisePet()
+              + setRaisePet()
+              + getHatchPet()
+              + setHatchPet()
+              + getLevelUp()
+              + setLevelUp()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        package com.habitrpg.android.habitica.models.user {
+          class Training {
+              - userId : String
+              + con : Float
+              + str : Float
+              + per : Float
+              + _int : Float
+              + getCon()
+              + setCon()
+              + getStr()
+              + setStr()
+              + getPer()
+              + setPer()
+              + get_int()
+              + set_int()
+              + merge()
+              + getUserId()
+              + setUserId()
+          }
+        }
+      }
+    }
+  }
+  
+
+  Buffs -up-|> RealmObject
+  ContributorInfo -up-|> RealmObject
+  ContributorInfo o-- User : user
+  Flags -up-|> RealmObject
+  Gear -up-|> RealmObject
+  Gear o-- Items : items
+  Gear o-- Outfit : equipped
+  Gear o-- Outfit : costume
+  Hair -up-|> RealmObject
+  Hair o-- Preferences : preferences
+  Inbox -up-|> RealmObject
+  Inbox o-- User : user
+  Items -up-|> RealmObject
+  Items o-- User : user
+  Items o-- Gear : gear
+  Items o-- SpecialItems : special
+  Profile -up-|> RealmObject
+  Profile o-- User : user
+  Purchases -up-|> RealmObject
+  Purchases o-- User : user
+  Purchases o-- SubscriptionPlan : plan
+  SpecialItems -up-|> RealmObject
+  SpecialItems o-- Items : items
+  SubscriptionPlan -up-|> RealmObject
+  SubscriptionPlan o-- SubscriptionPlanConsecutive : consecutive
+  SubscriptionPlanConsecutive -up-|> RealmObject
+  SubscriptionPlanConsecutive o-- SubscriptionPlan : subscriptionPlan
+  SuppressedModals -up-|> RealmObject
+  SuppressedModals o-- Preferences : preferences
+  Training -up-|> RealmObject
+  Training o-- Stats : stats
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

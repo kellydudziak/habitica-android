@@ -1,0 +1,277 @@
+@startuml
+
+title __MODELS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Achievement {
+            + type : String
+            + title : String
+            + text : String
+            + icon : String
+            + category : String
+            + key : String
+            + value : String
+            + earned : boolean
+            + index : int
+            + optionalCount : Integer
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class AchievementGroup {
+            + label : String
+            + achievements : HashMap<String, Achievement>
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class AchievementResult {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        interface Avatar {
+            {abstract} + getCurrentMount()
+            {abstract} + getCurrentPet()
+            {abstract} + getSleep()
+            {abstract} + getStats()
+            {abstract} + getPreferences()
+            {abstract} + getGemCount()
+            {abstract} + getHourglassCount()
+            {abstract} + getCostume()
+            {abstract} + getEquipped()
+            {abstract} + hasClass()
+            {abstract} + isValid()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        interface AvatarPreferences {
+            {abstract} + getUserId()
+            {abstract} + getHair()
+            {abstract} + getCostume()
+            {abstract} + getSleep()
+            {abstract} + getShirt()
+            {abstract} + getSkin()
+            {abstract} + getSize()
+            {abstract} + getBackground()
+            {abstract} + getChair()
+            {abstract} + getDisableClasses()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class ContentGear {
+            + flat : RealmList<Equipment>
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class ContentResult {
+            + quests : RealmList<QuestContent>
+            + eggs : RealmList<Egg>
+            + food : RealmList<Food>
+            + hatchingPotions : RealmList<HatchingPotion>
+            + pets : RealmList<Pet>
+            + mounts : RealmList<Mount>
+            + spells : List<Skill>
+            + appearances : RealmList<Customization>
+            + backgrounds : RealmList<Customization>
+            + faq : RealmList<FAQArticle>
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class FAQArticle {
+            - position : Integer
+            - question : String
+            - answer : String
+            + getPosition()
+            + setPosition()
+            + getQuestion()
+            + setQuestion()
+            + getAnswer()
+            + setAnswer()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        enum HabitRpgClass {
+          rogue
+          wizard
+          warrior
+          healer
+          base
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class IAPGift {
+            + uuid : String
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class LeaveChallengeBody {
+            + keep : String
+            + LeaveChallengeBody()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Notification {
+            - type : String
+            - createdAt : String
+            - id : String
+            - additionalProperties : Map<String, Object>
+            + getType()
+            + setType()
+            + getCreatedAt()
+            + setCreatedAt()
+            + getId()
+            + setId()
+            + getAdditionalProperties()
+            + setAdditionalProperty()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class PurchaseValidationResult {
+            + ok : boolean
+            + data : Object
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class PushDevice {
+            - regId : String
+            - type : String
+            + getRegId()
+            + setRegId()
+            + getType()
+            + setType()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Tag {
+            + id : String
+            + userId : String
+            + tasks : RealmList<Task>
+            ~ name : String
+            ~ challenge : boolean
+            + getTasks()
+            + getName()
+            + setName()
+            + getId()
+            + setId()
+            + equals()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.models {
+        class Transaction {
+            + receipt : String
+            + signature : String
+        }
+      }
+    }
+  }
+  
+
+  AchievementResult o-- AchievementGroup : basic
+  AchievementResult o-- AchievementGroup : seasonal
+  AchievementResult o-- AchievementGroup : special
+  ContentResult o-- Equipment : potion
+  ContentResult o-- Equipment : armoire
+  ContentResult o-- ContentGear : gear
+  FAQArticle -up-|> RealmObject
+  Notification o-- NotificationData : data
+  Tag -up-|> RealmObject
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

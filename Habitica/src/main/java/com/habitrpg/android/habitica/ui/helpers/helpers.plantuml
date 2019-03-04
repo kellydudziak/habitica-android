@@ -1,0 +1,228 @@
+@startuml
+
+title __HELPERS's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class FloatingActionMenuBehavior {
+              - FAB_ANIMATION_DURATION : int
+              - mTranslationY : float
+              - context : Context
+              - isAnimating : boolean
+              - isOffScreen : boolean
+              - fab : FloatingActionMenu
+              + FloatingActionMenuBehavior()
+              + layoutDependsOn()
+              + onDependentViewChanged()
+              - updateTranslation()
+              - getTranslationY()
+              + onStartNestedScroll()
+              + onNestedScroll()
+              - resetAnimatingStatusWithDelay()
+              - slideFabOffScreen()
+              - slideFabOnScreen()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperAdapter {
+              {abstract} + onItemMove()
+              {abstract} + onItemDismiss()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperDropCallback {
+              {abstract} + onDrop()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          interface ItemTouchHelperViewHolder {
+              {abstract} + onItemSelected()
+              {abstract} + onItemClear()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class MarginDecoration {
+              - margin : int
+              + MarginDecoration()
+              + getItemOffsets()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class SafeDefaultItemAnimator {
+              {static} - DEBUG : boolean
+              {static} - sDefaultInterpolator : TimeInterpolator
+              - mPendingRemovals : ArrayList<ViewHolder>
+              - mPendingAdditions : ArrayList<ViewHolder>
+              - mPendingMoves : ArrayList<MoveInfo>
+              - mPendingChanges : ArrayList<ChangeInfo>
+              ~ mAdditionsList : ArrayList<ArrayList<ViewHolder>>
+              ~ mMovesList : ArrayList<ArrayList<MoveInfo>>
+              ~ mChangesList : ArrayList<ArrayList<ChangeInfo>>
+              ~ mAddAnimations : ArrayList<ViewHolder>
+              ~ mMoveAnimations : ArrayList<ViewHolder>
+              ~ mRemoveAnimations : ArrayList<ViewHolder>
+              ~ mChangeAnimations : ArrayList<ViewHolder>
+              + runPendingAnimations()
+              + animateRemove()
+              - animateRemoveImpl()
+              + animateAdd()
+              ~ animateAddImpl()
+              + animateMove()
+              ~ animateMoveImpl()
+              + animateChange()
+              ~ animateChangeImpl()
+              - endChangeAnimation()
+              - endChangeAnimationIfNecessary()
+              - endChangeAnimationIfNecessary()
+              + endAnimation()
+              - resetAnimation()
+              + isRunning()
+              ~ dispatchFinishedWhenDone()
+              + endAnimations()
+              ~ cancelAll()
+              + canReuseUpdatedViewHolder()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class MoveInfo {
+              + holder : ViewHolder
+              + fromX : int
+              + fromY : int
+              + toX : int
+              + toY : int
+              ~ MoveInfo()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class ChangeInfo {
+              + oldHolder : ViewHolder
+              + newHolder : ViewHolder
+              + fromX : int
+              + fromY : int
+              + toX : int
+              + toY : int
+              - ChangeInfo()
+              ~ ChangeInfo()
+              + toString()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class SimpleItemTouchHelperCallback {
+              + SimpleItemTouchHelperCallback()
+              + isLongPressDragEnabled()
+              + isItemViewSwipeEnabled()
+              + getMovementFlags()
+              + onMove()
+              + onSwiped()
+              + onSelectedChanged()
+              + clearView()
+          }
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.ui {
+        package com.habitrpg.android.habitica.ui.helpers {
+          class ViewHelper {
+              {static} + SetBackgroundTint()
+              {static} - SetBackgroundTintV21()
+              {static} + SetBackgroundTint()
+              {static} + SetBackgroundTint()
+              {static} ~ SetBackgroundTint()
+              {static} + SetBackground()
+              {static} - setBackgroundV16Plus()
+              {static} - setBackgroundV16Minus()
+          }
+        }
+      }
+    }
+  }
+  
+
+  FloatingActionMenuBehavior -up-|> Behavior
+  MarginDecoration -up-|> ItemDecoration
+  SafeDefaultItemAnimator -up-|> SimpleItemAnimator
+  SafeDefaultItemAnimator +-down- MoveInfo
+  SafeDefaultItemAnimator +-down- ChangeInfo
+  SimpleItemTouchHelperCallback -up-|> Callback
+  SimpleItemTouchHelperCallback o-- ItemTouchHelperAdapter : mAdapter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

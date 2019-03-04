@@ -1,0 +1,232 @@
+@startuml
+
+title __WIDGET's Class Diagram__\n
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class AddTaskWidgetProvider {
+            + layoutResourceId()
+            + onUpdate()
+            + configureRemoteViews()
+            - getSelectedTaskType()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class AvatarStatsWidgetProvider {
+            - appWidgetManager : AppWidgetManager
+            ~ userId : String
+            - showManaBar : Boolean
+            + layoutResourceId()
+            - setUp()
+            + onUpdate()
+            + configureRemoteViews()
+            - updateData()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesListFactory {
+            + DailiesListFactory()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesWidgetProvider {
+            {static} + DAILY_ACTION : String
+            {static} + TASK_ID_ITEM : String
+            - setUp()
+            # getServiceClass()
+            # getProviderClass()
+            # getTitleResId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class DailiesWidgetService {
+            + onGetViewFactory()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetProvider {
+            {static} + HABIT_ACTION : String
+            {static} + TASK_ID : String
+            {static} + TASK_DIRECTION : String
+            + userId : String
+            - setUp()
+            + layoutResourceId()
+            + onUpdate()
+            + onReceive()
+            + configureRemoteViews()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class HabitButtonWidgetService {
+            + userId : String
+            + sharedPreferences : SharedPreferences
+            + resources : Resources
+            + context : Context
+            - appWidgetManager : AppWidgetManager
+            - taskMapping : Map<String, Integer>
+            - allWidgetIds : int[]
+            + onStartCommand()
+            - updateData()
+            + onBind()
+            - makeTaskMapping()
+            - getTaskId()
+            - getPendingIntent()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        abstract class TaskListFactory {
+            - widgetId : int
+            + userID : String
+            - listItemResId : int
+            - listItemTextResId : int
+            - taskType : String
+            - taskList : List<Task>
+            - context : Context
+            - reloadData : boolean
+            ~ TaskListFactory()
+            - loadData()
+            + onCreate()
+            + onDataSetChanged()
+            + onDestroy()
+            + getCount()
+            + getViewAt()
+            + getLoadingView()
+            + getViewTypeCount()
+            + getItemId()
+            + hasStableIds()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        abstract class TaskListWidgetProvider {
+            {static} + DAILY_ACTION : String
+            {static} + TASK_ID_ITEM : String
+            ~ userId : String
+            - setUp()
+            {abstract} # getServiceClass()
+            {abstract} # getProviderClass()
+            {abstract} # getTitleResId()
+            + onReceive()
+            + onUpdate()
+            + layoutResourceId()
+            + configureRemoteViews()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodoListFactory {
+            + TodoListFactory()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodoListWidgetProvider {
+            # getServiceClass()
+            # getProviderClass()
+            # getTitleResId()
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package com.habitrpg.android.habitica {
+      package com.habitrpg.android.habitica.widget {
+        class TodosWidgetService {
+            + onGetViewFactory()
+        }
+      }
+    }
+  }
+  
+
+  AddTaskWidgetProvider -up-|> BaseWidgetProvider
+  AvatarStatsWidgetProvider -up-|> BaseWidgetProvider
+  AvatarStatsWidgetProvider o-- UserRepository : userRepository
+  DailiesListFactory -up-|> TaskListFactory
+  DailiesWidgetProvider -up-|> TaskListWidgetProvider
+  DailiesWidgetProvider o-- ApiClient : apiClient
+  DailiesWidgetProvider o-- HostConfig : hostConfig
+  DailiesWidgetService -up-|> RemoteViewsService
+  HabitButtonWidgetProvider -up-|> BaseWidgetProvider
+  HabitButtonWidgetProvider o-- TaskRepository : taskRepository
+  HabitButtonWidgetService -up-|> Service
+  HabitButtonWidgetService o-- TaskRepository : taskRepository
+  TaskListFactory -up-|> RemoteViewsFactory
+  TaskListFactory o-- TaskRepository : taskRepository
+  TaskListFactory o-- UserRepository : userRepository
+  TaskListWidgetProvider -up-|> BaseWidgetProvider
+  TaskListWidgetProvider o-- ApiClient : apiClient
+  TaskListWidgetProvider o-- TaskRepository : taskRepository
+  TodoListFactory -up-|> TaskListFactory
+  TodoListWidgetProvider -up-|> TaskListWidgetProvider
+  TodosWidgetService -up-|> RemoteViewsService
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
