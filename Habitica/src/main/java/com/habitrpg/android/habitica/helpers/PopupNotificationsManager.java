@@ -1,6 +1,8 @@
 package com.habitrpg.android.habitica.helpers;
 
 import android.content.Context;
+import android.util.Log;
+
 import androidx.annotation.Nullable;
 
 import com.habitrpg.android.habitica.R;
@@ -21,6 +23,8 @@ import java.util.Map;
  */
 
 public class PopupNotificationsManager {
+    private static final String DEBUG_TAG = "PopupNotifnManager";
+
     private Map<String, Boolean> seenNotifications;
     @Nullable
     private ApiClient apiClient;
@@ -29,6 +33,8 @@ public class PopupNotificationsManager {
     // @TODO: A queue for displaying alert dialogues
 
     public PopupNotificationsManager(Context context) {
+        Log.d(DEBUG_TAG, "in PopupNotificationsManager");
+
         this.seenNotifications = new HashMap<>();
         this.context = context;
     }
@@ -38,6 +44,7 @@ public class PopupNotificationsManager {
     }
 
     Boolean displayNotification(Notification notification) {
+        Log.d(DEBUG_TAG, "in displayNotification");
         String nextUnlockText = context.getString(R.string.nextPrizeUnlocks, notification.data.nextRewardAt);
         if (notification.data.rewardKey != null) {
             ShowCheckinDialog event = new ShowCheckinDialog();
@@ -60,6 +67,8 @@ public class PopupNotificationsManager {
     }
 
     public Boolean showNotificationDialog(final List<Notification> notifications) {
+        Log.d(DEBUG_TAG, "in showNotificationDialog");
+
         if (notifications == null || notifications.size() == 0) {
             return false;
         }

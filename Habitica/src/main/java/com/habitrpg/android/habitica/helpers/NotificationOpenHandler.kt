@@ -1,16 +1,16 @@
 package com.habitrpg.android.habitica.helpers
 
 import android.content.Intent
+import android.util.Log
 import androidx.core.os.bundleOf
 import com.habitrpg.android.habitica.R
 import com.habitrpg.android.habitica.helpers.notifications.PushNotificationManager
 import com.habitrpg.android.habitica.models.user.User
 
 class NotificationOpenHandler {
-
     companion object {
-
         fun handleOpenedByNotification(identifier: String, intent: Intent, user: User?) {
+            Log.d("NotificationOpenHandler", "in handleOpenedByNotification")
             when (identifier) {
                 PushNotificationManager.PARTY_INVITE_PUSH_NOTIFICATION_KEY -> openPartyScreen()
                 PushNotificationManager.QUEST_BEGUN_PUSH_NOTIFICATION_KEY -> openQuestDetailSCreen(user?.party?.id,

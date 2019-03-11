@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
+import android.util.Log
 import androidx.annotation.CallSuper
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
@@ -18,7 +19,7 @@ import com.habitrpg.android.habitica.ui.activities.MainActivity
  * Created by keithholliday on 6/28/16.
  */
 abstract class HabiticaLocalNotification(protected var context: Context, protected var identifier: String) {
-
+    private val DEBUG_TAG = "H..LocalNotification"
     protected var data: Map<String, String>? = null
     protected var title: String? = null
     protected var message: String? = null
@@ -27,6 +28,7 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
 
     @CallSuper
     open fun notifyLocally(title: String?, message: String?) {
+        Log.d(DEBUG_TAG, "In notifyLocally")
         this.title = title
         this.message = message
 
@@ -54,10 +56,12 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
     }
 
     fun setExtras(data: Map<String, String>) {
+        Log.d(DEBUG_TAG, "In setExtras")
         this.data = data
     }
 
     protected open fun setNotificationActions()  {
+        Log.d(DEBUG_TAG, "In setNotificationActions")
         val intent = Intent(context, MainActivity::class.java)
         intent.putExtra("notificationIdentifier", identifier)
         configureMainIntent(intent)
@@ -78,6 +82,7 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
 
 @RequiresApi(Build.VERSION_CODES.O)
 public fun NotificationManager.createOrUpdateHabiticaChannel() {
+    Log.d("H..LocalNotification", "in createOrUpdateHabiticaChannel")
     var hasChannel = false
     for (channel in notificationChannels) {
         if (channel.id == "default") {

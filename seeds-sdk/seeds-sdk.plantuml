@@ -1,0 +1,333 @@
+@startuml
+
+title __SEEDS-SDK's Class Diagram__\n
+
+  package com.playseeds.android.sdk {
+    class AdvertisingIdAdapter {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class BuildConfig {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class BuildConfig {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CertificateTrustManager {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      enum ClickType {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ConnectionProcessor {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ConnectionQueue {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface Const {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CountlyStore {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CrashDetails {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class DeviceId {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class DeviceInfo {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class Event {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class EventQueue {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      enum Gender {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class GeneralInAppMessageProvider {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IInAppMessageShowCountListener {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IInAppPurchaseCountListener {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IUserBehaviorQueryListener {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface InAppMessage {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface InAppMessageListener {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageManager {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      abstract class InAppMessageProvider {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageRequest {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageResponse {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageView {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppWebView {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class Log {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class MainActivityEventListener {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class Manifest {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class MessagingAdapter {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class OpenUDIDAdapter {
+    }
+  }
+  
+
+  package org.openudid {
+    class OpenUDID_manager {
+    }
+  }
+  
+
+  package org.openudid {
+    class OpenUDID_service {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class R {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ReferrerReceiver {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class RequestException {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class ResourceManager {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class RichMediaActivity {
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class Seeds {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class UserData {
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class Util {
+      }
+    }
+  }
+  
+
+  CertificateTrustManager -up-|> X509TrustManager
+  ConnectionProcessor -up-|> Runnable
+  ConnectionProcessor o-- CountlyStore : store_
+  ConnectionProcessor o-- DeviceId : deviceId_
+  ConnectionQueue o-- CountlyStore : store_
+  ConnectionQueue o-- DeviceId : deviceId_
+  DeviceId o-- Type : type
+  EventQueue o-- CountlyStore : countlyStore_
+  GeneralInAppMessageProvider -up-|> InAppMessageProvider
+  InAppMessageManager o-- InAppMessageListener : mListener
+  InAppMessageManager o-- Type : mIdMode
+  InAppMessageManager o-- Gender : userGender
+  InAppMessageRequest o-- Type : idMode
+  InAppMessageRequest o-- Gender : gender
+  InAppMessageResponse -up-|> InAppMessage
+  InAppMessageResponse o-- ClickType : clickType
+  InAppMessageView -up-|> RelativeLayout
+  InAppMessageView o-- InAppMessageResponse : response
+  InAppMessageView o-- BannerAdViewListener : adListener
+  InAppWebView -up-|> Activity
+  MainActivityEventListener -up-|> ActivityLifecycleCallbacks
+  MainActivityEventListener o-- InAppMessageListener : listener
+  MainActivityEventListener o-- Type : idMode
+  OpenUDID_manager -up-|> ServiceConnection
+  OpenUDID_service -up-|> Service
+  ReferrerReceiver -up-|> BroadcastReceiver
+  RichMediaActivity -up-|> Activity
+  RichMediaActivity o-- ResourceManager : mResourceManager
+  RichMediaActivity o-- InAppMessageResponse : mAd
+  Seeds o-- ConnectionQueue : connectionQueue_
+  Seeds o-- EventQueue : eventQueue_
+  Seeds o-- CountlyMessagingMode : messagingMode_
+  Seeds o-- MainActivityEventListener : mainActivityEventListener
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

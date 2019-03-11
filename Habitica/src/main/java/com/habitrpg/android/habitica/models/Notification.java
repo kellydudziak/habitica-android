@@ -4,12 +4,15 @@ package com.habitrpg.android.habitica.models;
  * Created by krh12 on 11/28/2016.
  */
 
+import android.util.Log;
+
 import com.habitrpg.android.habitica.models.notifications.NotificationData;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Notification {
+    private static final String DEBUG_TAG = "Notification";
 
     public NotificationData data;
     private String type;
@@ -21,6 +24,7 @@ public class Notification {
      * @return The type
      */
     public String getType() {
+        Log.d(DEBUG_TAG, "in getType");
         return type;
     }
 
@@ -28,6 +32,7 @@ public class Notification {
      * @param type The type
      */
     public void setType(String type) {
+        Log.d(DEBUG_TAG, "in setType");
         this.type = type;
     }
 
@@ -67,13 +72,15 @@ public class Notification {
      * @return The id
      */
     public String getId() {
-        return id;
+    Log.d(DEBUG_TAG, "in getId");
+    return id;
     }
 
     /**
      * @param id The id
      */
     public void setId(String id) {
+        Log.d(DEBUG_TAG, "in setId");
         this.id = id;
     }
 

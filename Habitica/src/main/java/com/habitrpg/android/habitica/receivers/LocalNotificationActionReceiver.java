@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.habitrpg.android.habitica.HabiticaBaseApplication;
 import com.habitrpg.android.habitica.R;
@@ -20,6 +21,8 @@ import java.util.Objects;
 import javax.inject.Inject;
 
 public class LocalNotificationActionReceiver extends BroadcastReceiver {
+    private static final String DEBUG_TAG = "LocalNotifActionRevievr";
+
     @Inject
     public UserRepository userRepository;
     @Inject
@@ -35,6 +38,8 @@ public class LocalNotificationActionReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        Log.d(DEBUG_TAG, "in onReceive");
+
         Objects.requireNonNull(HabiticaBaseApplication.Companion.getComponent()).inject(this);
         this.resources = context.getResources();
 
@@ -46,12 +51,14 @@ public class LocalNotificationActionReceiver extends BroadcastReceiver {
     }
 
     public void onUserReceived(User user) {
+        Log.d(DEBUG_TAG, "in onUserRecieved");
         this.user = user;
         this.handleLocalNotificationAction(action);
         userRepository.close();
     }
 
     private void handleLocalNotificationAction(String action) {
+        Log.d(DEBUG_TAG, "in handleLocalNotificationAction");
         NotificationManager notificationManager = (NotificationManager) this.context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
 

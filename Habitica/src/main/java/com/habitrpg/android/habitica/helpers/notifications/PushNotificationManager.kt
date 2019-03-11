@@ -2,6 +2,7 @@ package com.habitrpg.android.habitica.helpers.notifications
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import androidx.core.content.edit
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.messaging.RemoteMessage
@@ -13,7 +14,7 @@ import io.reactivex.functions.Consumer
 import java.util.*
 
 class PushNotificationManager(var apiClient: ApiClient, private val sharedPreferences: SharedPreferences, private val context: Context) {
-
+    private val DEBUG_TAG = "H..LocalNotification"
     var refreshedToken: String = ""
     set(value) {
         if (value.isEmpty()) {
@@ -33,6 +34,7 @@ class PushNotificationManager(var apiClient: ApiClient, private val sharedPrefer
 
     //@TODO: Use preferences
     fun addPushDeviceUsingStoredToken() {
+        Log.d(DEBUG_TAG, "in addPushDeviceUsingStoredToken")
         if (this.refreshedToken.isEmpty()) {
             this.refreshedToken = FirebaseInstanceId.getInstance().token ?: ""
         }
@@ -48,6 +50,7 @@ class PushNotificationManager(var apiClient: ApiClient, private val sharedPrefer
     }
 
     fun removePushDeviceUsingStoredToken() {
+        Log.d(DEBUG_TAG, "in removePushDeviceUsingStoredToken")
         if (this.refreshedToken.isEmpty()) {
             return
         }
@@ -55,6 +58,7 @@ class PushNotificationManager(var apiClient: ApiClient, private val sharedPrefer
     }
 
     private fun userHasPushDevice(): Boolean {
+        Log.d(DEBUG_TAG, "in userHasPushDevice")
         if (this.user?.pushDevices == null) {
             return true
         }
@@ -68,6 +72,7 @@ class PushNotificationManager(var apiClient: ApiClient, private val sharedPrefer
     }
 
     fun displayNotification(remoteMessage: RemoteMessage) {
+        Log.d(DEBUG_TAG, "in displayNotification")
         val remoteMessageIdentifier = remoteMessage.data["identifier"]
 
 
@@ -83,10 +88,12 @@ class PushNotificationManager(var apiClient: ApiClient, private val sharedPrefer
     }
 
     private fun userIsSubscribedToNotifications(): Boolean {
+        Log.d(DEBUG_TAG, "in userIsSubscribedToNotifications")
         return sharedPreferences.getBoolean("pushNotifications", true)
     }
 
     private fun userIsSubscribedToNotificationType(type: String?): Boolean {
+        Log.d(DEBUG_TAG, "in userIsSubscribedToNotificationType")
         var key = ""
 
         //@TODO: If user has push turned off to send

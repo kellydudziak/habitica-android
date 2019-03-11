@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.edit
@@ -32,7 +33,6 @@ import javax.inject.Inject
 @Suppress("DEPRECATION")
 //https://gist.github.com/BrandonSmith/6679223
 class NotificationPublisher : WakefulBroadcastReceiver() {
-
     @Inject
     lateinit var taskRepository: TaskRepository
     @Inject
@@ -44,6 +44,7 @@ class NotificationPublisher : WakefulBroadcastReceiver() {
     private var context: Context? = null
 
     override fun onReceive(context: Context, intent: Intent) {
+        Log.d("NotificationPublisher", "in onReceive")
         this.context = context
         if (!wasInjected) {
             wasInjected = true
@@ -85,6 +86,7 @@ class NotificationPublisher : WakefulBroadcastReceiver() {
     }
 
     private fun notify(intent: Intent, notification: Notification?) {
+        Log.d("NotificationPublisher", "in notify")
         val notificationManager = context?.getSystemService(Context.NOTIFICATION_SERVICE) as? NotificationManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             notificationManager?.createOrUpdateHabiticaChannel()
@@ -94,6 +96,7 @@ class NotificationPublisher : WakefulBroadcastReceiver() {
     }
 
     private fun buildNotification(wasInactive: Boolean, registrationDate: Date? = null): Notification? {
+        Log.d("NotificationPublisher", "in buildNotification")
         val thisContext = context ?: return null
         val notification: Notification
         val builder = NotificationCompat.Builder(thisContext)

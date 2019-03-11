@@ -1,0 +1,571 @@
+@startuml
+
+title __INAPPMESSAGING's Class Diagram__\n
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      enum ClickType {
+        INAPP
+        BROWSER
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface Const {
+          {static} + ENCODING : String
+          {static} + RESPONSE_ENCODING : String
+          {static} + VERSION : String
+          {static} + PROTOCOL_VERSION : String
+          {static} + LIVE : int
+          {static} + TEST : int
+          {static} + IMAGE_BODY : String
+          {static} + REDIRECT_URI : String
+          {static} + HIDE_BORDER : String
+          {static} + INTERSTITIAL_HIDE_BORDER : String
+          {static} + TOUCH_DISTANCE : int
+          {static} + CONNECTION_TIMEOUT : int
+          {static} + SOCKET_TIMEOUT : int
+          {static} + PREFS_DEVICE_ID : String
+          {static} + USER_AGENT_PATTERN : String
+          {static} + AD_EXTRA : String
+          {static} + AD_TYPE_EXTRA : String
+          {static} + MAX_NUMBER_OF_TRACKING_RETRIES : int
+          {static} + CONNECTION_TYPE_UNKNOWN : String
+          {static} + CONNECTION_TYPE_WIFI : String
+          {static} + CONNECTION_TYPE_WIMAX : String
+          {static} + CONNECTION_TYPE_MOBILE_UNKNOWN : String
+          {static} + CONNECTION_TYPE_MOBILE_1xRTT : String
+          {static} + CONNECTION_TYPE_MOBILE_CDMA : String
+          {static} + CONNECTION_TYPE_MOBILE_EDGE : String
+          {static} + CONNECTION_TYPE_MOBILE_EHRPD : String
+          {static} + CONNECTION_TYPE_MOBILE_EVDO_0 : String
+          {static} + CONNECTION_TYPE_MOBILE_EVDO_A : String
+          {static} + CONNECTION_TYPE_MOBILE_EVDO_B : String
+          {static} + CONNECTION_TYPE_MOBILE_GPRS : String
+          {static} + CONNECTION_TYPE_MOBILE_HSDPA : String
+          {static} + CONNECTION_TYPE_MOBILE_HSPA : String
+          {static} + CONNECTION_TYPE_MOBILE_HSPAP : String
+          {static} + CONNECTION_TYPE_MOBILE_HSUPA : String
+          {static} + CONNECTION_TYPE_MOBILE_IDEN : String
+          {static} + CONNECTION_TYPE_MOBILE_LTE : String
+          {static} + CONNECTION_TYPE_MOBILE_UMTS : String
+          {static} + LOADING : CharSequence
+          {static} + CACHE_DOWNLOAD_PERIOD : long
+          {static} + AD_FAILED : int
+          {static} + IMAGE : int
+          {static} + TEXT : int
+          {static} + NO_AD : int
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      enum Gender {
+        MALE
+        FEMALE
+        param
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class GeneralInAppMessageProvider {
+          + GeneralInAppMessageProvider()
+          + parseCountlyJSON()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface InAppMessage {
+          {abstract} + getType()
+          {abstract} + setType()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface InAppMessageListener {
+          {abstract} + inAppMessageClicked()
+          {abstract} + inAppMessageDismissed()
+          {abstract} + inAppMessageLoadSucceeded()
+          {abstract} + inAppMessageShown()
+          {abstract} + noInAppMessageFound()
+          {abstract} + inAppMessageClickedWithDynamicPrice()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageManager {
+          - mAppKey : String
+          - adDoNotTrack : boolean
+          {static} - mContext : Context
+          {static} - mBillingService : IInAppBillingService
+          - mRequestThreads : HashMap<String, Thread>
+          - mResponses : HashMap<String, InAppMessageResponse>
+          - interstitialRequestURL : String
+          - mDeviceID : String
+          - requestedHorizontalAd : boolean
+          - userAge : int
+          - keywords : List<String>
+          - doNotShow : boolean
+          - mRequests : HashMap<String, InAppMessageRequest>
+          {static} - sRunningAds : HashMap<Long, InAppMessageManager>
+          - InAppMessageManager()
+          {static} + sharedInstance()
+          + init()
+          {static} + closeRunningInAppMessage()
+          {static} + notifyInAppMessageClick()
+          + requestInAppMessage()
+          - requestInAppMessageInternal()
+          - getRequestThread()
+          + showInAppMessage()
+          + isInAppMessageLoaded()
+          - notifyNoAdFound()
+          - notifyAdClicked()
+          - notifyAdLoaded()
+          - notifyAdShown()
+          - notifyAdDismiss()
+          - getInterstitialRequest()
+          + showInAppMessage()
+          - sendNotification()
+          + setListener()
+          # setRunningAds()
+          - getOrientation()
+          - getContext()
+          {static} - getmContext()
+          {static} - setmContext()
+          {static} - setmBillingService()
+          + setUserGender()
+          + setUserAge()
+          + setKeywords()
+          + recordInterstitialEvent()
+          + recordInterstitialEvent()
+          + doNotShow()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class SingletonHolder {
+          {static} ~ instance : InAppMessageManager
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      abstract class InAppMessageProvider {
+          + obtainInAppMessage()
+          {abstract} # parseCountlyJSON()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageRequest {
+          - userAgent : String
+          - userAgent2 : String
+          - headers : String
+          - listAds : String
+          - requestURL : String
+          - protocolVersion : String
+          - appKey : String
+          - deviceId : String
+          - messageId : String
+          - longitude : double
+          - latitude : double
+          - adspaceStrict : boolean
+          - adspaceWidth : int
+          - adspaceHeight : int
+          - userAge : int
+          - keywords : List<String>
+          - ipAddress : String
+          - connectionType : String
+          - timestamp : long
+          - orientation : String
+          - androidAdId : String
+          - adDoNotTrack : boolean
+          {static} - REQUEST_TYPE_ANDROID : String
+          {static} - DEVICE_ID_MS_DELAY : int
+          + setDeviceId()
+          + setGender()
+          + getMessageId()
+          + setMessageId()
+          + setUserAge()
+          + setKeywords()
+          + setIdMode()
+          + setConnectionType()
+          + setAdDoNotTrack()
+          + setOrientation()
+          + setHeaders()
+          + setIpAddress()
+          + setLatitude()
+          + setListAds()
+          + setLongitude()
+          + setProtocolVersion()
+          + setAppKey()
+          + setTimestamp()
+          + setUserAgent()
+          + setUserAgent2()
+          + setRequestURL()
+          + setAdspaceStrict()
+          + setAdspaceWidth()
+          + setAdspaceHeight()
+          + setAndroidAdId()
+          + countlyUriToString()
+          + toCountlyUri()
+          + getRequestURL()
+          + isAdspaceStrict()
+          + getAdspaceWidth()
+          + getAdspaceHeight()
+          + getAndroidAdId()
+          + hasAdDoNotTrack()
+          + getOrientation()
+          + getIdMode()
+          + getAndroidVersion()
+          + getConnectionType()
+          + getDeviceMode()
+          + getDeviceId()
+          + getHeaders()
+          + getIpAddress()
+          + getLatitude()
+          + getListAds()
+          + getLongitude()
+          + getProtocolVersion()
+          + getAppKey()
+          + getRequestType()
+          + getTimestamp()
+          + getUserAgent()
+          + getUserAgent2()
+          + getGender()
+          + getUserAge()
+          + getKeywords()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageResponse {
+          {static} + OTHER : String
+          {static} - serialVersionUID : long
+          - type : int
+          - bannerWidth : int
+          - bannerHeight : int
+          - text : String
+          - skipOverlay : int
+          - imageUrl : String
+          - productId : String
+          - formattedPrice : String
+          - manualLocalizedPrice : String
+          - clickUrl : String
+          - urlType : String
+          - seedsLinkUrl : String
+          - refresh : int
+          - scale : boolean
+          - skipPreflight : boolean
+          - timestamp : long
+          - horizontalOrientationRequested : boolean
+          - messageId : String
+          - messageVariant : String
+          - messageContext : String
+          + getFormattedPrice()
+          + setFormattedPrice()
+          + getProductId()
+          + isScale()
+          + isSkipPreflight()
+          + isHorizontalOrientationRequested()
+          + setBannerHeight()
+          + setBannerWidth()
+          + setClickType()
+          + setClickUrl()
+          + setSeedsLinkUrl()
+          + setProductId()
+          + setImageUrl()
+          + setRefresh()
+          + setScale()
+          + setSkipPreflight()
+          + setText()
+          + setUrlType()
+          + setType()
+          + setSkipOverlay()
+          + setTimestamp()
+          + setHorizontalOrientationRequested()
+          + getTimestamp()
+          + getBannerHeight()
+          + getBannerWidth()
+          + getClickType()
+          + getClickUrl()
+          + getSeedsLinkUrl()
+          + getImageUrl()
+          + getRefresh()
+          + getText()
+          + getUrlType()
+          + getType()
+          + getString()
+          + getSkipOverlay()
+          + getMessageId()
+          + setMessageId()
+          + getMessageVariant()
+          + setMessageVariant()
+          + getMessageContext()
+          + setMessageContext()
+          + setManualLocalizedPrice()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppMessageView {
+          - animation : boolean
+          - webSettings : WebSettings
+          - webView : WebView
+          - width : int
+          - height : int
+          {static} - mWebView_SetLayerType : Method
+          {static} - mWebView_LAYER_TYPE_SOFTWARE : Field
+          - wasUserAction : boolean
+          - fadeInAnimation : Animation
+          - mContext : Context
+          + InAppMessageView()
+          - createWebView()
+          - doOpenUrl()
+          - startActivity()
+          - makeTrackingRequest()
+          {static} - initCompatibility()
+          {static} - setLayer()
+          - buildBannerView()
+          - initialize()
+          - openLink()
+          + showContent()
+          + getAdListener()
+          + getResponse()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      interface BannerAdViewListener {
+          {abstract} + onLoad()
+          {abstract} + onClick()
+          {abstract} + onError()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class InAppWebView {
+          {static} + URL_EXTRA : String
+          + onCreate()
+          - initializeWebView()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class Log {
+          {static} + TAG : String
+          {static} + LOG_AD_RESPONSES : boolean
+          {static} + isLoggable()
+          {static} + d()
+          {static} + d()
+          {static} + e()
+          {static} + e()
+          {static} + i()
+          {static} + i()
+          {static} + v()
+          {static} + v()
+          {static} + w()
+          {static} + w()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class RequestException {
+          + RequestException()
+          + RequestException()
+          + RequestException()
+          + RequestException()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class ResourceManager {
+          {static} + RESOURCE_LOADED_MSG : int
+          {static} + sDownloading : boolean
+          {static} + sCancel : boolean
+          {static} + DEFAULT_TOPBAR_BG_RESOURCE_ID : int
+          {static} + DEFAULT_BOTTOMBAR_BG_RESOURCE_ID : int
+          {static} + DEFAULT_PLAY_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_PAUSE_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_REPLAY_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_BACK_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_FORWARD_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_RELOAD_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_EXTERNAL_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_SKIP_IMAGE_RESOURCE_ID : int
+          {static} + DEFAULT_CLOSE_BUTTON_NORMAL_RESOURCE_ID : int
+          {static} + DEFAULT_CLOSE_BUTTON_PRESSED_RESOURCE_ID : int
+          {static} + PLAY_IMAGE_DRAWABLE : String
+          {static} + PAUSE_IMAGE_DRAWABLE : String
+          {static} + REPLAY_IMAGE_DRAWABLE : String
+          {static} + BACK_IMAGE_DRAWABLE : String
+          {static} + FORWARD_IMAGE_DRAWABLE : String
+          {static} + RELOAD_IMAGE_DRAWABLE : String
+          {static} + EXTERNAL_IMAGE_DRAWABLE : String
+          {static} + SKIP_IMAGE_DRAWABLE : String
+          {static} + BAR_IMAGE_DRAWABLE : String
+          {static} + CLOSE_BUTTON_NORMAL_IMAGE_DRAWABLE : String
+          {static} + CLOSE_BUTTON_PRESSED_IMAGE_DRAWABLE : String
+          {static} - sResources : HashMap<Integer, Drawable>
+          - mResources : HashMap<Integer, Drawable>
+          + ResourceManager()
+          + releaseInstance()
+          {static} - initDefaultResource()
+          {static} - registerImageResource()
+          {static} - buildDrawable()
+          {static} + isDownloading()
+          {static} + cancel()
+          + getResource()
+          {static} + getStaticResource()
+          # getsResources()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class RichMediaActivity {
+          - mRootLayout : FrameLayout
+          - mSkipButton : ImageView
+          - mType : int
+          - mResult : boolean
+          ~ skipButtonSizeLand : int
+          ~ skipButtonSizePort : int
+          {static} + TYPE_UNKNOWN : int
+          {static} + TYPE_BROWSER : int
+          {static} + TYPE_INTERSTITIAL : int
+          ~ metrics : DisplayMetrics
+          ~ mOnInterstitialSkipListener : OnClickListener
+          + handleMessage()
+          + finish()
+          + goBack()
+          - initInterstitialFromBannerView()
+          - createLocalAdListener()
+          - initRootLayout()
+          + onConfigurationChanged()
+          + onCreate()
+          - setOrientationOldApi()
+          - setOrientation()
+          # onDestroy()
+          + onKeyDown()
+          # onPause()
+          # onResume()
+          + close()
+          # setTypeInterstitial()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class ResourceHandler {
+          ~ richMediaActivity : WeakReference<RichMediaActivity>
+          + ResourceHandler()
+          + handleMessage()
+      }
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    package com.playseeds.android.sdk.inappmessaging {
+      class Util {
+          {static} - androidAdId : String
+          {static} - adDoNotTrack : boolean
+          {static} - MINIMAL_ACCURACY : float
+          {static} - MINIMAL_TIME_FROM_FIX : long
+          {static} + isNetworkAvailable()
+          {static} + getConnectionType()
+          {static} + getLocalIpAddress()
+          {static} + getLocation()
+          {static} + getDefaultUserAgentString()
+          {static} + buildUserAgent()
+          {static} + getMemoryClass()
+          {static} + prepareAndroidAdId()
+          {static} + getAndroidAdId()
+          {static} + loadBitmap()
+      }
+    }
+  }
+  
+
+  GeneralInAppMessageProvider -up-|> InAppMessageProvider
+  InAppMessageManager o-- InAppMessageListener : mListener
+  InAppMessageManager o-- Type : mIdMode
+  InAppMessageManager o-- Gender : userGender
+  InAppMessageManager +-down- SingletonHolder
+  InAppMessageRequest o-- Type : idMode
+  InAppMessageRequest o-- Gender : gender
+  InAppMessageResponse -up-|> InAppMessage
+  InAppMessageResponse o-- ClickType : clickType
+  InAppMessageView -up-|> RelativeLayout
+  InAppMessageView o-- InAppMessageResponse : response
+  InAppMessageView o-- BannerAdViewListener : adListener
+  InAppMessageView +-down- BannerAdViewListener
+  LayoutParams -up-|> MarginLayoutParams
+  MarginLayoutParams -up-|> LayoutParams
+  BaseSavedState -up-|> AbsSavedState
+  InAppWebView -up-|> Activity
+  RichMediaActivity -up-|> Activity
+  RichMediaActivity o-- ResourceManager : mResourceManager
+  RichMediaActivity o-- InAppMessageResponse : mAd
+  RichMediaActivity +-down- ResourceHandler
+  ResourceHandler -up-|> Handler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

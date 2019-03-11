@@ -176,6 +176,8 @@ open class MainActivity : BaseActivity(), TutorialView.OnTutorialReaction {
 
     @SuppressLint("ObsoleteSdkInt")
     public override fun onCreate(savedInstanceState: Bundle?) {
+        Log.e("MainActivity", "in onCreate Kelly")
+
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         val languageHelper = LanguageHelper(sharedPreferences.getString("language", "en"))
         Locale.setDefault(languageHelper.locale)
@@ -254,12 +256,14 @@ open class MainActivity : BaseActivity(), TutorialView.OnTutorialReaction {
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
+        Log.d("MainActivity", "in onPostCreate")
         super.onPostCreate(savedInstanceState)
         // Sync the toggle state after onRestoreInstanceState has occurred.
         drawerToggle?.syncState()
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        Log.d("MainActivity", "in onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
         Log.e("RESTORED:", savedInstanceState.toString())
     }
@@ -270,16 +274,19 @@ open class MainActivity : BaseActivity(), TutorialView.OnTutorialReaction {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Log.d("MainActivity", "in onOptionsItemSelected")
         return if (drawerToggle?.onOptionsItemSelected(item) == true) {
             true
         } else super.onOptionsItemSelected(item)
     }
 
     override fun injectActivity(component: AppComponent?) {
+        Log.d("MainActivity", "in injectActivity")
         component?.inject(this)
     }
 
     override fun onResume() {
+        Log.d("MainActivity", "in onResume")
         super.onResume()
 
         if(!resumeFromActivity){
@@ -318,6 +325,7 @@ open class MainActivity : BaseActivity(), TutorialView.OnTutorialReaction {
     }
 
     override fun startActivity(intent: Intent?) {
+        Log.d("MainActivity", "in startActivity")
         resumeFromActivity = true
         super.startActivity(intent)
     }
@@ -328,6 +336,7 @@ open class MainActivity : BaseActivity(), TutorialView.OnTutorialReaction {
     }
 
     override fun startActivity(intent: Intent?, options: Bundle?) {
+        Log.d("MainActivity", "in startActivity")
         resumeFromActivity = true
         super.startActivity(intent, options)
     }

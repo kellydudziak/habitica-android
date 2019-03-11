@@ -1,14 +1,17 @@
 package com.habitrpg.android.habitica.helpers.notifications;
 
 import android.content.Context;
+import android.util.Log;
 
 /**
  * Created by keithholliday on 6/28/16.
  */
 public class HabiticaLocalNotificationFactory {
+    private static final String DEBUG_TAG = "H...LocalNotifFact";
 
     //use getShape method to get object of type shape
     public HabiticaLocalNotification build(String notificationType, Context context) {
+        Log.d(DEBUG_TAG, "in build");
         if (notificationType.equalsIgnoreCase(PushNotificationManager.PARTY_INVITE_PUSH_NOTIFICATION_KEY)) {
             return new PartyInviteLocalNotification(context, notificationType);
         } else if (notificationType.contains(PushNotificationManager.RECEIVED_PRIVATE_MESSAGE_PUSH_NOTIFICATION_KEY)) {

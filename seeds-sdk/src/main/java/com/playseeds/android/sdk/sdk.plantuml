@@ -1,0 +1,451 @@
+@startuml
+
+title __SDK's Class Diagram__\n
+
+  package com.playseeds.android.sdk {
+    class AdvertisingIdAdapter {
+        {static} - TAG : String
+        {static} - ADVERTISING_ID_CLIENT_CLASS_NAME : String
+        {static} + isAdvertisingIdAvailable()
+        {static} + setAdvertisingId()
+        {static} - getAdvertisingId()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CertificateTrustManager {
+        - keys : List<byte[]>
+        + CertificateTrustManager()
+        + checkServerTrusted()
+        + checkClientTrusted()
+        + getAcceptedIssuers()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ConnectionProcessor {
+        {static} - CONNECT_TIMEOUT_IN_MILLISECONDS : int
+        {static} - READ_TIMEOUT_IN_MILLISECONDS : int
+        - serverURL_ : String
+        - sslContext_ : SSLContext
+        ~ ConnectionProcessor()
+        + urlConnectionForEventData()
+        + run()
+        ~ getServerURL()
+        ~ getCountlyStore()
+        ~ getDeviceId()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ConnectionQueue {
+        - executor_ : ExecutorService
+        - appKey_ : String
+        - context_ : Context
+        - serverURL_ : String
+        - connectionProcessorFuture_ : Future<?>
+        - sslContext_ : SSLContext
+        ~ getAppKey()
+        ~ setAppKey()
+        ~ getContext()
+        ~ setContext()
+        ~ getServerURL()
+        ~ setServerURL()
+        ~ getCountlyStore()
+        ~ setCountlyStore()
+        ~ getDeviceId()
+        + setDeviceId()
+        ~ checkInternalState()
+        ~ beginSession()
+        ~ updateSession()
+        + tokenSession()
+        ~ endSession()
+        ~ sendUserData()
+        ~ sendReferrerData()
+        ~ sendCrashReport()
+        ~ recordEvents()
+        ~ recordLocation()
+        ~ ensureExecutor()
+        ~ tick()
+        ~ getExecutor()
+        ~ setExecutor()
+        ~ getConnectionProcessorFuture()
+        ~ setConnectionProcessorFuture()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CountlyStore {
+        {static} - PREFERENCES : String
+        {static} - DELIMITER : String
+        {static} - CONNECTIONS_PREFERENCE : String
+        {static} - EVENTS_PREFERENCE : String
+        {static} - LOCATION_PREFERENCE : String
+        - preferences_ : SharedPreferences
+        ~ CountlyStore()
+        + connections()
+        + events()
+        + eventsList()
+        + isEmptyConnections()
+        + addConnection()
+        + removeConnection()
+        ~ addEvent()
+        ~ setLocation()
+        ~ getAndRemoveLocation()
+        + addEvent()
+        + removeEvents()
+        {static} ~ joinEvents()
+        {static} ~ join()
+        + getPreference()
+        + setPreference()
+        ~ clear()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class CrashDetails {
+        {static} - logs : ArrayList<String>
+        {static} - startTime : int
+        {static} - customSegments : Map<String, String>
+        {static} - inBackground : boolean
+        {static} - totalMemory : long
+        {static} - getTotalRAM()
+        {static} ~ inForeground()
+        {static} ~ inBackground()
+        {static} ~ isInBackground()
+        {static} ~ addLog()
+        {static} ~ getLogs()
+        {static} ~ setCustomSegments()
+        {static} ~ getCustomSegments()
+        {static} ~ getManufacturer()
+        {static} ~ getCpu()
+        {static} ~ getOpenGL()
+        {static} ~ getRamCurrent()
+        {static} ~ getRamTotal()
+        {static} ~ getDiskCurrent()
+        {static} ~ getDiskTotal()
+        {static} ~ getBatteryLevel()
+        {static} ~ getRunningTime()
+        {static} ~ getOrientation()
+        {static} ~ isRooted()
+        {static} ~ isOnline()
+        {static} ~ isMuted()
+        {static} ~ getCrashData()
+        {static} ~ fillJSONIfValuesNotEmpty()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class DeviceId {
+        - id : String
+        {static} - TAG : String
+        {static} - PREFERENCE_KEY_ID_TYPE : String
+        + DeviceId()
+        + DeviceId()
+        + init()
+        - storeOverriddenType()
+        - retrieveOverriddenType()
+        # switchToIdType()
+        + getId()
+        # setId()
+        + getType()
+        {static} ~ deviceIDEqualsNullSafe()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    enum Type {
+      DEVELOPER_SUPPLIED
+      OPEN_UDID
+      ADVERTISING_ID
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class DeviceInfo {
+        {static} ~ getOS()
+        {static} ~ getOSVersion()
+        {static} ~ getDevice()
+        {static} ~ getResolution()
+        {static} ~ getDensity()
+        {static} ~ getCarrier()
+        {static} ~ getLocale()
+        {static} ~ getAppVersion()
+        {static} ~ getStore()
+        {static} ~ getMetrics()
+        {static} ~ fillJSONIfValuesNotEmpty()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class Event {
+        {static} - SEGMENTATION_KEY : String
+        {static} - KEY_KEY : String
+        {static} - COUNT_KEY : String
+        {static} - SUM_KEY : String
+        {static} - TIMESTAMP_KEY : String
+        + key : String
+        + segmentation : Map<String, String>
+        + count : int
+        + sum : double
+        + timestamp : int
+        ~ toJSON()
+        {static} ~ fromJSON()
+        + equals()
+        + hashCode()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class EventQueue {
+        ~ EventQueue()
+        ~ size()
+        ~ events()
+        ~ recordEvent()
+        ~ getCountlyStore()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IInAppMessageShowCountListener {
+        {abstract} + onInAppMessageShowCount()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IInAppPurchaseCountListener {
+        {abstract} + onInAppPurchaseCount()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    interface IUserBehaviorQueryListener {
+        {abstract} + onUserBehaviorResponse()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class MainActivityEventListener {
+        - mainActivity : Activity
+        - serverURL : String
+        - appKey : String
+        - deviceID : String
+        - mServiceConn : ServiceConnection
+        ~ mService : IInAppBillingService
+        + MainActivityEventListener()
+        + resolve()
+        + onActivityStarted()
+        + onActivityStopped()
+        + onActivityDestroyed()
+        + onActivityCreated()
+        + onActivityResumed()
+        + onActivityPaused()
+        + onActivitySaveInstanceState()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class MessagingAdapter {
+        {static} - TAG : String
+        {static} - MESSAGING_CLASS_NAME : String
+        {static} + isMessagingAvailable()
+        {static} + init()
+        {static} + storeConfiguration()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class OpenUDIDAdapter {
+        {static} - OPEN_UDID_MANAGER_CLASS_NAME : String
+        {static} + isOpenUDIDAvailable()
+        {static} + isInitialized()
+        {static} + sync()
+        {static} + getOpenUDID()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class ReferrerReceiver {
+        {static} - key : String
+        {static} + getReferrer()
+        {static} + deleteReferrer()
+        + ReferrerReceiver()
+        + onReceive()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class Seeds {
+        - timerService_ : ScheduledExecutorService
+        - prevSessionDurationStartTime_ : long
+        - activityCount_ : int
+        - disableUpdateSessionRequests_ : boolean
+        - enableLogging_ : boolean
+        - context_ : Context
+        {static} # publicKeyPinCertificates : List<String>
+        - billingService : IInAppBillingService
+        - asyncHttpClient : AsyncHttpClient
+        {static} + COUNTLY_SDK_VERSION_STRING : String
+        {static} + DEFAULT_APP_VERSION : String
+        {static} + TAG : String
+        {static} - EVENT_QUEUE_SIZE_THRESHOLD : int
+        {static} - TIMER_DELAY_IN_SECONDS : long
+        ~ Seeds()
+        {static} + sharedInstance()
+        + simpleInit()
+        + init()
+        + init()
+        + init()
+        + isInitialized()
+        + initMessaging()
+        + initMessaging()
+        + initInAppMessaging()
+        + halt()
+        + onStart()
+        ~ onStartHelper()
+        + onStop()
+        ~ onStopHelper()
+        + onRegistrationId()
+        + recordEvent()
+        + recordEvent()
+        + recordEvent()
+        - recordGenericIAPEvent()
+        + recordEvent()
+        + recordEvent()
+        + setUserData()
+        + setUserData()
+        + setCustomUserData()
+        + setLocation()
+        + setCustomCrashSegments()
+        + addCrashLog()
+        + logException()
+        + logException()
+        + enableCrashReporting()
+        + setDisableUpdateSessionRequests()
+        + setLoggingEnabled()
+        + isLoggingEnabled()
+        ~ sendEventsIfNeeded()
+        ~ onTimer()
+        ~ roundedSecondsSinceLastSessionDurationUpdate()
+        {static} ~ currentTimestamp()
+        {static} ~ isValidURL()
+        {static} + enablePublicKeyPinning()
+        ~ getConnectionQueue()
+        ~ setConnectionQueue()
+        ~ getTimerService()
+        ~ getEventQueue()
+        ~ setEventQueue()
+        ~ getPrevSessionDurationStartTime()
+        ~ setPrevSessionDurationStartTime()
+        ~ getActivityCount()
+        ~ getDisableUpdateSessionRequests()
+        # clear()
+        + recordIAPEvent()
+        + recordSeedsIAPEvent()
+        + requestInAppMessage()
+        + requestInAppMessage()
+        + isInAppMessageLoaded()
+        + showInAppMessage()
+        + requestTotalInAppPurchaseCount()
+        + requestInAppPurchaseCount()
+        + requestTotalInAppMessageShowCount()
+        + requestInAppMessageShowCount()
+        + requestGenericUserBehaviorQuery()
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class SingletonHolder {
+        {static} ~ instance : Seeds
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    enum CountlyMessagingMode {
+      TEST
+      PRODUCTION
+    }
+  }
+  
+
+  package com.playseeds.android.sdk {
+    class UserData {
+        {static} + NAME_KEY : String
+        {static} + USERNAME_KEY : String
+        {static} + EMAIL_KEY : String
+        {static} + ORG_KEY : String
+        {static} + PHONE_KEY : String
+        {static} + PICTURE_KEY : String
+        {static} + PICTURE_PATH_KEY : String
+        {static} + GENDER_KEY : String
+        {static} + BYEAR_KEY : String
+        {static} + CUSTOM_KEY : String
+        {static} + name : String
+        {static} + username : String
+        {static} + email : String
+        {static} + org : String
+        {static} + phone : String
+        {static} + picture : String
+        {static} + picturePath : String
+        {static} + gender : String
+        {static} + custom : Map<String, String>
+        {static} + byear : int
+        {static} + isSynced : boolean
+        {static} ~ setData()
+        {static} ~ setCustomData()
+        {static} ~ getDataForRequest()
+        {static} ~ toJSON()
+        {static} + getPicturePathFromQuery()
+    }
+  }
+  
+
+  CertificateTrustManager -up-|> X509TrustManager
+  ConnectionProcessor -up-|> Runnable
+  ConnectionProcessor o-- CountlyStore : store_
+  ConnectionProcessor o-- DeviceId : deviceId_
+  ConnectionQueue o-- CountlyStore : store_
+  ConnectionQueue o-- DeviceId : deviceId_
+  DeviceId o-- Type : type
+  DeviceId +-down- Type
+  EventQueue o-- CountlyStore : countlyStore_
+  MainActivityEventListener -up-|> ActivityLifecycleCallbacks
+  MainActivityEventListener o-- InAppMessageListener : listener
+  MainActivityEventListener o-- Type : idMode
+  ReferrerReceiver -up-|> BroadcastReceiver
+  Seeds o-- ConnectionQueue : connectionQueue_
+  Seeds o-- EventQueue : eventQueue_
+  Seeds o-- CountlyMessagingMode : messagingMode_
+  Seeds o-- MainActivityEventListener : mainActivityEventListener
+  Seeds +-down- SingletonHolder
+  Seeds +-down- CountlyMessagingMode
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

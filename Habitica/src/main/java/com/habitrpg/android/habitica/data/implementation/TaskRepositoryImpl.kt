@@ -22,6 +22,8 @@ import java.util.*
 
 
 class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiClient, userID: String) : BaseRepositoryImpl<TaskLocalRepository>(localRepository, apiClient, userID), TaskRepository {
+    private val DEBUG_TAG = "TaskRepositoryImpl";
+
     override fun getTasksOfType(taskType: String): Flowable<RealmResults<Task>> = getTasks(taskType, userID)
 
     private var lastTaskAction: Long = 0
@@ -33,15 +35,18 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
             this.localRepository.getTasks(userId)
 
     override fun saveTasks(userId: String, order: TasksOrder, tasks: TaskList) {
+        android.util.Log.d(DEBUG_TAG, "in saveTasks")
         localRepository.saveTasks(userId, order, tasks)
     }
 
     override fun retrieveTasks(userId: String, tasksOrder: TasksOrder): Flowable<TaskList> {
+        android.util.Log.d(DEBUG_TAG, "in retrieveTasks")
         return this.apiClient.tasks
                 .doOnNext { res -> this.localRepository.saveTasks(userId, tasksOrder, res) }
     }
 
     override fun retrieveCompletedTodos(userId: String): Flowable<TaskList> {
+        android.util.Log.d(DEBUG_TAG, "in retrieveCompletedTodos")
         return this.apiClient.getTasks("completedTodos")
                 .doOnNext { taskList ->
                     val tasks = taskList.tasks
@@ -52,6 +57,7 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
     }
 
     override fun retrieveTasks(userId: String, tasksOrder: TasksOrder, dueDate: Date): Flowable<TaskList> {
+        android.util.Log.d(DEBUG_TAG, "in retrieveTasks")
         val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.US)
         return this.apiClient.getTasks("dailys", formatter.format(dueDate))
                 .doOnNext { res -> this.localRepository.saveTasks(userId, tasksOrder, res) }
@@ -59,6 +65,7 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
 
     @Suppress("ReturnCount")
     override fun taskChecked(user: User?, task: Task, up: Boolean, force: Boolean): Flowable<TaskScoringResult?> {
+        android.util.Log.d(DEBUG_TAG, "in taskChecked")
         val now = Date().time
         val id = task.id
         if (lastTaskAction > now - 500 && !force || id == null) {
@@ -115,11 +122,13 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
     }
 
     override fun taskChecked(user: User?, taskId: String, up: Boolean, force: Boolean): Maybe<TaskScoringResult?> {
+        android.util.Log.d(DEBUG_TAG, "in taskChecked")
         return localRepository.getTask(taskId).firstElement()
                 .flatMap { task -> taskChecked(user, task, up, force).singleElement() }
     }
 
     override fun scoreChecklistItem(taskId: String, itemId: String): Flowable<Task> {
+        android.util.Log.d(DEBUG_TAG, "in scoreChecklistItem")
         return apiClient.scoreChecklistItem(taskId, itemId)
                 .flatMapMaybe { localRepository.getTask(taskId).firstElement() }
                 .doOnNext { task ->
@@ -135,6 +144,7 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
     override fun getTaskCopy(taskId: String): Flowable<Task> = localRepository.getTaskCopy(taskId)
 
     override fun createTask(task: Task, force: Boolean): Flowable<Task> {
+        android.util.Log.d(DEBUG_TAG, "in createTask")
         val now = Date().time
         if (lastTaskAction > now - 500  && !force) {
             return Flowable.empty()
@@ -188,6 +198,7 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
 
     @Suppress("ReturnCount")
     override fun updateTask(task: Task, force: Boolean): Maybe<Task> {
+        android.util.Log.d(DEBUG_TAG, "in updateTask")
         val now = Date().time
         if ((lastTaskAction > now - 500  && !force)|| !task.isValid ) {
             return Maybe.just(task)
@@ -212,21 +223,25 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
     }
 
     override fun deleteTask(taskId: String): Flowable<Void> {
+        android.util.Log.d(DEBUG_TAG, "in deleteTask")
         return apiClient.deleteTask(taskId)
                 .doOnNext { localRepository.deleteTask(taskId) }
     }
 
     override fun saveTask(task: Task) {
+        android.util.Log.d(DEBUG_TAG, "in saveTask")
         localRepository.save(task)
     }
 
     override fun createTasks(newTasks: List<Task>): Flowable<List<Task>> = apiClient.createTasks(newTasks)
 
     override fun markTaskCompleted(taskId: String, isCompleted: Boolean) {
+        android.util.Log.d(DEBUG_TAG, "in markTaskCompleted")
         localRepository.markTaskCompleted(taskId, isCompleted)
     }
 
     override fun saveReminder(remindersItem: RemindersItem) {
+        android.util.Log.d(DEBUG_TAG, "in saveReminder")
         localRepository.saveReminder(remindersItem)
     }
 
@@ -247,10 +262,12 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
             getTask(taskid).map { localRepository.getUnmanagedCopy(it) }
 
     override fun updateTaskInBackground(task: Task) {
+        android.util.Log.d(DEBUG_TAG, "in updateTaskInBackground")
         updateTask(task).subscribe(Consumer { }, RxErrorHandler.handleEmptyError())
     }
 
     override fun createTaskInBackground(task: Task) {
+        android.util.Log.d(DEBUG_TAG, "in createTaskInBackground")
         createTask(task).subscribe(Consumer { }, RxErrorHandler.handleEmptyError())
     }
 
@@ -261,12 +278,14 @@ class TaskRepositoryImpl(localRepository: TaskLocalRepository, apiClient: ApiCli
             Flowable.just(localRepository.getUnmanagedCopy(tasks))
 
     override fun updateDailiesIsDue(date: Date): Flowable<TaskList> {
+        android.util.Log.d(DEBUG_TAG, "in updateDailiesIsDue")
         val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.US)
         return apiClient.getTasks("dailys", formatter.format(date))
                 .flatMapMaybe { localRepository.updateIsdue(it) }
     }
 
     override fun syncErroredTasks(): Single<List<Task>> {
+        android.util.Log.d(DEBUG_TAG, "in syncErroredTasks")
         return localRepository.getErroredTasks(userID).firstElement()
                 .flatMapPublisher { Flowable.fromIterable(it) }
                 .map { localRepository.getUnmanagedCopy(it) }
