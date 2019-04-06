@@ -28,7 +28,7 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
 
     @CallSuper
     open fun notifyLocally(title: String?, message: String?) {
-        Log.d(DEBUG_TAG, "In notifyLocally")
+        Log.d(DEBUG_TAG, "CS215, in notifyLocally")
         this.title = title
         this.message = message
 
@@ -56,12 +56,12 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
     }
 
     fun setExtras(data: Map<String, String>) {
-        Log.d(DEBUG_TAG, "In setExtras")
+        Log.d(DEBUG_TAG, "CS215, In setExtras")
         this.data = data
     }
 
     protected open fun setNotificationActions()  {
-        Log.d(DEBUG_TAG, "In setNotificationActions")
+        Log.d(DEBUG_TAG, "CS215, In setNotificationActions")
         val intent = Intent(context, MainActivity::class.java)
         intent.putExtra("notificationIdentifier", identifier)
         configureMainIntent(intent)
@@ -82,7 +82,7 @@ abstract class HabiticaLocalNotification(protected var context: Context, protect
 
 @RequiresApi(Build.VERSION_CODES.O)
 public fun NotificationManager.createOrUpdateHabiticaChannel() {
-    Log.d("H..LocalNotification", "in createOrUpdateHabiticaChannel")
+    Log.d("H..LocalNotification", "CS215, in createOrUpdateHabiticaChannel")
     var hasChannel = false
     for (channel in notificationChannels) {
         if (channel.id == "default") {

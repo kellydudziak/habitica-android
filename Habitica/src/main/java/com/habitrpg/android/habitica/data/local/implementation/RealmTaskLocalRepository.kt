@@ -1,5 +1,6 @@
 package com.habitrpg.android.habitica.data.local.implementation
 
+import android.util.Log
 import com.habitrpg.android.habitica.data.local.TaskLocalRepository
 import com.habitrpg.android.habitica.models.tasks.*
 import io.reactivex.Flowable
@@ -9,8 +10,10 @@ import io.realm.RealmObject
 import io.realm.RealmResults
 
 class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), TaskLocalRepository {
-
+    private val DEBUG_TAG = "RealmTaskLocalRepo";
     override fun getTasks(taskType: String, userID: String): Flowable<RealmResults<Task>> {
+        Log.d(DEBUG_TAG, "CS215, in getTasks")
+
         return realm.where(Task::class.java)
                 .equalTo("type", taskType)
                 .equalTo("userId", userID)
@@ -22,6 +25,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun getTasks(userId: String): Flowable<RealmResults<Task>> {
+        Log.d(DEBUG_TAG, "CS215, in getTasks")
+
         return realm.where(Task::class.java).equalTo("userId", userId)
                 .sort("position")
                 .findAll()
@@ -30,6 +35,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun saveTasks(userId: String, tasksOrder: TasksOrder, tasks: TaskList) {
+        Log.d(DEBUG_TAG, "CS215, in saveTasks")
+
         val sortedTasks = ArrayList<Task>()
         sortedTasks.addAll(sortTasks(tasks.tasks, tasksOrder.habits))
         sortedTasks.addAll(sortTasks(tasks.tasks, tasksOrder.dailys))
@@ -49,11 +56,15 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun saveCompletedTodos(userId: String, tasks: MutableCollection<Task>) {
+        Log.d(DEBUG_TAG, "CS215, in saveCompletedTodos")
+
         removeCompletedTodos(userId, tasks)
         realm.executeTransactionAsync { realm1 -> realm1.insertOrUpdate(tasks) }
     }
 
     private fun sortTasks(taskMap: MutableMap<String, Task>, taskOrder: List<String>): List<Task> {
+        Log.d(DEBUG_TAG, "CS215, in sortTasks")
+
         val taskList = ArrayList<Task>()
         var position = 0
         for (taskId in taskOrder) {
@@ -69,6 +80,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     private fun removeOldTasks(userID: String, onlineTaskList: List<Task>) {
+        Log.d(DEBUG_TAG, "CS215, in removeOldTasks")
+
         val localTasks = realm.where(Task::class.java)
                 .equalTo("userId", userID)
                 .beginGroup()
@@ -92,6 +105,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     private fun removeCompletedTodos(userID: String, onlineTaskList: MutableCollection<Task>) {
+        Log.d(DEBUG_TAG, "CS215, in removeCompletedTodos")
+
         val localTasks = realm.where(Task::class.java)
                 .equalTo("userId", userID)
                 .equalTo("type", Task.TYPE_TODO)
@@ -109,6 +124,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     private fun removeOldChecklists(onlineItems: List<ChecklistItem>) {
+        Log.d(DEBUG_TAG, "CS215, in removeOldChecklists")
+
         val localItems = realm.where(ChecklistItem::class.java).findAll().createSnapshot()
         val itemsToDelete = localItems.filterNot { onlineItems.contains(it) }
         realm.executeTransaction {
@@ -119,6 +136,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     private fun removeOldReminders(onlineReminders: List<RemindersItem>) {
+        Log.d(DEBUG_TAG, "CS215, in removeOldReminders")
+
         val localReminders = realm.where(RemindersItem::class.java).findAll().createSnapshot()
         val itemsToDelete = localReminders.filterNot { onlineReminders.contains(it) }
         realm.executeTransaction {
@@ -129,6 +148,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun deleteTask(taskID: String) {
+        Log.d(DEBUG_TAG, "CS215, in deleteTask")
+
         val task = realm.where(Task::class.java).equalTo("id", taskID).findFirstAsync()
         realm.executeTransaction {
             if (task.isManaged) {
@@ -138,12 +159,16 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun getTask(taskId: String): Flowable<Task> {
+        Log.d(DEBUG_TAG, "CS215, in getTask")
+
         return realm.where(Task::class.java).equalTo("id", taskId).findFirstAsync().asFlowable<RealmObject>()
                 .filter { realmObject -> realmObject.isLoaded }
                 .cast(Task::class.java)
     }
 
     override fun getTaskCopy(taskId: String): Flowable<Task> {
+        Log.d(DEBUG_TAG, "CS215, in getTaskCopy")
+
         return getTask(taskId)
                 .map { task ->
                     return@map if (task.isManaged && task.isValid) {
@@ -155,11 +180,15 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun markTaskCompleted(taskId: String, isCompleted: Boolean) {
+        Log.d(DEBUG_TAG, "CS215, in markTaskCompleted")
+
         val task = realm.where(Task::class.java).equalTo("id", taskId).findFirstAsync()
         realm.executeTransaction { task.completed = true }
     }
 
     override fun saveReminder(remindersItem: RemindersItem) {
+        Log.d(DEBUG_TAG, "CS215, in saveReminder")
+
         realm.executeTransaction { it.insertOrUpdate(remindersItem) }
     }
 
@@ -181,6 +210,8 @@ class RealmTaskLocalRepository(realm: Realm) : RealmBaseLocalRepository(realm), 
     }
 
     override fun updateIsdue(daily: TaskList): Maybe<TaskList> {
+        Log.d(DEBUG_TAG, "CS215, in updateIsdue")
+
         return Flowable.just(realm.where(Task::class.java).equalTo("type", "daily").findAll())
                 .firstElement()
                 .map { tasks ->

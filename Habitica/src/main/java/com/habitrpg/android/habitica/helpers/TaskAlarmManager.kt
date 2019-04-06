@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
+import android.util.Log
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.habitrpg.android.habitica.data.TaskRepository
@@ -21,6 +22,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     private val am: AlarmManager? = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
 
     private fun setAlarmsForTask(task: Task) {
+        Log.d("TaskAlarmManager", "CS215, in setAlarmsForTask")
         task.reminders?.let {
             for (reminder in it) {
                 var currentReminder = reminder
@@ -34,6 +36,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     }
 
     private fun removeAlarmsForTask(task: Task) {
+        Log.d("TaskAlarmManager", "CS215, in removeAlarmsForTask")
         task.reminders?.let {
             for (reminder in it) {
                 this.removeAlarmForRemindersItem(reminder)
@@ -45,6 +48,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     //We currently only use this function to schedule the next reminder for dailies
     //We may be able to use repeating alarms instead of this in the future
     fun addAlarmForTaskId(taskId: String) {
+        Log.d("TaskAlarmManager", "CS215, in addAlarmForTaskId")
         taskRepository.getTaskCopy(taskId)
                 .filter { task -> task.isValid && task.isManaged && Task.TYPE_DAILY == task.type }
                 .firstElement()
@@ -52,6 +56,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     }
 
     fun scheduleAllSavedAlarms(preventDailyReminder: Boolean) {
+        Log.d("TaskAlarmManager", "CS215, in scheduleAllSavedAlarms")
         taskRepository.getTaskCopies(userId)
                 .firstElement()
                 .toFlowable()
@@ -67,10 +72,12 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     }
 
     fun scheduleAlarmsForTask(task: Task) {
+        Log.d("TaskAlarmManager", "CS215, in scheduleAlarmsForTask")
         setAlarmsForTask(task)
     }
 
     private fun setTimeForDailyReminder(remindersItem: RemindersItem?, task: Task): RemindersItem? {
+        Log.d("TaskAlarmManager", "CS215, in setTimeForDailyReminder")
         val oldTime = remindersItem?.time
         val newTime = task.getNextReminderOccurence(oldTime) ?: return null
         val calendar = Calendar.getInstance()
@@ -82,6 +89,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     }
 
     private fun setAlarmForRemindersItem(reminderItemTask: Task, remindersItem: RemindersItem?) {
+        Log.d("TaskAlarmManager", "CS215, in setAlarmForRemindersItem")
         val now = Date()
         if (remindersItem == null || remindersItem.time?.before(now) == true) {
             return
@@ -111,6 +119,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
     }
 
     private fun removeAlarmForRemindersItem(remindersItem: RemindersItem) {
+        Log.d("TaskAlarmManager", "CS215, in removeAlarmForRemindersItem")
         val intent = Intent(context, TaskReceiver::class.java)
         intent.action = remindersItem.id
         val intentId = remindersItem.id?.hashCode() ?: 0 and 0xfffffff
@@ -125,6 +134,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
         const val TASK_NAME_INTENT_KEY = "TASK_NAME"
 
         fun scheduleDailyReminder(context: Context?) {
+            Log.d("TaskAlarmManager", "CS215, in scheduleDailyReminder")
             val prefs = PreferenceManager.getDefaultSharedPreferences(context)
             if (prefs.getBoolean("use_reminder", false)) {
                 val timeval = prefs.getString("reminder_time", "19:00")
@@ -155,12 +165,14 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
                 val pendingIntent = PendingIntent.getBroadcast(context, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
                 if (context != null) {
+                    Log.d("TaskAlarmManager", "CS215, if (context != null, setAlarm(triggerTime")
                     setAlarm(context, triggerTime, pendingIntent)
                 }
             }
         }
 
         fun removeDailyReminder(context: Context?) {
+            Log.d("TaskAlarmManager", "CS215, in removeDailyReminder")
             val notificationIntent = Intent(context, NotificationPublisher::class.java)
             val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
             val displayIntent = PendingIntent.getBroadcast(context, 0, notificationIntent, 0)
@@ -168,6 +180,7 @@ class TaskAlarmManager(private var context: Context, private var taskRepository:
         }
 
         private fun setAlarm(context: Context, time: Long, pendingIntent: PendingIntent?) {
+            Log.d("TaskAlarmManager", "CS215, in setAlarm")
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
 
             if (pendingIntent == null) {

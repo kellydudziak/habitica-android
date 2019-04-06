@@ -71,6 +71,7 @@ abstract class HabiticaBaseApplication : MultiDexApplication() {
         private set
 
     override fun onCreate() {
+        Log.d("HabiticaBaseApplication", "CS215, in onCreate")
         super.onCreate()
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
@@ -210,6 +211,7 @@ abstract class HabiticaBaseApplication : MultiDexApplication() {
         }
 
         fun logout(context: Context) {
+            Log.d("HabiticaBaseApplication", "in logout")
             val realm = Realm.getDefaultInstance()
             getInstance(context)?.deleteDatabase(realm.path)
             realm.close()
@@ -236,6 +238,7 @@ abstract class HabiticaBaseApplication : MultiDexApplication() {
         }
 
         private fun startActivity(activityClass: Class<*>, context: Context) {
+            Log.d("HabiticaBaseApplication", "CS215, in startActivity")
             val intent = Intent(context, activityClass)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)

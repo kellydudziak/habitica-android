@@ -11,7 +11,7 @@ public class HabiticaLocalNotificationFactory {
 
     //use getShape method to get object of type shape
     public HabiticaLocalNotification build(String notificationType, Context context) {
-        Log.d(DEBUG_TAG, "in build");
+        Log.d(DEBUG_TAG, "CS215, in build");
         if (notificationType.equalsIgnoreCase(PushNotificationManager.PARTY_INVITE_PUSH_NOTIFICATION_KEY)) {
             return new PartyInviteLocalNotification(context, notificationType);
         } else if (notificationType.contains(PushNotificationManager.RECEIVED_PRIVATE_MESSAGE_PUSH_NOTIFICATION_KEY)) {
